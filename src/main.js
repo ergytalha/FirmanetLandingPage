@@ -60,4 +60,93 @@ const swiper = new Swiper(".swiper-container", {
       }
     });
   });
+ 
+  const basePrice = {
+    "10": 300000,
+    "15": 427500,
+    "20": 540000,
+    "25": 637500,
+    "35": 840000,
+    "50": 1050000
+  };
+  
+  const modulesData = {
+    general: [
+      "Ofis Yönetimi", "Müşteri İlişkileri Yönetimi (CRM)", "Satış Yönetimi", "Yardım Masası", 
+      "Araç Yönetimi", "Malzeme ve Stok Yönetimi", "Tedarik Zinciri Yönetimi", "Malzeme İhtiyaç Yönetimi (MRP)",
+      "Servis Yönetimi", "Dokümantasyon Yönetimi", "Hukuk Yönetimi", "İnsan Kaynakları Yönetimi", 
+      "Ön Muhasebe Yönetimi", "Finans Yönetimi", "Raporlar ve Dashboard", "Proje Yönetimi", "Üretim Yönetimi", 
+      "Ar-ge Yönetimi", "Bakım/Onarım", "Kantar Yönetimi", "Resmi Muhasebe Yönetimi", "Demirbaş Yönetimi", 
+      "Bütçe Yönetimi", "Bordro Yönetimi"
+    ],
+    lab: [
+      "Laboratuvar Modülü"
+    ],
+    realEstate: [
+      "Emlak Modülü"
+    ]
+  };
+  
+  function updateModules() {
+    const userCount = document.getElementById('userCount').value;
+    const sector = document.getElementById('sector').value;
+    const price = basePrice[userCount];
+    const modules = [...modulesData.general]; // Başlangıçta tüm modülleri al
+  
+    // Seçilen sektöre göre ek modüller ekle
+    if (sector === 'lab') {
+      modules.unshift("Laboratuvar Modülü"); // Laboratuvar modülünü ekle
+    } else if (sector === 'realEstate') {
+      modules.unshift("Emlak Modülü"); // Emlak modülünü ekle
+    }
+  
+    // Modülleri tabloya ekle
+    const moduleContainer = document.getElementById('modulesList');
+    moduleContainer.innerHTML = "";
+    let count = 0;
+    let row = "<tr>";
+  
+    modules.forEach((module) => {
+      if (count < 4) {
+        row += `<td class=\"border p-4 text-gray-700\">${module}</td>`;
+        count++;
+      } else {
+        row += `</tr><tr><td class=\"border p-4 text-gray-700\">${module}</td>`;
+        count = 1;
+      }
+    });
+  
+    row += "</tr>";
+    moduleContainer.innerHTML = row;
+  
+    // Brüt fiyatı hesapla (Seçilen kullanıcı sayısı + 5 kullanıcı + 30000 * 1.25)
+    let grossPrice = (parseInt(userCount) + (document.getElementById('extraUser').checked ? 5 : 0)) * 30000 * 1.25;
+  
+    // İndirimli fiyatı güncelle
+    document.getElementById('discountPrice').textContent = grossPrice.toLocaleString();
+    document.getElementById('totalPrice').textContent = price.toLocaleString();
+  }
+  
+  function updatePrice() {
+    const extraUser = document.getElementById('extraUser').checked;
+    let userCount = parseInt(document.getElementById('userCount').value);
+    let totalPrice = basePrice[userCount];
+  
+    // +5 kullanıcı kutusu işaretli ise fiyatı ₺135.000 artır
+    if (extraUser) {
+      totalPrice += 135000; // 5 ek kullanıcı için ₺135.000 ekle
+    }
+  
+    // Toplam fiyatı güncelle
+    document.getElementById('totalPrice').textContent = `${totalPrice.toLocaleString()}`;
+  }
+  
+  // Kullanıcı sayısı değiştiğinde +5 kullanıcı kutusunun işaretini kaldır
+  function resetExtraUser() {
+    document.getElementById('extraUser').checked = false;
+    updatePrice();
+  }
+  
+  // İlk yüklemede modülleri güncelle
+  window.onload = updateModules;
   
