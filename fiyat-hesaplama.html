@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiyat Hesaplama Aracı</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .dropdown {
+      margin: 20px 0;
+    }
+    .dropdown select {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      margin-right: 20px;
+    }
+    .module-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .module-table th, .module-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    .module-table th {
+      background-color: #f2f2f2;
+    }
+    .total-price {
+      font-size: 72px;  /* Daha büyük font büyüklüğü */
+      font-weight: bold;
+      color: #003366;  /* Koyu mavi renk */
+      margin-top: 20px;
+      text-align: right;
+    }
+    .discount-price {
+      font-size: 48px;
+      text-decoration: line-through;
+      color: red;
+      font-weight: bold;
+    }
+    .discount-info {
+      font-size: 24px;
+      color: #003366;
+      font-weight: bold;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .note {
+      font-size: 16px;
+      color: #333;
+      margin-top: 20px;
+    }
+    .checkbox-label {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Tüm Modüller Tek Fiyat</h2>
+
+  <p><strong>Değerli Müşterimiz,</strong></p>
+  <p>Firmanet ERP çözümümüzle işletmenizin tüm süreçlerini tek bir platformda yönetin. Aşağıdaki modüllerle, iş operasyonlarınızı daha verimli hale getirebilirsiniz.</p>
+
+  <p><strong>Eş Zamanlı Kullanıcı Tanımı:</strong> Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak işlem gerçekleştiren kullanıcı sayısını ifade eder. Kullanıcı sayısını belirlerken, işletmenizdeki kullanıcıların sisteme aynı anda giriş yapma yoğunluğunu göz önünde bulundurabilirsiniz. Sistemi ne kadar yoğun kullanacakları, eş zamanlı kullanıcı sayınızı belirler.</p>
+
+  <p><strong>Kullanıcı Paketleri ve Fiyatlandırma:</strong></p>
+  <ul>
+    <li><strong>10 Kullanıcı:</strong> 300.000</li>
+    <li><strong>15 Kullanıcı:</strong> 427.500</li>
+    <li><strong>20 Kullanıcı:</strong> 540.000</li>
+    <li><strong>25 Kullanıcı:</strong> 637.500</li>
+    <li><strong>35 Kullanıcı:</strong> 840.000</li>
+    <li><strong>50 Kullanıcı:</strong> 1.050.000</li>
+  </ul>
+
+  <p><strong>Not:</strong> Bu fiyatlar sadece <strong>lisans fiyatlarıdır</strong>. Lisans alımından sonraki bir zamanda kullanıcı eklemek isterseniz en az 5 kullanıcı ekleyebilirsiniz.</p>
+
+  <p><strong>Eğitim ve Uyarlama:</strong> Tüm paketlerde <strong>20 saat eğitim ve uyarlama</strong> hizmeti dahildir. Ancak, işletmenizin ihtiyaçlarına göre <strong>ek eğitim ve uyarlama</strong> hizmetleri de sağlanmaktadır. Bu hizmetler, istediğiniz modüllere göre ve ihtiyacınıza göre ücretlendirilir.</p>
+
+  <p><strong>Ekstra Eğitim ve Uyarlama Bedeli:</strong> Eğer daha fazla eğitim ya da özelleştirilmiş uyarlama hizmeti almak isterseniz, bunun için ayrıca fiyatlandırma yapılacaktır. Eğitinin kapsamı ve süresi ile ilgili taleplerinize göre, size özel teklifler sunulacaktır.</p>
+
+  <p><strong>Fiyat Hesaplama Aracı:</strong></p>
+
+  <!-- Kullanıcı Sayısı ve Sektör Seçimi -->
+  <div class="dropdown">
+    <select id="userCount" onchange="updateModules(); resetExtraUser()">
+      <option value="10">10 Kullanıcı</option>
+      <option value="15">15 Kullanıcı</option>
+      <option value="20">20 Kullanıcı</option>
+      <option value="25">25 Kullanıcı</option>
+      <option value="35">35 Kullanıcı</option>
+      <option value="50">50 Kullanıcı</option>
+    </select>
+
+    <select id="sector" onchange="updateModules()">
+      <option value="general">Genel</option>
+      <option value="lab">Akredite Laboratuvar</option>
+      <option value="realEstate">Emlak</option>
+    </select>
+  </div>
+
+  <!-- +5 Kullanıcı Ekle -->
+  <div>
+    <label class="checkbox-label">
+      <input type="checkbox" id="extraUser" onclick="updatePrice()"> +5 Kullanıcı Ekle
+    </label>
+  </div>
+
+  <!-- Modüller Tablosu -->
+  <table class="module-table" id="modulesTable">
+    <thead>
+      <tr>
+        <th colspan="4">Tüm Modüller Tek Fiyat</th>
+      </tr>
+    </thead>
+    <tbody id="modulesList">
+      <tr>
+        <td>Ofis Yönetimi</td>
+        <td>Müşteri İlişkileri Yönetimi (CRM)</td>
+        <td>Satış Yönetimi</td>
+        <td>Yardım Masası</td>
+      </tr>
+      <tr>
+        <td>Araç Yönetimi</td>
+        <td>Malzeme ve Stok Yönetimi</td>
+        <td>Tedarik Zinciri Yönetimi</td>
+        <td>Malzeme İhtiyaç Yönetimi (MRP)</td>
+      </tr>
+      <tr>
+        <td>Servis Yönetimi</td>
+        <td>Dokümantasyon Yönetimi</td>
+        <td>Hukuk Yönetimi</td>
+        <td>İnsan Kaynakları Yönetimi</td>
+      </tr>
+      <tr>
+        <td>Ön Muhasebe Yönetimi</td>
+        <td>Finans Yönetimi</td>
+        <td>Raporlar ve Dashboard</td>
+        <td>Proje Yönetimi</td>
+      </tr>
+      <tr>
+        <td>Üretim Yönetimi</td>
+        <td>Ar-ge Yönetimi</td>
+        <td>Bakım/Onarım</td>
+        <td>Kantar Yönetimi</td>
+      </tr>
+      <tr>
+        <td>Resmi Muhasebe Yönetimi</td>
+        <td>Demirbaş Yönetimi</td>
+        <td>Bütçe Yönetimi</td>
+        <td>Bordro Yönetimi</td>
+      </tr>
+      <tr>
+        <td><span class="bold">Laboratuvar Modülü</span></td>
+        <td>Emlak Modülü</td>
+        <td colspan="2"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="module-table">
+    <tbody>
+      <tr>
+        <td colspan="4" class="total-price">
+          <span id="discountPrice" class="discount-price">0,00</span> TL
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" class="total-price">
+          </strong> <span id="totalPrice">0,00</span> TL + KDV
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Nasıl İleriye Gidebiliriz?</strong> Teklifimizi değerlendirmeniz ve herhangi bir sorunuz olduğunda size daha fazla bilgi sunmamız için bizimle iletişime geçebilirsiniz.</p>
+
+</div>
+
+<script>
+  const basePrice = {
+    "10": 300000,
+    "15": 427500,
+    "20": 540000,
+    "25": 637500,
+    "35": 840000,
+    "50": 1050000
+  };
+
+  const modulesData = {
+    general: [
+      "Ofis Yönetimi", "Müşteri İlişkileri Yönetimi (CRM)", "Satış Yönetimi", "Yardım Masası", 
+      "Araç Yönetimi", "Malzeme ve Stok Yönetimi", "Tedarik Zinciri Yönetimi", "Malzeme İhtiyaç Yönetimi (MRP)",
+      "Servis Yönetimi", "Dokümantasyon Yönetimi", "Hukuk Yönetimi", "İnsan Kaynakları Yönetimi", 
+      "Ön Muhasebe Yönetimi", "Finans Yönetimi", "Raporlar ve Dashboard", "Proje Yönetimi", "Üretim Yönetimi", 
+      "Ar-ge Yönetimi", "Bakım/Onarım", "Kantar Yönetimi", "Resmi Muhasebe Yönetimi", "Demirbaş Yönetimi", 
+      "Bütçe Yönetimi", "Bordro Yönetimi"
+    ],
+    lab: [
+      "Laboratuvar Modülü"
+    ],
+    realEstate: [
+      "Emlak Modülü"
+    ]
+  };
+
+  function updateModules() {
+    const userCount = document.getElementById('userCount').value;
+    const sector = document.getElementById('sector').value;
+    const price = basePrice[userCount];
+    const modules = [...modulesData.general]; // Başlangıçta tüm modülleri al
+
+    // Seçilen sektöre göre ek modüller ekle
+    if (sector === 'lab') {
+      modules.unshift("<span class='bold'>Laboratuvar Modülü</span>"); // Laboratuvar modülünü ekle
+    } else if (sector === 'realEstate') {
+      modules.unshift("<span class='bold'>Emlak Modülü</span>"); // Emlak modülünü ekle
+    }
+
+    // Modülleri tabloya ekle
+    const moduleContainer = document.getElementById('modulesList');
+    moduleContainer.innerHTML = "";
+    let count = 0;
+    let row = "<tr>";
+
+    modules.forEach((module, index) => {
+      if (count < 4) {
+        row += `<td>${module}</td>`;
+        count++;
+      } else {
+        row += `</tr><tr><td>${module}</td>`;
+        count = 1;
+      }
+    });
+
+    row += "</tr>";
+    moduleContainer.innerHTML = row;
+
+    // Brüt fiyatı hesapla (Seçilen kullanıcı sayısı + 5 kullanıcı + 30000 * 1.25)
+    let grossPrice = (parseInt(userCount) + (document.getElementById('extraUser').checked ? 5 : 0)) * 30000 * 1.25;
+
+    // İndirimli fiyatı güncelle
+    document.getElementById('discountPrice').textContent = grossPrice.toLocaleString();
+    document.getElementById('totalPrice').textContent = price.toLocaleString();
+  }
+
+  function updatePrice() {
+    const extraUser = document.getElementById('extraUser').checked;
+    let userCount = parseInt(document.getElementById('userCount').value);
+    let totalPrice = basePrice[userCount];
+    
+    // +5 kullanıcı kutusu işaretli ise fiyatı ₺135.000 artır
+    if (extraUser) {
+      totalPrice += 135000; // 5 ek kullanıcı için ₺135.000 ekle
+    }
+
+    // Toplam fiyatı güncelle
+    document.getElementById('totalPrice').textContent = `${totalPrice.toLocaleString()}`;
+  }
+
+  // Kullanıcı sayısı değiştiğinde +5 kullanıcı kutusunun işaretini kaldır
+  function resetExtraUser() {
+    document.getElementById('extraUser').checked = false;
+    updatePrice();
+  }
+
+  // İlk yüklemede modülleri güncelle
+  window.onload = updateModules;
+</script>
+
+</body>
+</html>
