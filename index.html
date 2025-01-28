@@ -436,76 +436,274 @@
  
  
     <!-- Form Section -->
-    <section class="form-section bg-white py-10" id="form-area">
-      <div class="container mx-auto max-w-5xl">
-        
-        <h2 class="text-3xl font-bold mb-6 text-center">Bilgi Talep Formu</h2>
-        <div class="flex md:flex-row gap-8">
-          <!-- Görsel Alanı -->
-          <div class="w-screen md:w-1/2 flex justify-center">
-            <img
-              src="src/img/img-13.png"
-              alt="Bilgi Formu Görseli"
-              class="w-full max-w-sm rounded-md shadow-md"
+<!-- 1. Bölüm: Form Alanı -->
+<section id="form-area" class="form-section bg-white py-10">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl font-bold mb-6 text-center">Bilgi Talep Formu</h2>
+    <div class="flex md:flex-row gap-8">
+      <!-- Görsel Alanı -->
+      <div class="w-screen md:w-1/2 flex justify-center">
+        <img
+          src="src/img/img-13.png"
+          alt="Bilgi Formu Görseli"
+          class="w-full max-w-sm rounded-md shadow-md"
+        />
+      </div>
+      <!-- Form Alanı -->
+      <div class="w-full md:w-1/2">
+        <form id="infoForm" class="space-y-6 mt-20">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Ad Soyad:</label>
+            <input
+              type="text"
+              placeholder="Adınız ve Soyadınızı Giriniz"
+              id="name"
+              name="name"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
-
-          <!-- Form Alanı -->
-          <div class="w-full md:w-1/2">
-            <form class="space-y-6 mt-20">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700"
-                  >Adınız</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700"
-                  >E-posta</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700"
-                  >Mesajınız</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-md"
-              >
-                Gönder
-              </button>
-            </form>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">E-posta Adresi:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-posta Adresinizi Giriniz"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
           </div>
-        </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Telefon Numarası:</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Telefon Numaranızı Giriniz"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <button
+            type="button"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-md"
+            onclick="goToPriceStep()"
+          >
+            Devam Et ve Fiyatı Gör
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Bölüm: Fiyatlandırma -->
+<section id="price-area" class="hidden container mx-auto py-10 px-4">
+  <div>
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">
+      Tüm Modüller Tek Fiyat
+    </h2>
+    <p class="mb-4 text-lg font-medium text-gray-700">
+      Değerli Müşterimiz,
+    </p>
+    <p class="mb-4 text-gray-600">
+      Firmanet ERP çözümümüzle işletmenizin tüm süreçlerini tek bir
+      platformda yönetin. Aşağıdaki modüllerle, iş operasyonlarınızı daha
+      verimli hale getirebilirsiniz.
+    </p>
+
+    <p class="mb-4 text-lg font-semibold text-gray-800">
+      Eş Zamanlı Kullanıcı Tanımı:
+    </p>
+    <p class="mb-4 text-gray-600">
+      Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak işlem
+      gerçekleştiren kullanıcı sayısını ifade eder. Kullanıcı sayısını
+      belirlerken, işletmenizdeki kullanıcıların sisteme aynı anda giriş
+      yapma yoğunluğunu göz önünde bulundurabilirsiniz. Sistemi ne kadar
+      yoğun kullanacakları, eş zamanlı kullanıcı sayınızı belirler.
+    </p>
+
+    <p class="mb-4 text-lg font-semibold text-gray-800">
+      Kullanıcı Paketleri ve Fiyatlandırma:
+    </p>
+    <ul class="list-disc pl-6 mb-4 text-gray-600">
+      <li><strong>10 Kullanıcı:</strong> 300.000</li>
+      <li><strong>15 Kullanıcı:</strong> 427.500</li>
+      <li><strong>20 Kullanıcı:</strong> 540.000</li>
+      <li><strong>25 Kullanıcı:</strong> 637.500</li>
+      <li><strong>35 Kullanıcı:</strong> 840.000</li>
+      <li><strong>50 Kullanıcı:</strong> 1.050.000</li>
+    </ul>
+
+    <p class="mb-4 text-gray-600">
+      <strong>Not:</strong> Bu fiyatlar sadece
+      <strong>lisans fiyatlarıdır</strong>. Lisans alımından sonraki bir
+      zamanda kullanıcı eklemek isterseniz en az 5 kullanıcı
+      ekleyebilirsiniz.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">
+      Eğitim ve Uyarlama
+    </h2>
+    <p class="mb-4 text-gray-600">
+      Tüm paketlerde <strong>20 saat eğitim ve uyarlama</strong> hizmeti
+      dahildir. Ancak, işletmenizin ihtiyaçlarına göre
+      <strong>ek eğitim ve uyarlama</strong> hizmetleri de sağlanmaktadır.
+      Bu hizmetler, istediğiniz modüllere göre ve ihtiyacınıza göre
+      ücretlendirilir.
+    </p>
+
+    <p class="mb-4 text-gray-600">
+      <strong>Ekstra Eğitim ve Uyarlama Bedeli:</strong> Eğer daha fazla
+      eğitim ya da özelleştirilmiş uyarlama hizmeti almak isterseniz, bunun
+      için ayrıca fiyatlandırma yapılacaktır. Eğitimin kapsamı ve süresi ile
+      ilgili taleplerinize göre, size özel teklifler sunulacaktır.
+    </p>
+  </div>
+
+  <p class="mb-6 text-lg font-semibold text-gray-800">
+    Fiyat Hesaplama Aracı:
+  </p>
+
+  <div class="mb-6">
+    <div class="flex space-x-4">
+      <select
+        id="userCount"
+        class="border rounded-lg p-3 w-1/2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+        onchange="updateModules(); resetExtraUser()"
+      >
+        <option value="10">10 Kullanıcı</option>
+        <option value="15">15 Kullanıcı</option>
+        <option value="20">20 Kullanıcı</option>
+        <option value="25">25 Kullanıcı</option>
+        <option value="35">35 Kullanıcı</option>
+        <option value="50">50 Kullanıcı</option>
+      </select>
+
+      <select
+        id="sector"
+        class="border rounded-lg p-3 w-1/2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+        onchange="updateModules()"
+      >
+        <option value="general">Genel</option>
+        <option value="lab">Akredite Laboratuvar</option>
+        <option value="realEstate">Emlak</option>
+      </select>
+    </div>
+
+    <div class="mt-4">
+      <label class="flex items-center space-x-2 text-gray-700">
+        <input
+          type="checkbox"
+          id="extraUser"
+          class="rounded focus:ring-2 focus:ring-blue-500"
+          onclick="updatePrice()"
+        />
+        <span>+5 Kullanıcı Ekle</span>
+      </label>
+    </div>
+  </div>
+
+  <table
+    class="w-full border border-collapse mb-6 bg-white rounded-lg shadow-sm"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="4"
+          class="border p-4 text-xl bg-gray-100 text-center font-semibold text-gray-800"
+        >
+          Tüm Modüller Tek Fiyat
+        </th>
+      </tr>
+    </thead>
+    <tbody id="modulesList">
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Ofis Yönetimi</td>
+        <td class="border p-4 text-gray-700">
+          Müşteri İlişkileri Yönetimi (CRM)
+        </td>
+        <td class="border p-4 text-gray-700">Satış Yönetimi</td>
+        <td class="border p-4 text-gray-700">Yardım Masası</td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Araç Yönetimi</td>
+        <td class="border p-4 text-gray-700">Malzeme ve Stok Yönetimi</td>
+        <td class="border p-4 text-gray-700">Tedarik Zinciri Yönetimi</td>
+        <td class="border p-4 text-gray-700">
+          Malzeme İhtiyaç Yönetimi (MRP)
+        </td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Servis Yönetimi</td>
+        <td class="border p-4 text-gray-700">Dokümantasyon Yönetimi</td>
+        <td class="border p-4 text-gray-700">Hukuk Yönetimi</td>
+        <td class="border p-4 text-gray-700">İnsan Kaynakları Yönetimi</td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Ön Muhasebe Yönetimi</td>
+        <td class="border p-4 text-gray-700">Finans Yönetimi</td>
+        <td class="border p-4 text-gray-700">Raporlar ve Dashboard</td>
+        <td class="border p-4 text-gray-700">Proje Yönetimi</td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Üretim Yönetimi</td>
+        <td class="border p-4 text-gray-700">Ar-ge Yönetimi</td>
+        <td class="border p-4 text-gray-700">Bakım/Onarım</td>
+        <td class="border p-4 text-gray-700">Kantar Yönetimi</td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 text-gray-700">Resmi Muhasebe Yönetimi</td>
+        <td class="border p-4 text-gray-700">Demirbaş Yönetimi</td>
+        <td class="border p-4 text-gray-700">Bütçe Yönetimi</td>
+        <td class="border p-4 text-gray-700">Bordro Yönetimi</td>
+      </tr>
+      <tr class="border">
+        <td class="border p-4 font-semibold text-gray-800">
+          Laboratuvar Modülü
+        </td>
+        <td class="border p-4 text-gray-700">Emlak Modülü</td>
+        <td class="border p-4 text-gray-700" colspan="2"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table
+    class="w-full border border-collapse mb-6 bg-white rounded-lg shadow-sm"
+  >
+    <tbody>
+      <tr>
+        <td
+          colspan="4"
+          class="border p-6 text-center text-2xl font-bold text-green-600 bg-gray-50"
+        >
+          <span id="discountPrice">0,00</span> TL
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="4"
+          class="border p-6 text-center text-2xl font-bold text-gray-800"
+        >
+          <span id="totalPrice">0,00</span> TL + KDV
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="text-center">
+    <button
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-md"
+      onclick="goToFormStep()"
+    >
+      Geri Dön
+    </button>
+  </div>
+</section>
 
     <!-- Brand Swiper -->
     <section class="brand-section bg-gray-100 py-10 overflow-hidden" id="brand">
