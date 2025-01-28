@@ -7,6 +7,10 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
+      font-family: "Inter", sans-serif;
+      --theme-color: #4999D5;
+      --color-2: #374151;
+      --white-color: #fff;
     --color-red-50: oklch(0.971 0.013 17.38);
     --color-red-100: oklch(0.936 0.032 17.717);
     --color-red-200: oklch(0.885 0.062 18.334);
@@ -2955,57 +2959,65 @@ section {
   position: absolute;
   clip-path: polygon(48% 23%, 0 0, 100% 0);
 }
+
 .service-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 1rem;
-  padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 1rem; */
+    padding: 1rem 0;
 }
 .service-box span {
-  margin: 1rem 0;
-  font-size: 1rem;
-  font-weight: 600;
+    font-size: 1rem;
+    font-weight: 600;
 }
 .service-box-img {
-  background-color: var(--white-color);
-  border-radius: 5px;
-  padding: 1rem;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 0.8rem 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .demand {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+    z-index: 99;
 }
 .demand.visible {
-  opacity: 1;
+    opacity: 1; 
 }
 .demand-btn {
-  top: 1px;
-  transform: rotate(270deg);
-  background-color: red;
-  padding: 1rem 2rem;
-  right: -57px;
-  color: white;
+    top: 1px;
+    transform: rotate(270deg);
+    background-color: red;
+    padding: 1rem 2rem;
+    right: -57px;
+    color: white;
 }
 .section.brand-section {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .smarter {
-  margin-left: 4rem;
+    margin-left: 4rem;
 }
 .smarter h4 {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
+
+
 .banner-bg {
-  background-image: url(https://martexreact.jthemes.net/_next/static/media/bg-04.4423825d.jpg);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
+    background-image: url(../src/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
 }
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
