@@ -201,12 +201,25 @@ function resetExtraUser() {
 window.onload = updateModules;
 
 // Step İşlemleri (Form -> Fiyatlandırma)
+// 1. Aşama: Formun ilk aşaması tamamlandığında event ve kullanıcı bilgileri gönder
 function goToPriceStep() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
 
+  // Kullanıcı bilgilerini kontrol et
   if (name && email && phone) {
+    // İlk event dataLayer'a gönder
+    dataLayer.push({
+      event: "success1", // Event adı
+      user: {
+        name: name, // Kullanıcı adı
+        email: email, // Kullanıcı e-posta adresi
+        phone: phone, // Kullanıcı telefon numarası
+      },
+    });
+
+    // Formu gizle, fiyatlandırmayı göster
     document.getElementById("form-area").classList.add("hidden");
     document.getElementById("price-area").classList.remove("hidden");
   } else {
@@ -214,7 +227,51 @@ function goToPriceStep() {
   }
 }
 
-function goToFormStep() {
-  document.getElementById("price-area").classList.add("hidden");
-  document.getElementById("form-area").classList.remove("hidden");
+// dataLayer kontrolü (Google Tag Manager için)
+window.dataLayer = window.dataLayer || [];
+
+// 1. Aşama: Formun tamamlanması ve ilk event'in gönderilmesi
+function goToPriceStep() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+  if (name && email && phone) {
+    // İlk event'i dataLayer'a gönder
+    dataLayer.push({
+      event: "success1", // Event adı
+      user: {
+        name: name, // Kullanıcı adı
+        email: email, // Kullanıcı e-posta adresi
+        phone: phone, // Kullanıcı telefon numarası
+      },
+    });
+
+    // Form alanını gizle, fiyatlandırma alanını göster
+    document.getElementById("form-area").classList.add("hidden");
+    document.getElementById("price-area").classList.remove("hidden");
+  } else {
+    alert("Lütfen tüm alanları doldurun!");
+  }
 }
+
+// 2. Aşama: Fiyatlandırma onayı ve ikinci event'in gönderilmesi
+function submitSecondStep() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+  // İkinci event'i dataLayer'a gönder
+  dataLayer.push({
+    event: "success2", // Event adı
+    user: {
+      name: name, // Kullanıcı adı
+      email: email, // Kullanıcı e-posta adresi
+      phone: phone, // Kullanıcı telefon numarası
+    },
+  });
+
+  // Onay mesajı göster
+  alert("Bilgileriniz başarıyla gönderildi! Ekibimiz sizinle iletişime geçecektir.");
+}
+
