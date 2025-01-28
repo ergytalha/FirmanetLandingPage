@@ -1,3 +1,14 @@
+const navbar = document.querySelector('#header');
+
+window.addEventListener('scroll', () => { 
+  if (window.scrollY > 0) {
+    navbar.classList.add('nav-bg');
+  } else {
+    navbar.classList.remove('nav-bg');
+  }
+
+} )
+
 window.addEventListener("scroll", function () {
     const demand = document.getElementById("demand");
     if (window.scrollY > 0) {

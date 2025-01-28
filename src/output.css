@@ -2932,9 +2932,18 @@ section {
 .swiper-slide {
   flex-shrink: 0;
 }
+#header {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+.nav-bg {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .nav-li {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--color-2);
 }
 .header-btn {
