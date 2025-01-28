@@ -1,13 +1,41 @@
 const navbar = document.querySelector('#header');
+const logo = document.querySelectorAll('.logo-white');
+const logoBlack = document.querySelectorAll('.logo-black');
 
-window.addEventListener('scroll', () => { 
+const button = document.querySelector('a[href="#hidden-section"]');
+const hiddenSection = document.querySelector('#hidden-section');
+
+
+logoBlack.forEach(logoBlack => {
+  logoBlack.classList.add('hidden');
+});
+
+window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     navbar.classList.add('nav-bg');
+    logo.forEach(logo => {
+      logo.classList.add('hidden');
+    });
+    logoBlack.forEach(logoBlack => {
+      logoBlack.classList.remove('hidden');
+    });
   } else {
     navbar.classList.remove('nav-bg');
+    logo.forEach(logo => {
+      logo.classList.remove('hidden');
+    });
+    logoBlack.forEach(logoBlack => {
+      logoBlack.classList.add('hidden');
+    });
   }
+});
 
-} )
+
+button.addEventListener('click', (e) => {
+  e.preventDefault(); 
+  hiddenSection.classList.remove('hidden'); 
+  hiddenSection.scrollIntoView({ behavior: 'smooth' }); 
+});
 
 window.addEventListener("scroll", function () {
     const demand = document.getElementById("demand");
@@ -161,3 +189,7 @@ const swiper = new Swiper(".swiper-container", {
   // İlk yüklemede modülleri güncelle
   window.onload = updateModules;
   
+
+  for (const link of links) {
+    link.addEventListener('click', focusSection);
+}
