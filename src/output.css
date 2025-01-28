@@ -2959,7 +2959,9 @@ section {
   position: absolute;
   clip-path: polygon(48% 23%, 0 0, 100% 0);
 }
-
+.hero-section {
+  padding: 8rem 0 !important;
+}
 .service-box {
     display: flex;
     align-items: center;
