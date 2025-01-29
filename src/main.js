@@ -97,8 +97,10 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
     }
   });
 });
+// ✅ Google Tag Manager için dataLayer tanımlandı
+window.dataLayer = window.dataLayer || [];
 
-// Fiyatlandırma İşlemleri
+// ✅ Kullanıcı sayısı baz fiyatları
 const basePrice = {
   10: 300000,
   15: 427500,
@@ -108,42 +110,99 @@ const basePrice = {
   50: 1050000,
 };
 
+// ✅ Modül verileri
 const modulesData = {
   general: [
-    "Ofis Yönetimi",
-    "Müşteri İlişkileri Yönetimi (CRM)",
-    "Satış Yönetimi",
-    "Yardım Masası",
-    "Araç Yönetimi",
-    "Malzeme ve Stok Yönetimi",
-    "Tedarik Zinciri Yönetimi",
-    "Malzeme İhtiyaç Yönetimi (MRP)",
-    "Servis Yönetimi",
-    "Dokümantasyon Yönetimi",
-    "Hukuk Yönetimi",
-    "İnsan Kaynakları Yönetimi",
-    "Ön Muhasebe Yönetimi",
-    "Finans Yönetimi",
-    "Raporlar ve Dashboard",
-    "Proje Yönetimi",
-    "Üretim Yönetimi",
-    "Ar-ge Yönetimi",
-    "Bakım/Onarım",
-    "Kantar Yönetimi",
-    "Resmi Muhasebe Yönetimi",
-    "Demirbaş Yönetimi",
-    "Bütçe Yönetimi",
-    "Bordro Yönetimi",
+    "Ofis Yönetimi", "Müşteri İlişkileri Yönetimi (CRM)", "Satış Yönetimi",
+    "Yardım Masası", "Araç Yönetimi", "Malzeme ve Stok Yönetimi",
+    "Tedarik Zinciri Yönetimi", "Malzeme İhtiyaç Yönetimi (MRP)", 
+    "Servis Yönetimi", "Dokümantasyon Yönetimi", "Hukuk Yönetimi",
+    "İnsan Kaynakları Yönetimi", "Ön Muhasebe Yönetimi", "Finans Yönetimi",
+    "Raporlar ve Dashboard", "Proje Yönetimi", "Üretim Yönetimi",
+    "Ar-ge Yönetimi", "Bakım/Onarım", "Kantar Yönetimi",
+    "Resmi Muhasebe Yönetimi", "Demirbaş Yönetimi", "Bütçe Yönetimi",
+    "Bordro Yönetimi"
   ],
   lab: ["Laboratuvar Modülü"],
   realEstate: ["Emlak Modülü"],
 };
 
-function updateModules() {
+// ✅ Fiyat hesaplama fonksiyonu
+function calculatePrice() {
+  const userCountElement = document.getElementById("priceUserCount");
+  const priceElement = document.getElementById("totalPrice");
+
+  if (!userCountElement || !priceElement) {
+    console.error("Fiyat hesaplama için gerekli HTML elemanları bulunamadı!");
+    return;
+  }
+
+  const userCount = userCountElement.value;
+  let price = basePrice[userCount] || 0;
+
+  priceElement.textContent = `₺${price.toLocaleString()}`;
+}
+
+// ✅ Formdan fiyatlandırmaya geçiş
+function goToPriceStep() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
   const userCount = document.getElementById("userCount").value;
   const sector = document.getElementById("sector").value;
-  const price = basePrice[userCount];
-  const modules = [...modulesData.general];
+
+  if (name && email && phone) {
+    // 📌 GTM Event Gönderimi
+    dataLayer.push({
+      event: "success1",
+      user: { name, email, phone, userCount, sector },
+    });
+
+    // 📌 Formu gizle, fiyatlandırmayı göster
+    document.getElementById("form-area").classList.add("hidden");
+
+    const priceArea = document.getElementById("price-area");
+    if (priceArea) {
+      priceArea.classList.remove("hidden");
+      console.log("✅ Fiyatlandırma alanı açıldı!");
+    } else {
+      console.error("❌ Fiyatlandırma alanı bulunamadı!");
+    }
+
+    // 📌 Kullanıcı sayısını güncelle
+    const priceUserCountElement = document.getElementById("priceUserCount");
+    if (priceUserCountElement) {
+      priceUserCountElement.value = userCount;
+      calculatePrice(); // 📌 Fiyatı hesapla
+    } else {
+      console.error("❌ Kullanıcı sayısı seçimi alanı bulunamadı!");
+    }
+  } else {
+    alert("Lütfen tüm alanları doldurun!");
+  }
+}
+
+// ✅ Fiyatlandırmayı onaylama (teklif gönderme)
+function submitSecondStep() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const userCount = document.getElementById("priceUserCount").value;
+  const sector = document.getElementById("sector").value;
+
+  // 📌 GTM Event Gönderimi
+  dataLayer.push({
+    event: "success2",
+    user: { name, email, phone, userCount, sector },
+  });
+
+  alert("Bilgileriniz başarıyla gönderildi! Ekibimiz sizinle iletişime geçecektir.");
+}
+
+// ✅ Modül listesini güncelleme
+function updateModules() {
+  const sector = document.getElementById("sector").value;
+  let modules = [...modulesData.general];
 
   if (sector === "lab") {
     modules.unshift("Laboratuvar Modülü");
@@ -152,6 +211,11 @@ function updateModules() {
   }
 
   const moduleContainer = document.getElementById("modulesList");
+  if (!moduleContainer) {
+    console.error("❌ Modül listesi bulunamadı!");
+    return;
+  }
+
   moduleContainer.innerHTML = "";
   let count = 0;
   let row = "<tr>";
@@ -168,110 +232,7 @@ function updateModules() {
 
   row += "</tr>";
   moduleContainer.innerHTML = row;
-
-  let grossPrice =
-    (parseInt(userCount) +
-      (document.getElementById("extraUser").checked ? 5 : 0)) *
-    30000 *
-    1.25;
-
-  document.getElementById("discountPrice").textContent =
-    grossPrice.toLocaleString();
-  document.getElementById("totalPrice").textContent = price.toLocaleString();
 }
 
-function updatePrice() {
-  const extraUser = document.getElementById("extraUser").checked;
-  let userCount = parseInt(document.getElementById("userCount").value);
-  let totalPrice = basePrice[userCount];
-
-  if (extraUser) {
-    totalPrice += 135000;
-  }
-  document.getElementById(
-    "totalPrice"
-  ).textContent = `${totalPrice.toLocaleString()}`;
-}
-
-function resetExtraUser() {
-  document.getElementById("extraUser").checked = false;
-  updatePrice();
-}
-
+// ✅ Sayfa yüklendiğinde modülleri güncelle
 window.onload = updateModules;
-
-// Step İşlemleri (Form -> Fiyatlandırma)
-// 1. Aşama: Formun ilk aşaması tamamlandığında event ve kullanıcı bilgileri gönder
-function goToPriceStep() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-
-  // Kullanıcı bilgilerini kontrol et
-  if (name && email && phone) {
-    // İlk event dataLayer'a gönder
-    dataLayer.push({
-      event: "success1", // Event adı
-      user: {
-        name: name, // Kullanıcı adı
-        email: email, // Kullanıcı e-posta adresi
-        phone: phone, // Kullanıcı telefon numarası
-      },
-    });
-
-    // Formu gizle, fiyatlandırmayı göster
-    document.getElementById("form-area").classList.add("hidden");
-    document.getElementById("price-area").classList.remove("hidden");
-  } else {
-    alert("Lütfen tüm alanları doldurun!");
-  }
-}
-
-// dataLayer kontrolü (Google Tag Manager için)
-window.dataLayer = window.dataLayer || [];
-
-// 1. Aşama: Formun tamamlanması ve ilk event'in gönderilmesi
-function goToPriceStep() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-
-  if (name && email && phone) {
-    // İlk event'i dataLayer'a gönder
-    dataLayer.push({
-      event: "success1", // Event adı
-      user: {
-        name: name, // Kullanıcı adı
-        email: email, // Kullanıcı e-posta adresi
-        phone: phone, // Kullanıcı telefon numarası
-      },
-    });
-
-    // Form alanını gizle, fiyatlandırma alanını göster
-    document.getElementById("form-area").classList.add("hidden");
-    document.getElementById("price-area").classList.remove("hidden");
-  } else {
-    alert("Lütfen tüm alanları doldurun!");
-  }
-}
-
-// 2. Aşama: Fiyatlandırma onayı ve ikinci event'in gönderilmesi
-function submitSecondStep() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-
-  // İkinci event'i dataLayer'a gönder
-  dataLayer.push({
-    event: "success2", // Event adı
-    user: {
-      name: name, // Kullanıcı adı
-      email: email, // Kullanıcı e-posta adresi
-      phone: phone, // Kullanıcı telefon numarası
-    },
-  });
-
-  // Onay mesajı göster
-  alert("Bilgileriniz başarıyla gönderildi! Ekibimiz sizinle iletişime geçecektir.");
-}
-

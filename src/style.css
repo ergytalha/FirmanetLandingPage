@@ -354,6 +354,33 @@ section {
     background-repeat: no-repeat;
     margin-top: 5px; /* h1 ile çizgi arasındaki mesafe */
 }
-.module-head h1 , h3 {
+.module-head {
     color: #4a9ad5;
+}
+
+.price-content {
+    display: flex;
+    background-color: #eef2fb;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.module-2-bottom {
+    position: relative;
+    top: -7rem;
+}
+
+.icon-info {
+    background-color: #7846FF;
+    color: white;
+    border-radius: 50%;
+    max-height: fit-content;
+    width: 80px;
+}
+
+.icon-info img {
+    width: -webkit-fill-available;
+    margin: 7px 0;
 }
