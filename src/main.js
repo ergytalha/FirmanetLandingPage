@@ -1,4 +1,4 @@
-// Navbar ve Logo İşlemleri
+// ✅ Navbar ve Logo İşlemleri
 const navbar = document.querySelector("#header");
 const logo = document.querySelectorAll(".logo-white");
 const logoBlack = document.querySelectorAll(".logo-black");
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Gizli Bölüm (Hidden Section) İşlemleri
+// ✅ Gizli Bölüm (Hidden Section) İşlemleri
 const button = document.querySelector('a[href="#hidden-section"]');
 const hiddenSection = document.querySelector("#hidden-section");
 
@@ -37,17 +37,7 @@ button.addEventListener("click", (e) => {
   hiddenSection.scrollIntoView({ behavior: "smooth" });
 });
 
-// Scroll İşlemleri
-window.addEventListener("scroll", () => {
-  const demand = document.getElementById("demand");
-  if (window.scrollY > 0) {
-    demand.classList.add("visible");
-  } else {
-    demand.classList.remove("visible");
-  }
-});
-
-// Swiper Ayarları
+// ✅ Swiper Ayarları
 const swiper = new Swiper(".swiper-container", {
   loop: true,
   autoplay: {
@@ -60,22 +50,13 @@ const swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-    },
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 20,
-    },
+    640: { slidesPerView: 2, spaceBetween: 10 },
+    768: { slidesPerView: 3, spaceBetween: 15 },
+    1024: { slidesPerView: 5, spaceBetween: 20 },
   },
 });
 
-// Akordeon İşlemleri
+// ✅ Akordeon İşlemleri
 document.querySelectorAll(".accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const target = document.querySelector(header.dataset.target);
@@ -97,6 +78,7 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
     }
   });
 });
+
 // ✅ Google Tag Manager için dataLayer tanımlandı
 window.dataLayer = window.dataLayer || [];
 
@@ -112,19 +94,8 @@ const basePrice = {
 
 // ✅ Modül verileri
 const modulesData = {
-  general: [
-    "Ofis Yönetimi", "Müşteri İlişkileri Yönetimi (CRM)", "Satış Yönetimi",
-    "Yardım Masası", "Araç Yönetimi", "Malzeme ve Stok Yönetimi",
-    "Tedarik Zinciri Yönetimi", "Malzeme İhtiyaç Yönetimi (MRP)", 
-    "Servis Yönetimi", "Dokümantasyon Yönetimi", "Hukuk Yönetimi",
-    "İnsan Kaynakları Yönetimi", "Ön Muhasebe Yönetimi", "Finans Yönetimi",
-    "Raporlar ve Dashboard", "Proje Yönetimi", "Üretim Yönetimi",
-    "Ar-ge Yönetimi", "Bakım/Onarım", "Kantar Yönetimi",
-    "Resmi Muhasebe Yönetimi", "Demirbaş Yönetimi", "Bütçe Yönetimi",
-    "Bordro Yönetimi"
-  ],
-  lab: ["Laboratuvar Modülü"],
-  realEstate: ["Emlak Modülü"],
+  lab: "Laboratuvar Modülü",
+  realEstate: "Emlak Modülü",
 };
 
 // ✅ Fiyat hesaplama fonksiyonu
@@ -150,6 +121,7 @@ function goToPriceStep() {
   const phone = document.getElementById("phone").value.trim();
   const userCount = document.getElementById("userCount").value;
   const sector = document.getElementById("sector").value;
+  const moduleListContainer = document.getElementById("module-list");
 
   if (name && email && phone) {
     // 📌 GTM Event Gönderimi
@@ -161,12 +133,22 @@ function goToPriceStep() {
     // 📌 Formu gizle, fiyatlandırmayı göster
     document.getElementById("form-area").classList.add("hidden");
 
+    document.querySelectorAll(".dynamic-module").forEach((el) => el.remove());
+
+    if (sector === "lab" || sector === "realEstate") {
+      const dynamicModule = `
+        <div class="text-gray-700 font-bold flex items-center dynamic-module">
+          <span class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+          <span class="ml-2 text-sm">${modulesData[sector]}</span>
+        </div>
+      `;
+      moduleListContainer.insertAdjacentHTML("afterbegin", dynamicModule);
+    }
+  
+
     const priceArea = document.getElementById("price-area");
     if (priceArea) {
       priceArea.classList.remove("hidden");
-      console.log("✅ Fiyatlandırma alanı açıldı!");
-    } else {
-      console.error("❌ Fiyatlandırma alanı bulunamadı!");
     }
 
     // 📌 Kullanıcı sayısını güncelle
@@ -174,8 +156,6 @@ function goToPriceStep() {
     if (priceUserCountElement) {
       priceUserCountElement.value = userCount;
       calculatePrice(); // 📌 Fiyatı hesapla
-    } else {
-      console.error("❌ Kullanıcı sayısı seçimi alanı bulunamadı!");
     }
   } else {
     alert("Lütfen tüm alanları doldurun!");
@@ -199,40 +179,7 @@ function submitSecondStep() {
   alert("Bilgileriniz başarıyla gönderildi! Ekibimiz sizinle iletişime geçecektir.");
 }
 
-// ✅ Modül listesini güncelleme
-function updateModules() {
-  const sector = document.getElementById("sector").value;
-  let modules = [...modulesData.general];
 
-  if (sector === "lab") {
-    modules.unshift("Laboratuvar Modülü");
-  } else if (sector === "realEstate") {
-    modules.unshift("Emlak Modülü");
-  }
 
-  const moduleContainer = document.getElementById("modulesList");
-  if (!moduleContainer) {
-    console.error("❌ Modül listesi bulunamadı!");
-    return;
-  }
-
-  moduleContainer.innerHTML = "";
-  let count = 0;
-  let row = "<tr>";
-
-  modules.forEach((module) => {
-    if (count < 4) {
-      row += `<td class="border p-4 text-gray-700">${module}</td>`;
-      count++;
-    } else {
-      row += `</tr><tr><td class="border p-4 text-gray-700">${module}</td>`;
-      count = 1;
-    }
-  });
-
-  row += "</tr>";
-  moduleContainer.innerHTML = row;
-}
-
-// ✅ Sayfa yüklendiğinde modülleri güncelle
+// Sayfa yüklendiğinde modülleri güncelle
 window.onload = updateModules;
