@@ -110,8 +110,8 @@ section {
 .service {
     background-color: #F3F4F6 !important;
     position: relative;
-    border-top-left-radius: 42%;
-    border-top-right-radius: 42%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
     margin-top: 15rem;
 }
 
@@ -150,15 +150,18 @@ section {
 }
 
 .service-box span {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
 }
 
 .service-box-img {
     background-color: var(--white-color);
-    border-radius: 5px;
-    padding: 0.8rem 3rem;
-    display: flex;
+    border-radius: 16px;
+    padding: 0.5rem 3.8rem;
+    display: flex
+;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -320,4 +323,37 @@ section {
     font-size: 1rem;
     color: #6B7280;
     margin-bottom: 1rem;
+}
+.platform-box {
+    border: 1px solid #cacaca;
+    border-radius: 38px;
+}
+
+.erp-head {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -51px;
+    top: 50%;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(178, 178, 178); /* Siyah dış çizgi */
+    font-size: 2.5rem;
+}
+.yellows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.yellows::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 20px; /* Çizginin yüksekliği */
+    background-image: url(../src/img/indir.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 5px; /* h1 ile çizgi arasındaki mesafe */
+}
+.module-head h1 , h3 {
+    color: #4a9ad5;
 }
