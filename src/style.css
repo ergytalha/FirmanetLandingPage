@@ -124,7 +124,7 @@ section {
 }
 
 .hero-section {
-    padding: 8rem 18rem !important;
+    padding: 12rem 18rem !important;
 }
 
 .hero-section::after {
@@ -285,6 +285,9 @@ section {
     width: 32%;
     z-index: -1;
 }
+.module-section {
+    background-color: #FFFFFF;
+}
 
 .module {
     display: flex;
@@ -295,11 +298,10 @@ section {
 }
 
 .module-content {
-    margin-top: 30px;
-    text-align: center;
-    background-color: #fff;
+    text-align: start;
+    background-color: #F9FAFB;
     border-radius: 7px;
-    padding: 30px 54px;
+    padding: 30px 8px;
     transition: all 0.4s;
 }
 
@@ -422,4 +424,121 @@ section {
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: center;
+}
+
+
+.slider-bottom .mouse-cont {
+    cursor: pointer;
+    margin-right: 17px;
+}
+.slider-bottom .mouse-cont {
+    cursor: pointer;
+    float: inherit;
+    position: relative;
+    top: 50px;
+}
+.slider-bottom .oklar {
+    position: relative;
+    margin-bottom: 6px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    animation-name: mouseArrow;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.button-scroll {
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 13px);
+    width: 26px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    left: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button-scroll span {
+    height: 10px;
+    width: 2px;
+    position: absolute;
+    left: calc(50% - 1px);
+    background: #fff;
+    -webkit-animation: scroll 1s infinite;
+    -moz-animation: scroll 1s infinite;
+    animation: scroll 1s infinite;
+}
+
+
+@keyframes scroll {
+    0% {
+        top: 50%;
+    }
+
+    25% {
+        top: 55%;
+    }
+
+    50% {
+        top: 60%;
+    }
+
+    75% {
+        top: 55%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        top: 50%;
+    }
+
+    25% {
+        top: 55%;
+    }
+
+    50% {
+        top: 60%;
+    }
+
+    75% {
+        top: 55%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@-moz-keyframes scroll {
+    0% {
+        top: 50%;
+    }
+
+    25% {
+        top: 55%;
+    }
+
+    50% {
+        top: 60%;
+    }
+
+    75% {
+        top: 55%;
+    }
+
+    100% {
+        top: 50%;
+    }
 }

@@ -32,17 +32,22 @@ window.addEventListener("scroll", () => {
 // Scroll Section Highlight
 var focusSectionLink = function (event) {
   for (const link of links) {
-      var id = link.hash.slice(1);
-      var section = document.getElementById(id);
-      var position = window.scrollY + (window.innerHeight / 1);
+    var id = link.hash.slice(1);
+    var section = document.getElementById(id);
 
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-          link.ariaCurrent = 'page';
-          link.classList.add('active');
-      } else {
-          link.ariaCurrent = null;
-          link.classList.remove('active');
-      }
+    if (!section) {
+      console.warn(`Section ${id} bulunamadı.`);
+      continue; // Section yoksa atla
+    }
+
+    var position = window.scrollY + (window.innerHeight / 1);
+    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      link.ariaCurrent = 'page';
+      link.classList.add('active');
+    } else {
+      link.ariaCurrent = null;
+      link.classList.remove('active');
+    }
   }
 };
 
@@ -63,17 +68,16 @@ window.addEventListener('scroll', focusSectionLink);
 for (const link of links) {
   link.addEventListener('click', focusSection);
 }
-
-// ✅ Gizli Bölüm (Hidden Section) İşlemleri
 const button = document.querySelector('a[href="#hidden-section"]');
-const hiddenSection = document.querySelector("#hidden-section");
-
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  hiddenSection.classList.remove("hidden");
-  hiddenSection.scrollIntoView({ behavior: "smooth" });
-});
-
+if (button) {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    hiddenSection.classList.remove("hidden");
+    hiddenSection.scrollIntoView({ behavior: "smooth" });
+  });
+} else {
+  console.error("Button bulunamadı!");
+}
 // ✅ Swiper Ayarları
 const swiper = new Swiper(".swiper-container", {
   loop: true,
@@ -118,6 +122,7 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 
 // ✅ Google Tag Manager için dataLayer tanımlandı
 window.dataLayer = window.dataLayer || [];
+
 
 // ✅ Kullanıcı sayısı baz fiyatları
 const basePrice = {
@@ -213,9 +218,16 @@ function submitSecondStep() {
     user: { name, email, phone, userCount, sector },
   });
 
-  alert("Bilgileriniz başarıyla gönderildi! Ekibimiz sizinle iletişime geçecektir.");
-}
+  // 📌 Bilgilendirme mesajını göster
+  const confirmationMessage = document.getElementById("confirmationMessage");
+  if (confirmationMessage) {
+    confirmationMessage.classList.remove("hidden"); // Mesajı görünür yap
+  }
 
+  // 📌 Formu ve fiyat bölümünü gizle
+  document.getElementById("form-area").classList.add("hidden");
+  document.getElementById("price-area").classList.add("hidden");
+}
 
 
 // Sayfa yüklendiğinde modülleri güncelle

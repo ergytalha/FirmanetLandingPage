@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #4999d5;
+      }
+
+      .st1 {
+        fill: #242d3c;
+      }
+
+      .st2 {
+        fill: #0054a1;
+      }
+    </style>
+  </defs>
+  <polygon class="st1" points="740.9 982 62.8 982 62.8 126.1 740.9 126.1 740.9 216.3 704.8 216.3 704.8 162.2 98.9 162.2 98.9 946 704.8 946 704.8 891.9 740.9 891.9 740.9 982"/>
+  <path class="st1" d="M740.9,162.2H62.8V18h678.1v144.2ZM98.9,126.1h606V54H98.9v72.1Z"/>
+  <rect class="st1" x="152.9" y="72.1" width="36.1" height="36.1"/>
+  <rect class="st1" x="225.1" y="72.1" width="36.1" height="36.1"/>
+  <rect class="st1" x="297.2" y="72.1" width="36.1" height="36.1"/>
+  <rect class="st0" x="152.9" y="216.3" width="142.2" height="142.2"/>
+  <rect class="st0" x="152.9" y="394.1" width="142.2" height="142.2"/>
+  <rect class="st0" x="152.9" y="571.9" width="142.2" height="142.2"/>
+  <rect class="st0" x="152.9" y="749.6" width="142.2" height="142.2"/>
+  <rect class="st0" x="330.7" y="216.3" width="142.2" height="142.2"/>
+  <rect class="st0" x="330.7" y="394.1" width="142.2" height="142.2"/>
+  <rect class="st0" x="330.7" y="571.9" width="142.2" height="142.2"/>
+  <rect class="st0" x="330.7" y="749.6" width="142.2" height="142.2"/>
+  <path class="st1" d="M508.5,216.3v142.2h142.2v-142.2h-142.2ZM614.7,322.5h-70.1v-70.1h70.1v70.1Z"/>
+  <path class="st1" d="M508.5,394.1v142.2h142.2v-142.2h-142.2ZM614.7,500.3h-70.1v-70.1h70.1v70.1Z"/>
+  <rect class="st0" x="508.5" y="571.9" width="142.2" height="142.2"/>
+  <rect class="st0" x="508.5" y="749.6" width="142.2" height="142.2"/>
+  <rect class="st2" x="795" y="216.3" width="142.2" height="142.2"/>
+  <rect class="st2" x="795" y="394.1" width="142.2" height="142.2"/>
+  <path class="st1" d="M795,571.9v142.2h142.2v-142.2h-142.2ZM901.1,678h-70.1v-70.1h70.1v70.1Z"/>
+  <path class="st1" d="M795,749.6v142.2h142.2v-142.2h-142.2ZM901.1,855.8h-70.1v-70.1h70.1v70.1Z"/>
+  <rect class="st1" x="679.6" y="269.4" width="86.5" height="36.1"/>
+  <rect class="st1" x="679.6" y="447.2" width="86.5" height="36.1"/>
+  <rect class="st1" x="679.6" y="624.9" width="86.5" height="36.1"/>
+  <rect class="st1" x="679.6" y="802.7" width="86.5" height="36.1"/>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #4999d5;
+      }
+
+      .st1 {
+        fill: #242d3c;
+      }
+
+      .st2 {
+        fill: #0054a1;
+      }
+    </style>
+  </defs>
+  <rect class="st1" x="482.3" y="38.7" width="35.5" height="122.4"/>
+  <rect class="st1" x="482.3" y="317.3" width="35.5" height="502.1"/>
+  <path class="st1" d="M659.7,908.1h-319.4v-106.4h319.4v106.4ZM375.8,872.6h248.4v-35.5h-248.4v35.5Z"/>
+  <path class="st1" d="M730.7,979h-461.3v-106.4h461.3v106.4ZM304.8,943.6h390.3v-35.5h-390.3v35.5Z"/>
+  <path class="st1" d="M500,335c-52.8,0-95.8-43-95.8-95.8s43-95.8,95.8-95.8,95.8,43,95.8,95.8-43,95.8-95.8,95.8ZM500,178.9c-33.3,0-60.3,27.1-60.3,60.3s27.1,60.3,60.3,60.3,60.3-27.1,60.3-60.3-27.1-60.3-60.3-60.3Z"/>
+  <path class="st2" d="M531.9,239.2c0,17.6-14.3,31.9-31.9,31.9s-31.9-14.3-31.9-31.9,14.3-31.9,31.9-31.9,31.9,14.3,31.9,31.9Z"/>
+  <rect class="st1" x="673.1" y="170.8" width="35.5" height="239.1" transform="translate(231.5 882.5) rotate(-75)"/>
+  <rect class="st1" x="291.4" y="68.5" width="35.5" height="239.1" transform="translate(47.5 438) rotate(-75)"/>
+  <rect class="st1" x="220.4" y="151" width="35.5" height="331.5" transform="translate(-76.1 75.3) rotate(-15.5)"/>
+  <rect class="st1" x="-16.3" y="299" width="331.5" height="35.5" transform="translate(-195.8 375.9) rotate(-74.5)"/>
+  <path class="st0" d="M44.7,464c0,82.3,66.7,149,149,149s149-66.7,149-149H44.7Z"/>
+  <rect class="st1" x="176" y="99.6" width="35.5" height="57.5"/>
+  <rect class="st1" x="832.9" y="315.2" width="35.5" height="331.4" transform="translate(-97.7 245.2) rotate(-15.5)"/>
+  <rect class="st1" x="596.2" y="463.2" width="331.5" height="35.5" transform="translate(94.5 1086.2) rotate(-74.5)"/>
+  <path class="st0" d="M657.2,628.2c0,82.3,66.7,149,149,149s149-66.7,149-149h-298.1Z"/>
+  <rect class="st1" x="788.5" y="263.8" width="35.5" height="57.5"/>
+  <rect class="st1" x="429" y="21" width="141.9" height="35.5"/>
+</svg>
