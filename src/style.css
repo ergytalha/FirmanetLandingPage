@@ -174,21 +174,24 @@ section {
     bottom: 20px;
     right: 20px;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease-in-out;
     z-index: 99;
 }
 
 .demand.visible {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .demand-btn {
-    top: 1px;
     transform: rotate(270deg);
-    background-color: red;
+    background-color: #2b7fff;
     padding: 1rem 2rem;
-    right: -57px;
     color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .section.brand-section {

@@ -3,7 +3,15 @@ const navbar = document.querySelector("#header");
 const logo = document.querySelectorAll(".logo-white");
 const logoBlack = document.querySelectorAll(".logo-black");
 const links = document.getElementsByClassName('scrool');
+const demandButton = document.getElementById("demand");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    demandButton.classList.add("visible");
+  } else {
+    demandButton.classList.remove("visible");
+  }
+});
 logoBlack.forEach((logoBlack) => {
   logoBlack.classList.add("hidden");
 });
