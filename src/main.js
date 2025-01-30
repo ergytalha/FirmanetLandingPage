@@ -2,6 +2,7 @@
 const navbar = document.querySelector("#header");
 const logo = document.querySelectorAll(".logo-white");
 const logoBlack = document.querySelectorAll(".logo-black");
+const links = document.getElementsByClassName('scrool');
 
 logoBlack.forEach((logoBlack) => {
   logoBlack.classList.add("hidden");
@@ -26,6 +27,42 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+
+// Scroll Section Highlight
+var focusSectionLink = function (event) {
+  for (const link of links) {
+      var id = link.hash.slice(1);
+      var section = document.getElementById(id);
+      var position = window.scrollY + (window.innerHeight / 1);
+
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+          link.ariaCurrent = 'page';
+          link.classList.add('active');
+      } else {
+          link.ariaCurrent = null;
+          link.classList.remove('active');
+      }
+  }
+};
+
+var focusSection = function (event) {
+  event.preventDefault();
+  var id = event.target.hash.slice(1);
+  var section = document.getElementById(id);
+  if (section) {
+      window.scrollTo({
+          top: section.offsetTop - navbar.offsetHeight,
+          behavior: 'smooth'
+      });
+  }
+};
+
+window.addEventListener('scroll', focusSectionLink);
+
+for (const link of links) {
+  link.addEventListener('click', focusSection);
+}
 
 // ✅ Gizli Bölüm (Hidden Section) İşlemleri
 const button = document.querySelector('a[href="#hidden-section"]');

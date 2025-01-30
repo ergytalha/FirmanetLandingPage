@@ -390,3 +390,36 @@ section {
 .module-icon-head {
     margin-bottom: -25px;
 }
+
+.icon-box-set {
+    display: flex
+    ;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.box-img {
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border: 0 solid color-mix(in srgb, currentColor 15%, transparent);
+    border-radius: 0.25rem;
+
+    height: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: .1s ease;
+    margin-bottom: 1rem;
+}
+.icon-box-content {
+    margin-bottom: 10px;
+}
+
+
+.icon-box-content span {
+    color: #111827 !important;
+    font-size: 1em;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
