@@ -1,549 +1,509 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Family CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" crossorigin href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" crossorigin href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
 
-    <link rel="stylesheet" href="src/vendor/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="src/aos/aos.css" />
-    <link href="./src/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./src/style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="src/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/aos/aos.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+    <!-- Demand Section -->
     <div class="demand" id="demand">
-      <a class="demand-btn" href="#price">Fiyat İste</a>
+        <a class="demand-btn" href="#price">Fiyat İste</a>
     </div>
+
+    <!-- Header Section -->
     <header class="p-5" id="header">
-      <nav class="flex justify-evenly items-center">
-        <div>
-          <a href="#"><img
-              class="w-50 logo-white"
-              src="src/img/firmanet_logo.svg"
-              alt /></a>
-          <a href="#"><img
-              class="w-40 logo-black"
-              src="src/img/firmanet_logo.png"
-              alt /></a>
-        </div>
-        <ul class="flex gap-6">
-          <li class="nav-li"><a class="scrool" href="#module">Uygulamalar</a></li>
-          <li class="nav-li"><a class="scrool" href="#features">Özellikler</a></li>
-          <li class="nav-li"><a class="scrool" href="#brand">Referanslar</a></li>
-          <li class="nav-li"><a class="scrool" href="#">İletişim</a></li>
-        </ul>
-        <div>
-          <a
-            href="#form-area"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded">
-            Hemen başlayın
-          </a>
-        </div>
-      </nav>
-    </header>
-    <section class="hero-section mx-auto flex justify-evenly py-10">
-      <div class="container flex-wrap mt-20">
-        <div class="left-hero flex flex-col flex-wrap-reverse">
-          <h1 class="text-white text-5xl font-bold">
-            ERP ve CRM’den Fazlasını<br />
-            Web Tabanlı Deneyimleyin!
-          </h1>
-          <h3 class="text-white text-3xl pb-20 pt-5 font-bold">
-            Kurumsal Hafızanızı, <br />
-            Kurumsal Zekaya Dönüştürün...
-          </h3>
-          <div class="hero-btn">
-            <a
-              href="#form-area"
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded">
-              Hemen başlayın
-            </a>
-          </div>
-        </div>
-        <div class="right-hero static">
-          <div class="welcome-image-group-wrapper">
-            <div class="welcome-image welcome-image--group-01">
-              <img
-                src="https://firmanet.com.tr/media/wtvpyal5/ansayfa-mockup.png"
-                alt />
+        <nav class="flex justify-evenly items-center">
+            <div>
+                <a href="#"><img class="w-50 logo-white" src="src/img/firmanet_logo.svg" alt="Logo"></a>
+                <a href="#"><img class="w-40 logo-black" src="src/img/firmanet_logo.png" alt="Logo"></a>
             </div>
-          </div>
+            <ul class="flex gap-6">
+                <li class="nav-li"><a class="scrool" href="#module">Uygulamalar</a></li>
+                <li class="nav-li"><a class="scrool" href="#features">Özellikler</a></li>
+                <li class="nav-li"><a class="scrool" href="#brand">Referanslar</a></li>
+                <li class="nav-li"><a class="scrool" href="#">İletişim</a></li>
+            </ul>
+            <div>
+                <a href="#form-area" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded">Hemen başlayın</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section mx-auto flex justify-evenly py-10">
+        <div class="container flex-wrap mt-20">
+            <div class="left-hero flex flex-col flex-wrap-reverse">
+                <h1 class="text-white text-5xl font-bold">ERP ve CRM’den Fazlasını<br>Web Tabanlı Deneyimleyin!</h1>
+                <h3 class="text-white text-3xl pb-20 pt-5 font-bold">Kurumsal Hafızanızı,<br>Kurumsal Zekaya Dönüştürün...</h3>
+                <div class="hero-btn">
+                    <a href="#form-area" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded">Hemen başlayın</a>
+                </div>
+            </div>
+            <div class="right-hero static">
+                <div class="welcome-image-group-wrapper">
+                    <div class="welcome-image welcome-image--group-01">
+                        <img src="https://firmanet.com.tr/media/wtvpyal5/ansayfa-mockup.png" alt="Hero Image">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
+    
     <section class="service bg-blue-50 mt-20" id="module">
       <div class="head flex justify-center mb-10">
-        <h1 class="text-6xl font-bold text-center">Erp & Crm'den <br> Fazlası
-          Tek Platformda</h1>
+          <!-- <h1 class="text-6xl font-bold text-center">Erp & Crm'den <br> Fazlası
+              Tek Platformda</h1> -->
+          <h1 class="text-6xl font-bold text-center">ERP ve CRM Uygulamaları</h1>
       </div>
       <div class="container mx-auto px-25 p-20 position-relative platform-box">
-        <div class="grid grid-cols-1 gap-15 gap-y-8">
-
-          <div class="flex justify-around flex-wrap gap-2 erp">
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/1.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+          <div class="grid grid-cols-1 gap-15 gap-y-8">
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">CRM ve Satış</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/2.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span class="text-center">
+                              CRM <br />
+                              (Müşteri İlişkileri Yönetimi)
+                          </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Satış Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Satış Talep Entegrasyon</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Firmalar / Bağlantılar</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>İhale Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Yardım Masası</span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/3.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">Üretim ve Kalite</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/4.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>Üretim Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Ar-Ge Laboratuvar</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Bakım/Onarım Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Kalite Kontrol Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Denetim Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Dokümantasyon Yönetimi</span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/5.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">Muhasebe ve Finans</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/6.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>Finans Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Ön Muhasebe</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Resmi Muhasebe</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Maliyet Muhasebesi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Bütçe Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>
+                              Demirbaş Amortisman <br />
+                              Yönetimi
+                          </span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <!--  -->
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/1.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">Tedarik Zinciri ve Envanter</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/2.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>Satınalma Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Lojistik ve Depo Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Malzeme ve Hizmetler </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>
+                              Malzeme İhtiyaç Planlama <br />
+                              (MRP)
+                          </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Kantar Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Sabit Kıymetler</span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/3.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">İnsan Kaynakları</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/4.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>IK Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Personel Devam </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Personel Masraf / Talep </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Bordro Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Bilgilerim </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Raporlar </span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/5.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <div class="module-head text-center">
+                  <h1 class="text-6xl font-bold ml-1 yellows">+</h1>
+                  <h3 class="text-2xl font-bold">Daha Fazlası</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/6.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">Hizmetler</h3>
               </div>
-            </div>
-            <!--  -->
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/1.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>Proje Yönetimi</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>Araç Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Teknik Servis Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Ofis Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Hukuk Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Lisans ve Eğitim Yönetimi </span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/2.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+              <!-- icon box star -->
+              <div class="module-icon-head ml-4">
+                  <h3 class="text-xl font-bold">Üretkenlik</h3>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/3.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="flex justify-around flex-wrap gap-2 erp">
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/1.svg" alt width="100" />
+                          <span>Ajandalar</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/2.svg" alt width="100" />
+                          <span>E-Postalar</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/3.svg" alt width="100" />
+                          <span>Ekstralar</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/4.svg" alt width="100" />
+                          <span>Zaman Yönetimi </span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/5.svg" alt width="100" />
+                          <span>Genel İşlemler</span>
+                      </div>
+                  </div>
+                  <div class="service-box">
+                      <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                          <img src="./src/img/icon/6.svg" alt width="100" />
+                          <span>Rapor & Dashboard</span>
+                      </div>
+                  </div>
+                  <!--  -->
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/4.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <!-- icon box end -->
+                  <!-- icon box star -->
+                  <div class="module-icon-head ml-4">
+                    <h3 class="text-xl font-bold">Akredite Laboratuvar Yönetimi</h3>
+                </div>
+                <div class="flex justify-around flex-wrap gap-2 erp">
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/1.svg" alt width="100" />
+                            <span>Numune İşlemleri</span>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/2.svg" alt width="100" />
+                            <span>Analiz İşlemleri</span>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/3.svg" alt width="100" />
+                            <span>Hammadde Talepleri</span>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/4.svg" alt width="100" />
+                            <span>Rapor & e-imza </span>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/5.svg" alt width="100" />
+                            <span>Cihaz Entegrasyon</span>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                            <img src="./src/img/icon/6.svg" alt width="100" />
+                            <span>Laboratuvar Personelleri</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- icon box end -->
+                      <!-- icon box star -->
+                      <div class="module-icon-head ml-4">
+                        <h3 class="text-xl font-bold">Emlak Yönetimi</h3>
+                    </div>
+                    <div class="flex justify-around flex-wrap gap-2 erp">
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/1.svg" alt width="100" />
+                                <span>Portföy Yönetimi</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/2.svg" alt width="100" />
+                                <span>Talepler & İlanlar</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/3.svg" alt width="100" />
+                                <span>Emlak Aktiviteleri</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/4.svg" alt width="100" />
+                                <span>Emsallar </span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/5.svg" alt width="100" />
+                                <span>Komisyonlar</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
+                                <img src="./src/img/icon/6.svg" alt width="100" />
+                                <span>Yetkiler</span>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!-- icon box end -->
+              <div class="head flex justify-center mt-10">
+                  <h1 class="text-2xl text-center">Firmanet İle Tüm Modüller Tek Platformda</h1>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/5.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
+              <div class="service-content text-center text-2xl">
+                  <div class="mb-10">
+                      <a
+                          href="#hidden-section"
+                          class="rounded-md border border-slate-300 py-4 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                          type="button"
+                      >
+                          Detaylı İncele
+                      </a>
+                  </div>
+                  <h4>
+                      <span class="font-bold">Geniş bir işletme uygulamaları koleksiyonunun hizmetinizde olduğunu hayal edin.</span>
+                      <br />
+                      Geliştirmek istediğiniz bir şey mi var? Bizde uygulaması mevcut.
+                      <br />
+                      Ne karmaşık, ne de masraflı; yalnızca bir tıkla yükleyebilirsiniz.
+                  </h4>
               </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/6.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <!--  -->
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/1.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/2.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/3.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/4.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/5.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/6.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <!--  -->
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/1.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/2.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/3.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/4.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/5.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="./src/img/icon/6.svg"
-                  alt
-                  width="100" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <!--  -->
           </div>
-          <div class="module-head text-center">
-            <h1 class="text-6xl font-bold ml-1 yellows">+</h1>
-            <h3 class="text-2xl font-bold">DİĞER UYGULAMALAR</h3>
-          </div>
-          <div class="flex justify-around flex-wrap gap-2 erp">
-
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-            <div class="service-box">
-              <div
-                class="service-box-img card !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
-                <img
-                  src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg"
-                  alt
-                  width="50" />
-                <span>Muhasebe</span>
-              </div>
-            </div>
-          </div>
-          <div class="head flex justify-center mt-10">
-            <h1 class="text-2xl text-center">Firmanet İle Tüm Modüller Tek
-              Platformda</h1>
-          </div>
-          <div class="service-content text-center text-2xl">
-            <div class="mb-10">
-              <a
-                href="#hidden-section"
-                class="rounded-md border border-slate-300 py-4 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button">
-                Detaylı İncele
-              </a>
-            </div>
-            <h4>
-              <span class="font-bold">Geniş bir işletme uygulamaları
-                koleksiyonunun hizmetinizde
-                olduğunu hayal edin.</span>
-              <br />
-              Geliştirmek istediğiniz bir şey mi var? Bizde uygulaması mevcut.
-              <br />
-              Ne karmaşık, ne de masraflı; yalnızca bir tıkla yükleyebilirsiniz.
-            </h4>
-          </div>
-        </div>
       </div>
-    </section>
+  </section>
+  
+  
+
+
 
     <section class="py-10" id="features">
       <div class="container mx-auto">
