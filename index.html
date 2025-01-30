@@ -463,7 +463,7 @@
         <img class="mx-auto" src="src/img/dashboard-01.png" alt />
       </div>
     </section>
-  
+
     <!-- Form Section -->
     <!-- 1. Bölüm: Form Alanı -->
     <section id="form-area" class="form-section bg-white py-10">
@@ -522,8 +522,17 @@
                 <select id="sector" name="sector" required
                   class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <option value="general">Genel</option>
+                  <option value="defense">Savunma Sanayi</option>
+                  <option value="flour-feed">Un ve Yem Sanayi</option>
+                  <option value="machinery-automation">Makina ve Otomasyon</option>
+                  <option value="automotive">Otomotiv ve Yedek Parça</option>
+                  <option value="exhibition-services">Fuarcılık Hizmetleri</option>
+                  <option value="epc">EPC Hizmetleri</option>
                   <option value="lab">Akredite Laboratuvar</option>
-                  <option value="realEstate">Emlak</option>
+                  <option value="realEstate">Gayrimenkul ve Emlak</option>
+                  <option value="wholesaler">Toptancı</option>
+                  <option value="manufacturing">Diğer İmalat</option>
+                  <option value="other-services">Diğer Hizmet</option>
                 </select>
               </div>
 
@@ -808,530 +817,621 @@
       </div>
     </section>
 
-
-
     <section id="hidden-section" class="module-section py-10">
       <div class="container mx-auto ">
-        <h1 class="text-4xl text-center font-bold mb-6">Tüm Modüller Tek Bir Fiyat</h1>
-    
+        <h1 class="text-4xl text-center font-bold mb-6">Tüm Modüller Tek Bir
+          Fiyat</h1>
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">CRM ve Satış</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Müşteri İlişkileri Yönetimi (CRM)</h4>
-              <p class="text-sm text-gray-600">Etkinlikler,Temaslar,  Ziyaretler, Teklifler, Satış Tahminleri, Ref. Listeleri ve Anketler</p>
+              <p class="text-sm text-gray-600">Etkinlikler,Temaslar, Ziyaretler,
+                Teklifler, Satış Tahminleri, Ref. Listeleri ve Anketler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Satış Yönetimi</h4>
-              <p class="text-sm text-gray-600">Entegre Talepler, Sözleşmeler, Siparişler, Pos Yönetimi ve Prim Hesaplama</p>
+              <p class="text-sm text-gray-600">Entegre Talepler, Sözleşmeler,
+                Siparişler, Pos Yönetimi ve Prim Hesaplama</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Satış Talep Entegrasyonu</h4>
-              <p class="text-sm text-gray-600">B2B Siparileri ve Web Sitesi Satış Talepleri entegrasyonu</p>
+              <p class="text-sm text-gray-600">B2B Siparileri ve Web Sitesi
+                Satış Talepleri entegrasyonu</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">İhale Yönetimi</h4>
-              <p class="text-sm text-gray-600">İhale Dokümanları, Süreçleri, Katılımcı Firmalar ve Teklifler</p>
+              <p class="text-sm text-gray-600">İhale Dokümanları, Süreçleri,
+                Katılımcı Firmalar ve Teklifler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Yardım Masası</h4>
-              <p class="text-sm text-gray-600">Müşteri Portalı, Görevler, İş Emirleri, Süreçler, Müşteri Talep ve Şikayetleri</p>
+              <p class="text-sm text-gray-600">Müşteri Portalı, Görevler, İş
+                Emirleri, Süreçler, Müşteri Talep ve Şikayetleri</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Firmalar ve Bağlantılar</h4>
-              <p class="text-sm text-gray-600">Firmalar, Kişiler, Cariler, Firma Kara Liste, Anket ve Görüşmeler, Riskler ve Fiyat Listeleri</p>
+              <p class="text-sm text-gray-600">Firmalar, Kişiler, Cariler, Firma
+                Kara Liste, Anket ve Görüşmeler, Riskler ve Fiyat Listeleri</p>
             </div>
           </div>
         </div>
-
 
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Üretim ve Kalite</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Üretim Yönetimi</h4>
-              <p class="text-sm text-gray-600">Talepler, Sevkiyata Göre Üretim, Planlama, İş Emirleri, Hareketler ve Operasyonlar</p>
+              <p class="text-sm text-gray-600">Talepler, Sevkiyata Göre Üretim,
+                Planlama, İş Emirleri, Hareketler ve Operasyonlar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Kalite Kontrol</h4>
-              <p class="text-sm text-gray-600">Numune Takip, Analizler, Parametreler, Rapor Düzenleme ve Cihaz Dosya Aktarımı</p>
+              <p class="text-sm text-gray-600">Numune Takip, Analizler,
+                Parametreler, Rapor Düzenleme ve Cihaz Dosya Aktarımı</p>
             </div>
           </div>
 
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Ar-Ge Laboratuvar</h4>
-              <p class="text-sm text-gray-600">Analizler, Ar-Ge Numuneleri, Ar-Ge Projeleri, Ar-Ge Uygulamaları, Malzemeler ve Ürünler</p>
+              <p class="text-sm text-gray-600">Analizler, Ar-Ge Numuneleri,
+                Ar-Ge Projeleri, Ar-Ge Uygulamaları, Malzemeler ve Ürünler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
-              <span class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Bakım ve Onarım</h4>
-              <p class="text-sm text-gray-600">Periyotlar, Sözleşmeler, Süreçler, Demirbaş Ajandası, İş Emirleri, Mevcut Arızalar ve Firmalar</p>
+              <p class="text-sm text-gray-600">Periyotlar, Sözleşmeler,
+                Süreçler, Demirbaş Ajandası, İş Emirleri, Mevcut Arızalar ve
+                Firmalar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
-              <span class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Dokümantasyon Yönetimi</h4>
-              <p class="text-sm text-gray-600">Bilgi Paylaşım Listesi, Dosya Yönetimi ve Dosya Tür Tanımları</p>
+              <p class="text-sm text-gray-600">Bilgi Paylaşım Listesi, Dosya
+                Yönetimi ve Dosya Tür Tanımları</p>
             </div>
           </div>
-  
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
-              <span class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Denetim Yönetimi</h4>
-              <p class="text-sm text-gray-600">Denetim Planı, Denetim Sözleşmeleri, Süreçler, Tutanaklar ve Faturalanacak Kalemler</p>
+              <p class="text-sm text-gray-600">Denetim Planı, Denetim
+                Sözleşmeleri, Süreçler, Tutanaklar ve Faturalanacak Kalemler</p>
             </div>
           </div>
         </div>
-        
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Muhasebe ve Finans</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Finans Yönetimi</h4>
-              <p class="text-sm text-gray-600">Nakit Akışı Planlama, Krediler, Teminatlar, Forward Takibi, Finans Hareketleri ve Bankalar</p>
+              <p class="text-sm text-gray-600">Nakit Akışı Planlama, Krediler,
+                Teminatlar, Forward Takibi, Finans Hareketleri ve Bankalar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Ön Muhasebe</h4>
-              <p class="text-sm text-gray-600">Banka Entegrasyon, Fatura, İrsaliye, Cari Mutabakat, KDV Listesi, Kur Farkı ve Çek-Senet</p>
+              <p class="text-sm text-gray-600">Banka Entegrasyon, Fatura,
+                İrsaliye, Cari Mutabakat, KDV Listesi, Kur Farkı ve Çek-Senet</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Resmi Muhasebe</h4>
-              <p class="text-sm text-gray-600">Fişler, Bilanço, Defter, Gelir Tablosu, Muavin, Yevmiye Defteri, Hesap Yansıtma ve E-Belgeler</p>
+              <p class="text-sm text-gray-600">Fişler, Bilanço, Defter, Gelir
+                Tablosu, Muavin, Yevmiye Defteri, Hesap Yansıtma ve E-Belgeler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Bütçe Yönetimi</h4>
-              <p class="text-sm text-gray-600">Bütçe Planlaması, Bütçe Raporu ve Bütçe Rapor Özeti</p>
+              <p class="text-sm text-gray-600">Bütçe Planlaması, Bütçe Raporu ve
+                Bütçe Rapor Özeti</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Maliyet Muhasebesi</h4>
-              <p class="text-sm text-gray-600">Fire Senaryoları, Dönemler, Mamül Maliyet, Ticari Maliyet ve Maliyet Düzenleme</p>
+              <p class="text-sm text-gray-600">Fire Senaryoları, Dönemler, Mamül
+                Maliyet, Ticari Maliyet ve Maliyet Düzenleme</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Demirbaş Amortisman</h4>
-              <p class="text-sm text-gray-600">Amortisman Bilgileri, Amortisman Listesi ve Faydalı Ömür Listesi</p>
+              <p class="text-sm text-gray-600">Amortisman Bilgileri, Amortisman
+                Listesi ve Faydalı Ömür Listesi</p>
             </div>
           </div>
         </div>
-        
 
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Tedarik Zinciri ve Envanter</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Malzeme ve Hizmetler</h4>
-              <p class="text-sm text-gray-600">Malzeme Listesi, Ürün Ağacı ve Maliyet, Stok Durumu, Fiyat Listeleri ve Rayiç Fiyatlar</p>
+              <p class="text-sm text-gray-600">Malzeme Listesi, Ürün Ağacı ve
+                Maliyet, Stok Durumu, Fiyat Listeleri ve Rayiç Fiyatlar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Malzeme İhtiyaç Planlaması (MRP)</h4>
-              <p class="text-sm text-gray-600">MRP, İhtiyaç Listesi, Toplu İhtiyaç Listesi ve Günlük Malzeme Tahmini</p>
+              <p class="text-sm text-gray-600">MRP, İhtiyaç Listesi, Toplu
+                İhtiyaç Listesi ve Günlük Malzeme Tahmini</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Sabit Kıymetler</h4>
-              <p class="text-sm text-gray-600">Demirbaşlar, Taşıtlar, Gayrimenkul ve Tesisler ve Zimmet Yönetimi</p>
+              <p class="text-sm text-gray-600">Demirbaşlar, Taşıtlar,
+                Gayrimenkul ve Tesisler ve Zimmet Yönetimi</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Satın Alma Yönetimi</h4>
-              <p class="text-sm text-gray-600">Talepler, Teklifler, Teklif Karşılaştırma, Siparişler, Mal Kabul ve İthalatlar</p>
+              <p class="text-sm text-gray-600">Talepler, Teklifler, Teklif
+                Karşılaştırma, Siparişler, Mal Kabul ve İthalatlar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Lojistik ve Depo Yönetimi</h4>
-              <p class="text-sm text-gray-600">Mal Kabul, Sevk Planlama, Sayım, Seri-Lot, Rezerveler, Konsinyeler, Sarflar ve Dinamik Depo</p>
+              <p class="text-sm text-gray-600">Mal Kabul, Sevk Planlama, Sayım,
+                Seri-Lot, Rezerveler, Konsinyeler, Sarflar ve Dinamik Depo</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Kantar Yönetimi</h4>
-              <p class="text-sm text-gray-600">Dış Tartım, Sevkiyat, Tartım Penceresi, Tüm Tartımlar, Mal Kabul ve Transferler</p>
+              <p class="text-sm text-gray-600">Dış Tartım, Sevkiyat, Tartım
+                Penceresi, Tüm Tartımlar, Mal Kabul ve Transferler</p>
             </div>
           </div>
         </div>
-        
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">İnsan Kaynakları (IK)</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">IK Yönetimi</h4>
-              <p class="text-sm text-gray-600">İş İlanları, İşe Alma, Org. Şeması, Sağlık Takip, Maaş Ödeme, Ekstra Haklar ve Değerlendirme</p>
+              <p class="text-sm text-gray-600">İş İlanları, İşe Alma, Org.
+                Şeması, Sağlık Takip, Maaş Ödeme, Ekstra Haklar ve Değerlendirme</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Personel Devam Durumu</h4>
-              <p class="text-sm text-gray-600">Personel Giriş ve Çıkış, PKDS Entegrasyonu ve Personel İzin Takip</p>
+              <p class="text-sm text-gray-600">Personel Giriş ve Çıkış, PKDS
+                Entegrasyonu ve Personel İzin Takip</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Talepler ve Masraflar</h4>
-              <p class="text-sm text-gray-600">Masraflar, Avans Talep, Mesai Talep, Seyahat Talep ve Satın Alma Talep</p>
+              <p class="text-sm text-gray-600">Masraflar, Avans Talep, Mesai
+                Talep, Seyahat Talep ve Satın Alma Talep</p>
             </div>
           </div>
         </div>
-        
 
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Hizmetler</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Proje Yönetimi</h4>
-              <p class="text-sm text-gray-600">Projeler, Proje Kar/Zarar, Süreçler, Satın Alma, Ekipmanlar, Talepler, Sunumlar ve Gant Chart</p>
+              <p class="text-sm text-gray-600">Projeler, Proje Kar/Zarar,
+                Süreçler, Satın Alma, Ekipmanlar, Talepler, Sunumlar ve Gant
+                Chart</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Ofis Yönetimi</h4>
-              <p class="text-sm text-gray-600">Çağrılar, Evraklar, Görevler, Toplantılar ve Ziyaretçi Defteri</p>
+              <p class="text-sm text-gray-600">Çağrılar, Evraklar, Görevler,
+                Toplantılar ve Ziyaretçi Defteri</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Teknik Servis Yönetimi</h4>
-              <p class="text-sm text-gray-600">Kira Sözleşmeleri, Servis Sözleşmeleri, Saha Servisleri, Teknik Servisleri ve Ürün İadeleri</p>
+              <p class="text-sm text-gray-600">Kira Sözleşmeleri, Servis
+                Sözleşmeleri, Saha Servisleri, Teknik Servisleri ve Ürün
+                İadeleri</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Araç Filo Yönetimi</h4>
-              <p class="text-sm text-gray-600">Araç Talep, Bakım, Sigorta, Muayene, Lastik Takibi, Akaryakıt, Tarihçe ve Trafik Cezaları</p>
+              <p class="text-sm text-gray-600">Araç Talep, Bakım, Sigorta,
+                Muayene, Lastik Takibi, Akaryakıt, Tarihçe ve Trafik Cezaları</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Hukuk</h4>
-              <p class="text-sm text-gray-600">Dava Dosyaları, Gelirler ve Giderler, Görevler ve Hukuksal İşlemler</p>
+              <p class="text-sm text-gray-600">Dava Dosyaları, Gelirler ve
+                Giderler, Görevler ve Hukuksal İşlemler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Lisans ve Eğitim Yönetimi</h4>
-              <p class="text-sm text-gray-600">Eğitim Etkinlikleri, Eğitim Hakları, Yazılım Servis Sözleşmeleri ve Yazılım Test Yönetimi</p>
+              <p class="text-sm text-gray-600">Eğitim Etkinlikleri, Eğitim
+                Hakları, Yazılım Servis Sözleşmeleri ve Yazılım Test Yönetimi</p>
             </div>
           </div>
         </div>
-        
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Üretkenlik</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Zaman Yönetimi</h4>
-              <p class="text-sm text-gray-600">Zaman Çizelgeleri, Çizelge Özeti, Çizelge Planlama ve Zaman Planı Projeksiyonu</p>
+              <p class="text-sm text-gray-600">Zaman Çizelgeleri, Çizelge Özeti,
+                Çizelge Planlama ve Zaman Planı Projeksiyonu</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Ajandalar</h4>
-              <p class="text-sm text-gray-600">Araç, Ekipman, Personel, Proje, Toplantı Salonu ve Denetim Ajandaları</p>
+              <p class="text-sm text-gray-600">Araç, Ekipman, Personel, Proje,
+                Toplantı Salonu ve Denetim Ajandaları</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Ekstralar</h4>
-              <p class="text-sm text-gray-600">Sohbet (Chat), Alarm, Bildirim, SMS, Dönüşüm, e-posta, Yorum, Raporlar, Yetki ve Onaylar</p>
+              <p class="text-sm text-gray-600">Sohbet (Chat), Alarm, Bildirim,
+                SMS, Dönüşüm, e-posta, Yorum, Raporlar, Yetki ve Onaylar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
-              <h4 class="font-bold mb-2">Araç Filo  Yönetimi</h4>
-              <p class="text-sm text-gray-600">Araç Talep, Bakım, Sigorta, Muayene, Lastik Takibi, Akaryakıt, Tarihçe ve Trafik Cezaları</p>
+              <h4 class="font-bold mb-2">Araç Filo Yönetimi</h4>
+              <p class="text-sm text-gray-600">Araç Talep, Bakım, Sigorta,
+                Muayene, Lastik Takibi, Akaryakıt, Tarihçe ve Trafik Cezaları</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Hukuk</h4>
-              <p class="text-sm text-gray-600">Dava Dosyları, Gelirler ve Giderler, Görevler ve Hukuksal İşlemler</p>
+              <p class="text-sm text-gray-600">Dava Dosyları, Gelirler ve
+                Giderler, Görevler ve Hukuksal İşlemler</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Lisans ve Eğitim Yönetimi</h4>
-              <p class="text-sm text-gray-600">Eğitim Etkinlikleri, Eğitim Hakları, Yazılım Servis Sözleşmeleri ve Yazılım Test Yönetimi</p>
+              <p class="text-sm text-gray-600">Eğitim Etkinlikleri, Eğitim
+                Hakları, Yazılım Servis Sözleşmeleri ve Yazılım Test Yönetimi</p>
             </div>
           </div>
         </div>
-        
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Akredite Laboratuvar Yönetimi</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Numune ve Analizler</h4>
-              <p class="text-sm text-gray-600">Numune Alma, İmha, Kabul, Kayıt ve Tutanak, Analiz Sayısı, Sonucu, Analizi ve Gönderimi</p>
+              <p class="text-sm text-gray-600">Numune Alma, İmha, Kabul, Kayıt
+                ve Tutanak, Analiz Sayısı, Sonucu, Analizi ve Gönderimi</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Personel ve Cihaz Takibi</h4>
-              <p class="text-sm text-gray-600">Laboratuvar Personelleri, Hammadde Talepleri ve Cihaz Dosya Aktarımı</p>
+              <p class="text-sm text-gray-600">Laboratuvar Personelleri,
+                Hammadde Talepleri ve Cihaz Dosya Aktarımı</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Rapor ve e-imza</h4>
-              <p class="text-sm text-gray-600">Numune, Teklif ve Analiz e-imza Süreçleri, Numune Raporu ve Numune Toplu e-posta</p>
+              <p class="text-sm text-gray-600">Numune, Teklif ve Analiz e-imza
+                Süreçleri, Numune Raporu ve Numune Toplu e-posta</p>
             </div>
           </div>
         </div>
-        
+
         <div class="module-head m-3">
           <h3 class="text-3xl font-bold mb-6">Emlak Yönetimi</h3>
         </div>
         <!-- modul detail -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Portföy Yönetimi</h4>
-              <p class="text-sm text-gray-600">Emlak Portföyü, Kira Kontrol, Mülk Sahibi, Emsaller ve Komisyonlar</p>
+              <p class="text-sm text-gray-600">Emlak Portföyü, Kira Kontrol,
+                Mülk Sahibi, Emsaller ve Komisyonlar</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Emlak Aktiviteleri</h4>
-              <p class="text-sm text-gray-600">Emlak Aktivite, Müşteri-Tedarikçi Görüşmeleri ve Pankart Takibi</p>
+              <p class="text-sm text-gray-600">Emlak Aktivite, Müşteri-Tedarikçi
+                Görüşmeleri ve Pankart Takibi</p>
             </div>
           </div>
-          <div class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
             <div class="icon">
               <span
-              class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-12 h-12 font-xl flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
             </div>
             <div>
               <h4 class="font-bold mb-2">Talepler ve İlanlar</h4>
-              <p class="text-sm text-gray-600">Emlak Talepler, İlan Listeleri ve Yetki Belgeleri</p>
+              <p class="text-sm text-gray-600">Emlak Talepler, İlan Listeleri ve
+                Yetki Belgeleri</p>
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
-    
 
     <footer class="bg-white py-14">
       <div
