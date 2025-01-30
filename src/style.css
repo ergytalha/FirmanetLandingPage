@@ -124,9 +124,11 @@ section {
 }
 
 .hero-section {
-    padding: 16rem 18rem !important;
+    padding: 18rem 18rem 13rem 18rem !important;
 }
-
+.icon-section {
+    margin-top: -28px;
+}
 .hero-section::after {
     content: "";
     position: absolute;
@@ -304,7 +306,7 @@ section {
     text-align: start;
     background-color: #F9FAFB;
     border-radius: 7px;
-    padding: 30px 8px;
+    padding: 8px;
     transition: all 0.4s;
 }
 
@@ -544,4 +546,8 @@ section {
     100% {
         top: 50%;
     }
+}
+
+.module-head.m-3 {
+    padding-top: 2rem;
 }
