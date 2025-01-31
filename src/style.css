@@ -37,13 +37,13 @@ section {
 }
 
 .nav-li {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--white-color);
 }
 
 .nav-bg .nav-li {
-    color: var(--color-2);
+    color: #0054a1;
 }
 
 .header-btn {

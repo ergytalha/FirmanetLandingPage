@@ -2561,6 +2561,9 @@
   .text-green-600 {
     color: var(--color-green-600);
   }
+  .text-orange-400 {
+    color: var(--color-orange-400);
+  }
   .text-red-600 {
     color: var(--color-red-600);
   }
@@ -3272,9 +3275,9 @@
       width: calc(var(--spacing) * 40);
     }
   }
-  .md\:w-50 {
+  .md\:w-60 {
     @media (width >= 48rem) {
-      width: calc(var(--spacing) * 50);
+      width: calc(var(--spacing) * 60);
     }
   }
   .md\:w-64 {
@@ -3427,12 +3430,12 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav-li {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--white-color);
 }
 .nav-bg .nav-li {
-  color: var(--color-2);
+  color: #0054a1;
 }
 .header-btn {
   padding: 8px 12px;
