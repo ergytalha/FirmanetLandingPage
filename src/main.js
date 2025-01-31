@@ -53,7 +53,18 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const icons = document.querySelectorAll(".icon-bg");
 
+  // Renk listesi
+  const colors = ["#0054A1", "#fec802", "#ff8d39"];
+
+  // Her bir ikona rastgele bir renk uygula
+  icons.forEach((icon) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    icon.style.backgroundColor = randomColor;
+  });
+});
 
 // Scroll Section Highlight
 var focusSectionLink = function (event) {

@@ -28,7 +28,7 @@ section {
 #header {
     position: sticky;
     top: 0px;
-    z-index: 999;
+    z-index: 90;
 }
 
 .nav-bg {
@@ -296,10 +296,14 @@ section {
 
 .module-content {
     text-align: start;
-    background-color: #F9FAFB;
-    border-radius: 7px;
     padding: 8px;
-    transition: all 0.4s;
+    background-color: #ffffff;
+    border: 0 solid 
+color-mix(in srgb, currentColor 15%, transparent);
+    border-radius: 0.25rem;
+    height: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: .1s ease;
 }
 
 .module-content .icon {
@@ -593,9 +597,15 @@ section {
 
 .module-head.m-3 {
     padding-top: 2rem;
+    color: #0054a1;
 }
 
-
+.module-content h4 {
+    color: #ee762d;
+}
+.module-content .icon span {
+    font-size: 35px;
+}
 /* responsive  */
 
 
@@ -609,8 +619,8 @@ section {
     }
     .demand {
         position: fixed;
-        top: 8rem;
-        right: 20px;
+        top: 2rem;
+        right: 82px;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.5s ease-in-out;

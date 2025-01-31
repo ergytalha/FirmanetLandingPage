@@ -1059,9 +1059,6 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
-  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
@@ -1070,6 +1067,9 @@
   }
   .h-25 {
     height: calc(var(--spacing) * 25);
+  }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
   }
   .h-75 {
     height: calc(var(--spacing) * 75);
@@ -2537,6 +2537,9 @@
   .text-\[\#8bc34a\] {
     color: #8bc34a;
   }
+  .text-\[\#fec700\] {
+    color: #fec700;
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -3300,6 +3303,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-6 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -3423,7 +3431,7 @@ section {
 #header {
   position: sticky;
   top: 0px;
-  z-index: 999;
+  z-index: 90;
 }
 .nav-bg {
   background-color: white;
@@ -3655,10 +3663,13 @@ section {
 }
 .module-content {
   text-align: start;
-  background-color: #F9FAFB;
-  border-radius: 7px;
   padding: 8px;
-  transition: all 0.4s;
+  background-color: #ffffff;
+  border: 0 solid color-mix(in srgb, currentColor 15%, transparent);
+  border-radius: 0.25rem;
+  height: auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: .1s ease;
 }
 .module-content .icon {
   display: flex;
@@ -3916,6 +3927,13 @@ section {
 }
 .module-head.m-3 {
   padding-top: 2rem;
+  color: #0054a1;
+}
+.module-content h4 {
+  color: #ee762d;
+}
+.module-content .icon span {
+  font-size: 35px;
 }
 @media (max-width: 768px) {
   .module-2-bottom {
@@ -3927,8 +3945,8 @@ section {
   }
   .demand {
     position: fixed;
-    top: 8rem;
-    right: 20px;
+    top: 2rem;
+    right: 82px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
