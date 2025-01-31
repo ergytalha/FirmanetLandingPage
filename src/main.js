@@ -1,4 +1,4 @@
-// ✅ Navbar ve Logo İşlemleri
+// Navbar and Logo Operations
 const navbar = document.querySelector("#header");
 const logo = document.querySelectorAll(".logo-white");
 const logoBlack = document.querySelectorAll(".logo-black");
@@ -14,6 +14,7 @@ window.addEventListener("scroll", () => {
     demandButton.classList.remove("visible");
   }
 });
+
 logoBlack.forEach((logoBlack) => {
   logoBlack.classList.add("hidden");
 });
@@ -39,9 +40,9 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {  // 100 piksel scroll sonrası değiştir
-      menuIconWhite.classList.add('hidden');  // Beyaz ikon gizle
-      menuIconDark.classList.remove('hidden');  // Koyu ikon göster
+  if (window.scrollY > 100) {
+      menuIconWhite.classList.add('hidden');
+      menuIconDark.classList.remove('hidden');
   } else {
       menuIconWhite.classList.remove('hidden');
       menuIconDark.classList.add('hidden');
@@ -55,11 +56,7 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const icons = document.querySelectorAll(".icon-bg");
-
-  // Renk listesi
   const colors = ["#0054A1", "#fec802", "#ff8d39"];
-
-  // Her bir ikona rastgele bir renk uygula
   icons.forEach((icon) => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     icon.style.backgroundColor = randomColor;
@@ -73,7 +70,7 @@ var focusSectionLink = function (event) {
     var section = document.getElementById(id);
 
     if (!section) {
-      console.warn(`Section ${id} bulunamadı.`);
+      console.warn(`Section ${id} not found.`);
       continue; 
     }
 
@@ -106,7 +103,7 @@ for (const link of links) {
   link.addEventListener('click', focusSection);
 }
 
-// ✅ Swiper Ayarları
+// Swiper Settings
 const swiper = new Swiper(".swiper-container", {
   loop: true,
   autoplay: {
@@ -125,12 +122,10 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-
-// ✅ Google Tag Manager için dataLayer tanımlandı
+// Google Tag Manager dataLayer
 window.dataLayer = window.dataLayer || [];
 
-
-// ✅ Kullanıcı sayısı liste ve indirimli fiyatlar
+// Base and Discount Price Lists
 const basePrice = {
   10: 650000,
   15: 900000,
@@ -141,7 +136,6 @@ const basePrice = {
   40: 2150000,
   45: 2400000,
   50: 2650000,
-
 };
 
 const discountPriceList = {
@@ -156,27 +150,33 @@ const discountPriceList = {
   50: 1720000,
 };
 
-// ✅ Fiyat hesaplama fonksiyonu
+// Calculate Price Function
 function calculatePrice() {
   const userCountElement = document.getElementById("priceUserCount");
   const totalPriceElement = document.getElementById("totalPrice");
   const discountPriceElement = document.getElementById("discountPrice");
 
   if (!userCountElement || !totalPriceElement || !discountPriceElement) {
-    console.error("Fiyat hesaplama için gerekli HTML elemanları bulunamadı!");
+    console.error("Fiyat hesaplaması için gerekli HTML öğeleri bulunamadı!");
     return;
   }
 
-  const userCount = parseInt(userCountElement.value) || 0;
-  const price = basePrice[userCount] || 0;
-  const discountPrice = discountPriceList[userCount] || 0;
+  const userCount = userCountElement.value;
 
-  // Liste ve indirimli fiyatı göster
-  totalPriceElement.textContent = `₺${price.toLocaleString()}`;
-  discountPriceElement.textContent = `₺${discountPrice.toLocaleString()}`;
+  if (userCount === "50+") {
+    totalPriceElement.textContent = "";
+    discountPriceElement.textContent = "Lütfen bizimle iletişime geçin.";
+  } else {
+    const parsedUserCount = parseInt(userCount) || 0;
+    const price = basePrice[parsedUserCount] || 0;
+    const discountPrice = discountPriceList[parsedUserCount] || 0;
+
+    totalPriceElement.textContent = `${price.toLocaleString()}TL`;
+    discountPriceElement.textContent = `${discountPrice.toLocaleString()}TL`;
+  }
 }
 
-// ✅ Formdan fiyatlandırmaya geçiş
+// Validate Form and Scroll to Price Section
 function validateForm() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -185,46 +185,41 @@ function validateForm() {
   const sector = document.getElementById("sector").value;
   const demandBtn = document.querySelector(".demand-btn");
 
-  // Ad Soyad Doğrulama (sadece harf ve boşluk)
   const nameRegex = /^[A-Za-zğüşıöçĞÜŞİÖÇ\s]+$/;
   if (!nameRegex.test(name)) {
-    alert("Lütfen geçerli bir ad soyad giriniz (sadece harf ve boşluk).");
+    alert("Please enter a valid name (letters and spaces only).");
     return false;
   }
 
-  // E-posta Doğrulama
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Lütfen geçerli bir e-posta adresi giriniz.");
+    alert("Please enter a valid email address.");
     return false;
   }
 
-  // Telefon Doğrulama (örnek: 555-555-5555 veya 5555555555)
   const phoneRegex = /^(\d{10}|\d{3}-\d{3}-\d{4})$/;
   if (!phoneRegex.test(phone)) {
-    alert("Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555).");
+    alert("Please enter a valid phone number (example: 5555555555 or 555-555-5555).");
     return false;
   }
 
-  // Kullanıcı Sayısı ve Sektör Seçimi Doğrulama
   if (userCount === "" || sector === "") {
-    alert("Lütfen kullanıcı sayısı ve sektör seçiniz.");
+    alert("Please select user count and sector.");
     return false;
   }
 
   demandBtn.style.display = "none";
 
-
-  // Eğer doğrulama başarılıysa, price alanını en üstte göster
   const priceSection = document.querySelector("#price-area");
   priceSection.scrollIntoView({
-    behavior: "smooth", // Yumuşak geçiş
-    block: "start"      // En üstte konumlandır
+    behavior: "smooth",
+    block: "start"
   });
 
   return true;
 }
 
+// Go to Price Step Function
 function goToPriceStep() {
   if (!validateForm()) {
     return; 
@@ -237,13 +232,11 @@ function goToPriceStep() {
   const sector = document.getElementById("sector").value;
   const moduleListContainer = document.getElementById("module-list");
 
-  // 📌 GTM Event Gönderimi
   dataLayer.push({
     event: "success1",
     user: { name, email, phone, userCount, sector },
   });
 
-  // 📌 Formu gizle, fiyatlandırmayı göster
   document.getElementById("form-area").classList.add("hidden");
 
   document.querySelectorAll(".dynamic-module").forEach((el) => el.remove());
@@ -263,16 +256,14 @@ function goToPriceStep() {
     priceArea.classList.remove("hidden");
   }
 
-  // 📌 Kullanıcı sayısını güncelle
   const priceUserCountElement = document.getElementById("priceUserCount");
   if (priceUserCountElement) {
     priceUserCountElement.value = userCount;
-    calculatePrice(); // 📌 Fiyatı hesapla
+    calculatePrice();
   }
 }
 
-
-// ✅ Fiyatlandırmayı onaylama (teklif gönderme)
+// Submit Second Step Function
 function submitSecondStep() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -280,23 +271,21 @@ function submitSecondStep() {
   const userCount = document.getElementById("priceUserCount").value;
   const sector = document.getElementById("sector").value;
 
-  // 📌 GTM Event Gönderimi
   dataLayer.push({
     event: "success2",
     user: { name, email, phone, userCount, sector },
   });
 
-  // 📌 Bilgilendirme mesajını göster
   const confirmationMessage = document.getElementById("confirmationMessage");
   if (confirmationMessage) {
-    confirmationMessage.classList.remove("hidden"); // Mesajı görünür yap
+    confirmationMessage.classList.remove("hidden");
   }
 
-  // 📌 Formu ve fiyat bölümünü gizle
   document.getElementById("form-area").classList.add("hidden");
   document.getElementById("price-area").classList.add("hidden");
 }
 
+// Modal Operations
 const openModal = document.getElementById('openModal');
 const closeModal = document.getElementById('closeModal');
 const closeModalFooter = document.getElementById('closeModalFooter');
@@ -304,26 +293,23 @@ const popupModal = document.getElementById('popupModal');
 
 let scrollPosition = 0;
 
-// Modalı açar
 openModal.addEventListener('click', () => {
-    scrollPosition = window.pageYOffset;  // Sayfanın mevcut konumunu al
-    document.body.style.position = 'fixed';  // Sayfayı sabitle
-    document.body.style.top = `-${scrollPosition}px`;  // Scroll pozisyonunu koru
-    popupModal.classList.remove('hidden');  // Modalı göster
+    scrollPosition = window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    popupModal.classList.remove('hidden');
 });
 
-// Modalı kapatır
 const closeModalFunction = () => {
-    document.body.style.position = '';  // Sayfa konumunu serbest bırak
-    document.body.style.top = '';  
-    window.scrollTo(0, scrollPosition);  // Eski konuma dön
-    popupModal.classList.add('hidden');  // Modalı gizle
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+    popupModal.classList.add('hidden');
 };
 
 closeModal.addEventListener('click', closeModalFunction);
 closeModalFooter.addEventListener('click', closeModalFunction);
 
-// Modal dışında tıklayınca kapat
 window.addEventListener('click', (e) => {
     if (e.target === popupModal) {
         closeModalFunction();
