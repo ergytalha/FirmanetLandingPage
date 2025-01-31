@@ -188,11 +188,10 @@ section {
 
 .demand-btn {
     transform: rotate(270deg);
-    background-color: #2b7fff;
+    background: linear-gradient(45deg, #e36825, #fa8636);
     padding: 1rem 2rem;
     color: white;
     font-weight: bold;
-    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -521,7 +520,9 @@ section {
     right: 0;
     transform: translate(0%, 98%);
 }
-
+.hero-content {
+    margin-top: -65px;
+}
 
 
 @keyframes scroll {
@@ -605,5 +606,20 @@ section {
     .module-2-top {
         position: relative;
         top: -6rem;
+    }
+    .demand {
+        position: fixed;
+        top: 8rem;
+        right: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 99;
+    }
+    .mouse-cont {
+        display: none;
+    }
+    .hero-icon, .hero-icon-2 {
+        display: none;
     }
 }

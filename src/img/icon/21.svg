@@ -12,33 +12,37 @@
       }
 
       .st2 {
-        fill: #0054a1;
+        fill: #fdc800;
+      }
+
+      .st3 {
+        fill: #ff8d39;
       }
     </style>
   </defs>
-  <polygon class="st1" points="740.9 982 62.8 982 62.8 126.1 740.9 126.1 740.9 216.3 704.8 216.3 704.8 162.2 98.9 162.2 98.9 946 704.8 946 704.8 891.9 740.9 891.9 740.9 982"/>
-  <path class="st1" d="M740.9,162.2H62.8V18h678.1v144.2ZM98.9,126.1h606V54H98.9v72.1Z"/>
-  <rect class="st1" x="152.9" y="72.1" width="36.1" height="36.1"/>
-  <rect class="st1" x="225.1" y="72.1" width="36.1" height="36.1"/>
-  <rect class="st1" x="297.2" y="72.1" width="36.1" height="36.1"/>
-  <rect class="st0" x="152.9" y="216.3" width="142.2" height="142.2"/>
-  <rect class="st0" x="152.9" y="394.1" width="142.2" height="142.2"/>
-  <rect class="st0" x="152.9" y="571.9" width="142.2" height="142.2"/>
-  <rect class="st0" x="152.9" y="749.6" width="142.2" height="142.2"/>
-  <rect class="st0" x="330.7" y="216.3" width="142.2" height="142.2"/>
-  <rect class="st0" x="330.7" y="394.1" width="142.2" height="142.2"/>
-  <rect class="st0" x="330.7" y="571.9" width="142.2" height="142.2"/>
-  <rect class="st0" x="330.7" y="749.6" width="142.2" height="142.2"/>
-  <path class="st1" d="M508.5,216.3v142.2h142.2v-142.2h-142.2ZM614.7,322.5h-70.1v-70.1h70.1v70.1Z"/>
-  <path class="st1" d="M508.5,394.1v142.2h142.2v-142.2h-142.2ZM614.7,500.3h-70.1v-70.1h70.1v70.1Z"/>
-  <rect class="st0" x="508.5" y="571.9" width="142.2" height="142.2"/>
-  <rect class="st0" x="508.5" y="749.6" width="142.2" height="142.2"/>
-  <rect class="st2" x="795" y="216.3" width="142.2" height="142.2"/>
-  <rect class="st2" x="795" y="394.1" width="142.2" height="142.2"/>
-  <path class="st1" d="M795,571.9v142.2h142.2v-142.2h-142.2ZM901.1,678h-70.1v-70.1h70.1v70.1Z"/>
-  <path class="st1" d="M795,749.6v142.2h142.2v-142.2h-142.2ZM901.1,855.8h-70.1v-70.1h70.1v70.1Z"/>
-  <rect class="st1" x="679.6" y="269.4" width="86.5" height="36.1"/>
-  <rect class="st1" x="679.6" y="447.2" width="86.5" height="36.1"/>
-  <rect class="st1" x="679.6" y="624.9" width="86.5" height="36.1"/>
-  <rect class="st1" x="679.6" y="802.7" width="86.5" height="36.1"/>
+  <polygon class="st1" points="730.4 961 81.8 961 81.8 142.4 730.4 142.4 730.4 228.7 695.9 228.7 695.9 176.9 116.3 176.9 116.3 926.5 695.9 926.5 695.9 874.8 730.4 874.8 730.4 961"/>
+  <path class="st1" d="M730.4,176.9H81.8V39h648.6v138ZM116.3,142.4h579.6v-69H116.3v69Z"/>
+  <rect class="st1" x="168.1" y="90.7" width="34.5" height="34.5"/>
+  <rect class="st1" x="237" y="90.7" width="34.5" height="34.5"/>
+  <rect class="st1" x="306" y="90.7" width="34.5" height="34.5"/>
+  <rect class="st3" x="168.1" y="228.7" width="136" height="136"/>
+  <rect class="st3" x="168.1" y="398.7" width="136" height="136"/>
+  <rect class="st3" x="168.1" y="568.7" width="136" height="136"/>
+  <rect class="st3" x="168.1" y="738.8" width="136" height="136"/>
+  <rect class="st3" x="338.1" y="228.7" width="136" height="136"/>
+  <rect class="st3" x="338.1" y="398.7" width="136" height="136"/>
+  <rect class="st3" x="338.1" y="568.7" width="136" height="136"/>
+  <rect class="st3" x="338.1" y="738.8" width="136" height="136"/>
+  <path class="st1" d="M508.1,228.7v136h136v-136h-136ZM609.7,330.2h-67v-67h67v67Z"/>
+  <path class="st1" d="M508.1,398.7v136h136v-136h-136ZM609.7,500.2h-67v-67h67v67Z"/>
+  <rect class="st0" x="508.1" y="568.7" width="136" height="136"/>
+  <rect class="st0" x="508.1" y="738.8" width="136" height="136"/>
+  <rect class="st2" x="782.1" y="228.7" width="136" height="136"/>
+  <rect class="st2" x="782.1" y="398.7" width="136" height="136"/>
+  <path class="st1" d="M782.1,568.7v136h136v-136h-136ZM883.7,670.3h-67v-67h67v67Z"/>
+  <path class="st1" d="M782.1,738.8v136h136v-136h-136ZM883.7,840.3h-67v-67.1h67v67.1Z"/>
+  <rect class="st1" x="671.8" y="279.4" width="82.8" height="34.5"/>
+  <rect class="st1" x="671.8" y="449.5" width="82.8" height="34.5"/>
+  <rect class="st1" x="671.8" y="619.5" width="82.8" height="34.5"/>
+  <rect class="st1" x="671.8" y="789.5" width="82.8" height="34.5"/>
 </svg>

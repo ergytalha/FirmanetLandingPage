@@ -4,6 +4,8 @@ const logo = document.querySelectorAll(".logo-white");
 const logoBlack = document.querySelectorAll(".logo-black");
 const links = document.getElementsByClassName('scrool');
 const demandButton = document.getElementById("demand");
+const menuIconWhite = document.querySelector(".mobile-menu-white");
+const menuIconDark = document.querySelector(".mobile-menu-dark");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
@@ -35,6 +37,17 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {  // 100 piksel scroll sonrası değiştir
+      menuIconWhite.classList.add('hidden');  // Beyaz ikon gizle
+      menuIconDark.classList.remove('hidden');  // Koyu ikon göster
+  } else {
+      menuIconWhite.classList.remove('hidden');
+      menuIconDark.classList.add('hidden');
+  }
+});
+
 document.getElementById('menu-toggle').addEventListener('click', function () {
   const mobileMenu = document.getElementById('mobile-menu');
   mobileMenu.classList.toggle('hidden');
@@ -117,6 +130,7 @@ const basePrice = {
   40: 2150000,
   45: 2400000,
   50: 2650000,
+
 };
 
 const discountPriceList = {
@@ -158,6 +172,7 @@ function validateForm() {
   const phone = document.getElementById("phone").value.trim();
   const userCount = document.getElementById("userCount").value;
   const sector = document.getElementById("sector").value;
+  const demandBtn = document.querySelector(".demand-btn");
 
   // Ad Soyad Doğrulama (sadece harf ve boşluk)
   const nameRegex = /^[A-Za-zğüşıöçĞÜŞİÖÇ\s]+$/;
@@ -185,6 +200,9 @@ function validateForm() {
     alert("Lütfen kullanıcı sayısı ve sektör seçiniz.");
     return false;
   }
+
+  demandBtn.style.display = "none";
+
 
   // Eğer doğrulama başarılıysa, price alanını en üstte göster
   const priceSection = document.querySelector("#price-area");
@@ -268,27 +286,35 @@ function submitSecondStep() {
   document.getElementById("price-area").classList.add("hidden");
 }
 
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const closeModalFooter = document.getElementById('closeModalFooter');
+const popupModal = document.getElementById('popupModal');
 
 let scrollPosition = 0;
 
-    function openModal() {
-      // Mevcut kaydırma pozisyonunu al ve sabitle
-      scrollPosition = window.scrollY;
-      document.body.style.top = `-${scrollPosition}px`;
-      document.body.classList.add("modal-open");
+// Modalı açar
+openModal.addEventListener('click', () => {
+    scrollPosition = window.pageYOffset;  // Sayfanın mevcut konumunu al
+    document.body.style.position = 'fixed';  // Sayfayı sabitle
+    document.body.style.top = `-${scrollPosition}px`;  // Scroll pozisyonunu koru
+    popupModal.classList.remove('hidden');  // Modalı göster
+});
 
-      // Modal ve arka planı göster
-      document.getElementById("static-modal").classList.remove("hidden");
-      document.getElementById("modalBackdrop").classList.remove("hidden");
+// Modalı kapatır
+const closeModalFunction = () => {
+    document.body.style.position = '';  // Sayfa konumunu serbest bırak
+    document.body.style.top = '';  
+    window.scrollTo(0, scrollPosition);  // Eski konuma dön
+    popupModal.classList.add('hidden');  // Modalı gizle
+};
+
+closeModal.addEventListener('click', closeModalFunction);
+closeModalFooter.addEventListener('click', closeModalFunction);
+
+// Modal dışında tıklayınca kapat
+window.addEventListener('click', (e) => {
+    if (e.target === popupModal) {
+        closeModalFunction();
     }
-
-    function closeModal() {
-      // Modal ve arka planı gizle
-      document.getElementById("static-modal").classList.add("hidden");
-      document.getElementById("modalBackdrop").classList.add("hidden");
-
-      // Sayfayı eski pozisyonuna döndür ve kaydırmayı tekrar etkinleştir
-      document.body.classList.remove("modal-open");
-      document.body.style.top = "";
-      window.scrollTo(0, scrollPosition);
-    }
+});

@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="demand" id="demand">
-      <a class="demand-btn" href="#form-area"> Hemen Fiyat Gör</a>
+      <a class="demand-btn rounded-full" href="#form-section"> Hemen Fiyat Gör</a>
     </div>
 
     <header class="p-5" id="header">
@@ -38,9 +38,23 @@
 
         <!-- Hamburger Menü (Mobil) -->
         <div class="md:hidden">
-          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <button id="menu-toggle" class="focus:outline-none">
+            <!-- Beyaz ikon -->
             <svg
-              class="w-6 h-6 text-white"
+              class="w-6 h-6 mobile-menu-white text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+
+            <!-- Koyu ikon -->
+            <svg
+              class="w-6 h-6 mobile-menu-dark text-gray-700 hidden"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24">
@@ -56,7 +70,10 @@
         <!-- Menü (Masaüstü) -->
         <ul class="hidden md:flex gap-6">
           <li class="nav-li">
-            <a class="scrool" href="#module">Uygulamalar</a>
+            <a class="scrool" href="#module">Genel Bakış</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#hidden-section">Tüm Modüller</a>
           </li>
           <li class="nav-li">
             <a class="scrool" href="#features">Özellikler</a>
@@ -72,8 +89,8 @@
         <!-- Buton (Masaüstü) -->
         <div class="hidden md:block">
           <a
-            href="#form-area"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-4 md:px-6 rounded">
+            href="#form-section"
+            class="bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
             Hemen Fiyat Gör
           </a>
         </div>
@@ -96,8 +113,8 @@
           </li>
           <li class="nav-li">
             <a
-              href="#form-area"
-              class="bg-white hover:bg-blue-700 text-blue-700 font-bold py-2 px-4 rounded block text-center">
+              href="#form-section"
+              class="bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
               Hemen Fiyat Gör
             </a>
           </li>
@@ -108,7 +125,7 @@
     <section
       class="hero-section mx-auto container max-w-screen-xl flex flex-col md:flex-row justify-between items-center">
       <!-- Sol Taraf (Metin ve Buton) -->
-      <div class="container text-center md:text-left">
+      <div class="container hero-content text-center md:text-left">
         <div class="left-hero flex flex-col items-center md:items-start">
           <h1 class="text-white text-3xl sm:text-5xl font-bold">
             ERP ve CRM’den FAZLASI<br />
@@ -177,8 +194,7 @@
     <!-- İcon Section -->
     <section
       id="module"
-      class="icon-section"
-      style="background-color: #f3f4f6 !important">
+      class="icon-section">
       <div class="head-container">
         <h1 class="text-4xl font-bold text-center">
           Tüm Modüller Tek Platform
@@ -488,7 +504,7 @@
         <div class="mb-10 mt-2">
           <button
             onclick="document.getElementById('hidden-section').scrollIntoView({ behavior: 'smooth' });"
-            class="mt-4 bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700">
+            class="mt-4 bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md">
             Detaylı İncele
           </button>
         </div>
@@ -571,8 +587,8 @@
 
     <!-- Form Section -->
     <!-- 1. Bölüm: Form Alanı -->
-    <section id="form-area" class="form-section bg-white py-10">
-      <div class="container mx-auto px-4">
+    <section class="form-section bg-white py-10" id="form-section">
+      <div class="container mx-auto px-4" id="form-area">
         <h2 class="text-3xl font-bold mb-6 text-center">Bilgi Talep Formu</h2>
         <div class="flex flex-col md:flex-row gap-20">
           <!-- Form Alanı (Mobilde Önce) -->
@@ -640,8 +656,11 @@
                   <option value="15">15 Kullanıcı</option>
                   <option value="20">20 Kullanıcı</option>
                   <option value="25">25 Kullanıcı</option>
+                  <option value="30">30 Kullanıcı</option>
                   <option value="35">35 Kullanıcı</option>
-                  <option value="50">50 Kullanıcı</option>
+                  <option value="40">40 Kullanıcı</option>
+                  <option value="45">45 Kullanıcı</option>
+                  <option value="50+">50+ Kullanıcı</option>
                 </select>
               </div>
 
@@ -676,14 +695,14 @@
                 <label for="kvkkCheckbox" class="text-gray-700 text-sm">
                   Kişisel Verilerin Korunması Kanunu kapsamında
                   <a href="#" class="text-blue-600 underline"
-                    onclick="openModal()">Aydınlatma ve Rıza Metni</a>'ni
+                    id="openModal">Aydınlatma ve Rıza Metni</a>'ni
                   okudum ve kabul ediyorum.
                 </label>
               </div>
               <!-- Devam Et Butonu -->
               <button
                 type="button"
-                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-md"
+                class="w-full bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
                 onclick="goToPriceStep()">
                 Devam Et ve Fiyatı Gör
               </button>
@@ -699,239 +718,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- 2. Aşama: Fiyatlandırma -->
-
-    <section id="price-area" class="hidden">
-      <div class="price-content">
-        <div class="container mx-auto py-2 px-4 rounded-lg">
-          <div class="text-center py-5">
-            <h3 class="text-lg font-semibold mb-2">Kullanıcı Sayısı Seçin</h3>
-            <!-- Kullanıcı Sayısı Seçimi (2. aşamada) -->
-            <select
-              id="priceUserCount"
-              class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
-              onchange="calculatePrice()">
-              <option value="10">10 Kullanıcı</option>
-              <option value="15">15 Kullanıcı</option>
-              <option value="20">20 Kullanıcı</option>
-              <option value="25">25 Kullanıcı</option>
-              <option value="35">35 Kullanıcı</option>
-              <option value="50">50 Kullanıcı</option>
-            </select>
-          </div>
-
-          <!-- Fiyat Alanı -->
-          <div class="text-center mt-4">
-            <p
-              class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 line-through">
-              <span id="totalPrice">₺300.000,00</span> TL
-            </p>
-            <p class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800">
-              <span id="discountPrice" class="discount-price">₺0,00</span> TL
-            </p>
-
-            <p class="text-sm text-gray-500">+ KDV, Tek Seferlik Ödeme</p>
-            <button
-              class="mt-4 bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700"
-              onclick="submitSecondStep()">
-              Teklifinizle İlgileniyorum
-            </button>
-          </div>
-          <div class="text-center py-5 mt-10">
-            <h2
-              class="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-700">
-              Tüm Modüller için Tek Fiyat
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modül Listesi -->
-      <div
-        class="module-2-top container mx-auto py-10 px-4 rounded-lg relative">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 bg-white p-6 rounded-lg shadow-sm module-list"
-          id="module-list">
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Ofis Yönetimi</span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Müşteri İlişkileri Yönetimi (CRM)</span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Satış Yönetimi</span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Yardım Masası</span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Araç Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Malzeme ve Stok Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Tedarik Zinciri Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Malzeme İhtiyaç Yönetimi (MRP) </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Servis Yönetimi</span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Dokümantasyon Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Hukuk Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">İnsan Kaynakları Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Ön Muhasebe Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Finans Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Raporlar ve Dashboard </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Proje Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Üretim Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Ar-ge Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Bakım/Onarım </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Kantar Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Resmi Muhasebe Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Demirbaş Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Bütçe Yönetimi </span>
-          </div>
-          <div class="text-gray-700 font-bold flex items-center">
-            <span
-              class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-            <span class="ml-2 text-sm">Bordro Yönetimi </span>
-          </div>
-        </div>
-        <!-- Bilgilendirme Alanları -->
-        <div
-          class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-gray-800 px-4">
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-            </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">
-                Eş Zamanlı Kullanıcı
-              </h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
-                işlem
-                yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
-                kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-            </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">Eğitim ve Uyarlama</h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
-                hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-            </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">
-                Satış Sonrası Destek
-              </h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Satın alma sonrası, kurulum, eğitim ve teknik destek
-                hizmetleriyle
-                işletmenizin verimli çalışmasını sağlıyoruz.
-                Karşılaşabileceğiniz
-                her türlü sorunda yanınızdayız.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="price-area" class="hidden">
+      <div id="price-area" class="hidden">
         <div class="price-content">
           <div class="container mx-auto py-2 px-4 rounded-lg">
             <div class="text-center py-5">
@@ -939,44 +726,53 @@
               <!-- Kullanıcı Sayısı Seçimi (2. aşamada) -->
               <select
                 id="priceUserCount"
-                class="border rounded-lg p-3 w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
                 onchange="calculatePrice()">
                 <option value="10">10 Kullanıcı</option>
                 <option value="15">15 Kullanıcı</option>
                 <option value="20">20 Kullanıcı</option>
                 <option value="25">25 Kullanıcı</option>
+                <option value="30">30 Kullanıcı</option>
                 <option value="35">35 Kullanıcı</option>
-                <option value="50">50 Kullanıcı</option>
+                <option value="40">40 Kullanıcı</option>
+                <option value="45">45 Kullanıcı</option>
+                <option value="50+">50+ Kullanıcı</option>
               </select>
             </div>
 
             <!-- Fiyat Alanı -->
             <div class="text-center mt-4">
-              <p class="text-6xl font-bold text-gray-800">
-                <span id="totalPrice">300.000 TL</span>
+              <p
+                class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 line-through">
+                <span id="totalPrice">₺300.000,00</span> TL
               </p>
-              <p class="text-sm text-gray-500">+ KDV, Tek Seferlik Ödeme</p>
+              <p
+                class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800">
+                <span id="discountPrice" class="discount-price">₺0,00</span> TL
+              </p>
+
+              <p class="text-sm text-gray-500">+ KDV, Tek Seferlik Lisans
+                Ödemesi</p>
               <button
                 class="mt-4 bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700"
                 onclick="submitSecondStep()">
                 Teklifinizle İlgileniyorum
               </button>
             </div>
-
-            <!-- Başlık ve Açıklama -->
-            <div class="text-center py-5 mt-15">
-              <h2 class="text-5xl font-medium text-gray-700">
+            <div class="text-center py-5 mt-10">
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-700">
                 Tüm Modüller için Tek Fiyat
               </h2>
             </div>
           </div>
         </div>
+
+        <!-- Modül Listesi -->
         <div
-          class="module-2-bottom container mx-auto py-10 px-4 rounded-lg relative">
-          <!-- Modül Listesi -->
-          <!-- <div id="module-list"></div> -->
+          class="module-2-top container mx-auto py-10 px-4 rounded-lg relative">
           <div
-            class="grid grid-cols-5 gap-4 mt-8 bg-white p-15 rounded-lg shadow-sm module-list"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 bg-white p-6 rounded-lg shadow-sm module-list"
             id="module-list">
             <div class="text-gray-700 font-bold flex items-center">
               <span
@@ -1099,62 +895,64 @@
               <span class="ml-2 text-sm">Bordro Yönetimi </span>
             </div>
           </div>
-        </div>
-        <!-- Bilgilendirme Alanları -->
-        <div
-          class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-5 text-gray-800">
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+          <!-- Bilgilendirme Alanları -->
+          <div
+            class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-gray-800 px-4">
+            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
+                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">
+                  Eş Zamanlı Kullanıcı
+                </h4>
+                <p class="text-gray-600 mt-2 text-base">
+                  Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
+                  işlem
+                  yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
+                  kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">
-                Eş Zamanlı Kullanıcı
-              </h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
-                işlem
-                yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
-                kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
-              </p>
-            </div>
-          </div>
 
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
+                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">Eğitim ve Uyarlama</h4>
+                <p class="text-gray-600 mt-2 text-base">
+                  Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
+                  hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">Eğitim ve Uyarlama</h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
-                hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
-              </p>
-            </div>
-          </div>
 
-          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-            <div
-              class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-            </div>
-            <div>
-              <h4 class="text-lg font-bold text-gray-900">
-                Satış Sonrası Destek
-              </h4>
-              <p class="text-gray-600 mt-2 text-base">
-                Satın alma sonrası, kurulum, eğitim ve teknik destek
-                hizmetleriyle
-                işletmenizin verimli çalışmasını sağlıyoruz.
-                Karşılaşabileceğiniz
-                her türlü sorunda yanınızdayız.
-              </p>
+            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
+                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900">
+                  Satış Sonrası Destek
+                </h4>
+                <p class="text-gray-600 mt-2 text-base">
+                  Satın alma sonrası, kurulum, eğitim ve teknik destek
+                  hizmetleriyle
+                  işletmenizin verimli çalışmasını sağlıyoruz.
+                  Karşılaşabileceğiniz
+                  her türlü sorunda yanınızdayız.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- 2. Aşama: Fiyatlandırma -->
 
       <div
         id="confirmationMessage"
@@ -1181,59 +979,134 @@
         </div>
       </div>
       <!-- Brand Swiper -->
-      <section class="brand-section bg-gray-100 py-10 overflow-hidden"
+      <section
+        class="brand-section bg-gradient-to-b from-[#3466aa] to-[#61aadb] py-10 overflow-hidden"
         id="brand">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-6">Referanslarımız</h2>
+          <h2 class="text-3xl text-white font-bold mb-6">Referanslarımız</h2>
           <div class="swiper-container">
             <div class="swiper-wrapper mx-auto">
               <!-- Slide 1 -->
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
+                  class="w-52 mx-auto"
                   src="./src/img/ref/1.png"
                   alt="Brand 1" />
               </div>
-
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
+                  class="w-52 mx-auto"
                   src="./src/img/ref/2.png"
                   alt="Brand 1" />
               </div>
-
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
+                  class="w-52 mx-auto"
                   src="./src/img/ref/3.png"
                   alt="Brand 1" />
               </div>
-
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
-                  src="./src/img/ref/4.png"
-                  alt="Brand 1" />
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  class="w-32 mx-auto"
+                  class="w-52 mx-auto"
                   src="./src/img/ref/5.png"
                   alt="Brand 1" />
               </div>
 
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
+                  class="w-52 mx-auto"
                   src="./src/img/ref/6.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/7.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/8.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/9.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/11.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/13.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/14.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/15.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/16.png"
                   alt="Brand 1" />
               </div>
 
               <div class="swiper-slide">
                 <img
-                  class="w-32 mx-auto"
-                  src="./src/img/ref/7.png"
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/10.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/17.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/12.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/18.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/19.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/20.png"
+                  alt="Brand 1" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="w-52 mx-auto"
+                  src="./src/img/ref/4.png"
                   alt="Brand 1" />
               </div>
             </div>
@@ -1958,8 +1831,15 @@
               alt="Firmanet Logo"
               class="w-44 mb-5 mx-auto md:mx-0" />
             <p class="text-base leading-relaxed">
-              <strong class="font-semibold text-gray-800">Güçlü Geçmiş, Yenilikçi Gelecek!</strong>
-              Firmanet Yazılım ve Teknoloji A.Ş., 2020 yılında Solimpeks Grup bünyesinde kurulmuş yenilikçi bir yazılım şirketidir. 2006 yılından bu yana ODTÜ Teknokent'te geliştirilen Türkiye'nin ilk web tabanlı yerli yazılımı iWorkBetter'ı 2021 yılında tüm haklarıyla devralarak, köklü bir geçmişi modern teknolojiyle birleştirdik. Bu önemli dönüşümle Firmanet adı altında, yenilikçi çözümler sunarak dijital dönüşümde fark yaratıyoruz.
+              <strong class="font-semibold text-gray-800">Güçlü Geçmiş,
+                Yenilikçi Gelecek!</strong>
+              Firmanet Yazılım ve Teknoloji A.Ş., 2020 yılında Solimpeks Grup
+              bünyesinde kurulmuş yenilikçi bir yazılım şirketidir. 2006
+              yılından bu yana ODTÜ Teknokent'te geliştirilen Türkiye'nin ilk
+              web tabanlı yerli yazılımı iWorkBetter'ı 2021 yılında tüm
+              haklarıyla devralarak, köklü bir geçmişi modern teknolojiyle
+              birleştirdik. Bu önemli dönüşümle Firmanet adı altında, yenilikçi
+              çözümler sunarak dijital dönüşümde fark yaratıyoruz.
             </p>
           </div>
 
@@ -2017,6 +1897,79 @@
         </div>
       </footer>
 
+      <div id="popupModal"
+        class="fixed inset-0 bg-opacity-50  hidden flex items-center justify-center z-50"
+        style="    background-color: #797575ba;">
+        <div class="bg-white w-11/12 max-w-3xl rounded-lg shadow-lg">
+          <!-- Başlık ve Kapatma Butonu -->
+          <div class="flex justify-between items-center border-b px-6 py-4">
+            <h2 class="text-xl font-semibold">Aydınlatma Metni</h2>
+            <button id="closeModal" class="text-gray-600 hover:text-gray-900">
+              ✖️
+            </button>
+          </div>
+
+          <!-- İçerik -->
+          <div class="p-6 max-h-[70vh] overflow-y-auto">
+            <p class="text-gray-700 mb-4">
+              İşbu, “Aydınlatma Metni” (“Veri Sorumlusu”) tarafından 6698 sayılı
+              Kişisel Verilerin Korunması Kanunu “Kanun” uyarınca kullanıcıların
+              kişisel verilerinin işlenmesine ilişkin olarak kullanıcıları
+              aydınlatmak amacıyla yayınlanmaktadır.
+            </p>
+
+            <h3 class="font-semibold text-gray-900">1) Veri Sorumlusunun Kimliği
+              ve İletişim Bilgileri</h3>
+            <p class="text-gray-700 mt-2">
+              Unvan: Firmanet Yazılım Teknoloji A.Ş. <br>
+              Konya Merkez Adresi: Büyükkayacık OSB Mahallesi, 101. Cadde,
+              InnoPark Konya TGB, B Blok, No:4/105, 42160, Selçuklu / KONYA <br>
+              Ankara Ofisi Adresi: Kızılırmak Mahallesi 1443.Cadde No:9 Ulusoy
+              Plaza Kat:2 Daire:6 Çankaya / Ankara <br>
+              Telefon: +90 312 439 39 40 <br>
+              E-Posta: info@iworkbetter.com.tr <br>
+            </p>
+
+            <!-- Diğer uzun içerikler burada olacak -->
+            <p class="text-gray-700 mt-4">
+              <strong>2) Kişisel Verilerin İşlenme Amacı:</strong> Kişisel
+              verileriniz, Veri Sorumlusu veya onun yurt içinde ve/veya yurt
+              dışında mukim iş ortakları, iş ortakları veya adınıza verilen
+              işleyen tüzel kişiler tarafından toplumsal ve kanuni amaçlarla
+              işlenebilecektir.
+            </p>
+
+            <p class="text-gray-700 mt-2">
+              <strong>3) Veri Sorumlusu Tarafından İşlenebilecek Veriler:</strong>
+              Şirket Unvanı, Mersis Numarası, IP Adresleri, Konum Bilgileri,
+              İnternet Sitesi İçerisinde Gezinti Alışkanlıkları, E-Posta
+              Adresleri, Telefon Numaraları, Adresler, Ad, soyad, TC Kimlik
+              Numaraları...
+            </p>
+
+            <p class="text-gray-700 mt-2">
+              <strong>4) Verilerin İşlenme Amaçları:</strong> Yukarıda
+              belirtilen veriler; ürün ve/veya hizmetlerin sunulması, ürünlerin
+              denenmesi, satış öncesi ve sonrası destek hizmetlerinin verilmesi
+              gibi amaçlarla işlenir...
+            </p>
+
+            <p class="text-gray-700 mt-2">
+              <strong>5) Kişisel Verilerin Aktarılabileceği Taraflar:</strong>
+              Kişisel verileriniz yukarıda belirtilen taraflara aktarılabilecek,
+              veri güvenliği önlemleri dahilinde saklanabilecektir...
+            </p>
+          </div>
+
+          <!-- Alt Kısım -->
+          <div class="flex justify-end border-t px-6 py-3">
+            <button id="closeModalFooter"
+              class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none">
+              Kapat
+            </button>
+          </div>
+        </div>
+      </div>
 
       <!-- Swiper.js Script -->
       <script src="./src/vendor/swiper/swiper-bundle.min.js"></script>
