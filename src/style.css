@@ -133,6 +133,7 @@ section {
     content: "";
     position: absolute;
     top: 0;
+    overflow: hidden;
     left: 0;
     height: 100%;
     width: 100%;

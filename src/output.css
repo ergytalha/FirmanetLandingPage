@@ -1146,9 +1146,6 @@
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
-  .w-70 {
-    width: calc(var(--spacing) * 70);
-  }
   .w-75 {
     width: calc(var(--spacing) * 75);
   }
@@ -3527,6 +3524,7 @@ section {
   content: "";
   position: absolute;
   top: 0;
+  overflow: hidden;
   left: 0;
   height: 100%;
   width: 100%;
