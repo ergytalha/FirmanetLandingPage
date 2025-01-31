@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", serif;
 }
 
 section {
@@ -136,7 +136,7 @@ section {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../src/img/bg/hero6-bg.png);
+    background-image: url(../src/img/hero-bg-1.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -479,7 +479,7 @@ section {
 
 
 .feature-section {
-    background: linear-gradient(180deg, #7846FF 0%, #70A8FF 100%);
+    background: linear-gradient(130deg, #3466aa 0%, #61aadb 100%);
 }
 .features-img-1 {
     width: 35vw !important;
@@ -502,6 +502,28 @@ section {
     right: 154px;
     transform: rotate(185deg);
 }
+.hero-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-86%, -32%);
+}
+.hero-icon-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0%, 87%);
+}
+
+.button-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(0%, 98%);
+}
+
+
+
 @keyframes scroll {
     0% {
         top: 50%;

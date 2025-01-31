@@ -40,6 +40,8 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
 });
 
+
+
 // Scroll Section Highlight
 var focusSectionLink = function (event) {
   for (const link of links) {
@@ -48,7 +50,7 @@ var focusSectionLink = function (event) {
 
     if (!section) {
       console.warn(`Section ${id} bulunamadı.`);
-      continue; // Section yoksa atla
+      continue; 
     }
 
     var position = window.scrollY + (window.innerHeight / 1);
@@ -79,16 +81,7 @@ window.addEventListener('scroll', focusSectionLink);
 for (const link of links) {
   link.addEventListener('click', focusSection);
 }
-const button = document.querySelector('a[href="#hidden-section"]');
-if (button) {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    hiddenSection.classList.remove("hidden");
-    hiddenSection.scrollIntoView({ behavior: "smooth" });
-  });
-} else {
-  console.error("Button bulunamadı!");
-}
+
 // ✅ Swiper Ayarları
 const swiper = new Swiper(".swiper-container", {
   loop: true,
@@ -108,67 +101,106 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-// ✅ Akordeon İşlemleri
-document.querySelectorAll(".accordion-header").forEach((header) => {
-  header.addEventListener("click", () => {
-    const target = document.querySelector(header.dataset.target);
-    const isVisible = target.classList.contains("block");
-
-    document.querySelectorAll(".accordion-content").forEach((content) => {
-      content.classList.remove("block");
-      content.classList.add("hidden");
-    });
-
-    document.querySelectorAll(".accordion-icon").forEach((icon) => {
-      icon.textContent = "+";
-    });
-
-    if (!isVisible) {
-      target.classList.remove("hidden");
-      target.classList.add("block");
-      header.querySelector(".accordion-icon").textContent = "-";
-    }
-  });
-});
 
 // ✅ Google Tag Manager için dataLayer tanımlandı
 window.dataLayer = window.dataLayer || [];
 
 
-// ✅ Kullanıcı sayısı baz fiyatları
+// ✅ Kullanıcı sayısı liste ve indirimli fiyatlar
 const basePrice = {
-  10: 300000,
-  15: 427500,
-  20: 540000,
-  25: 637500,
-  35: 840000,
-  50: 1050000,
+  10: 650000,
+  15: 900000,
+  20: 1150000,
+  25: 1400000,
+  30: 1650000,
+  35: 1900000,
+  40: 2150000,
+  45: 2400000,
+  50: 2650000,
 };
 
-// ✅ Modül verileri
-const modulesData = {
-  lab: "Laboratuvar Modülü",
-  realEstate: "Emlak Modülü",
+const discountPriceList = {
+  10: 520000,
+  15: 705000,
+  20: 880000,
+  25: 1045000,
+  30: 1200000,
+  35: 1345000,
+  40: 1480000,
+  45: 1605000,
+  50: 1720000,
 };
 
 // ✅ Fiyat hesaplama fonksiyonu
 function calculatePrice() {
   const userCountElement = document.getElementById("priceUserCount");
-  const priceElement = document.getElementById("totalPrice");
+  const totalPriceElement = document.getElementById("totalPrice");
+  const discountPriceElement = document.getElementById("discountPrice");
 
-  if (!userCountElement || !priceElement) {
+  if (!userCountElement || !totalPriceElement || !discountPriceElement) {
     console.error("Fiyat hesaplama için gerekli HTML elemanları bulunamadı!");
     return;
   }
 
-  const userCount = userCountElement.value;
-  let price = basePrice[userCount] || 0;
+  const userCount = parseInt(userCountElement.value) || 0;
+  const price = basePrice[userCount] || 0;
+  const discountPrice = discountPriceList[userCount] || 0;
 
-  priceElement.textContent = `₺${price.toLocaleString()}`;
+  // Liste ve indirimli fiyatı göster
+  totalPriceElement.textContent = `₺${price.toLocaleString()}`;
+  discountPriceElement.textContent = `₺${discountPrice.toLocaleString()}`;
 }
 
 // ✅ Formdan fiyatlandırmaya geçiş
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const userCount = document.getElementById("userCount").value;
+  const sector = document.getElementById("sector").value;
+
+  // Ad Soyad Doğrulama (sadece harf ve boşluk)
+  const nameRegex = /^[A-Za-zğüşıöçĞÜŞİÖÇ\s]+$/;
+  if (!nameRegex.test(name)) {
+    alert("Lütfen geçerli bir ad soyad giriniz (sadece harf ve boşluk).");
+    return false;
+  }
+
+  // E-posta Doğrulama
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Lütfen geçerli bir e-posta adresi giriniz.");
+    return false;
+  }
+
+  // Telefon Doğrulama (örnek: 555-555-5555 veya 5555555555)
+  const phoneRegex = /^(\d{10}|\d{3}-\d{3}-\d{4})$/;
+  if (!phoneRegex.test(phone)) {
+    alert("Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555).");
+    return false;
+  }
+
+  // Kullanıcı Sayısı ve Sektör Seçimi Doğrulama
+  if (userCount === "" || sector === "") {
+    alert("Lütfen kullanıcı sayısı ve sektör seçiniz.");
+    return false;
+  }
+
+  // Eğer doğrulama başarılıysa, price alanını en üstte göster
+  const priceSection = document.querySelector("#price-area");
+  priceSection.scrollIntoView({
+    behavior: "smooth", // Yumuşak geçiş
+    block: "start"      // En üstte konumlandır
+  });
+
+  return true;
+}
+
 function goToPriceStep() {
+  if (!validateForm()) {
+    return; 
+  }
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
@@ -176,44 +208,40 @@ function goToPriceStep() {
   const sector = document.getElementById("sector").value;
   const moduleListContainer = document.getElementById("module-list");
 
-  if (name && email && phone) {
-    // 📌 GTM Event Gönderimi
-    dataLayer.push({
-      event: "success1",
-      user: { name, email, phone, userCount, sector },
-    });
+  // 📌 GTM Event Gönderimi
+  dataLayer.push({
+    event: "success1",
+    user: { name, email, phone, userCount, sector },
+  });
 
-    // 📌 Formu gizle, fiyatlandırmayı göster
-    document.getElementById("form-area").classList.add("hidden");
+  // 📌 Formu gizle, fiyatlandırmayı göster
+  document.getElementById("form-area").classList.add("hidden");
 
-    document.querySelectorAll(".dynamic-module").forEach((el) => el.remove());
+  document.querySelectorAll(".dynamic-module").forEach((el) => el.remove());
 
-    if (sector === "lab" || sector === "realEstate") {
-      const dynamicModule = `
-        <div class="text-gray-700 font-bold flex items-center dynamic-module">
-          <span class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
-          <span class="ml-2 text-sm">${modulesData[sector]}</span>
-        </div>
-      `;
-      moduleListContainer.insertAdjacentHTML("afterbegin", dynamicModule);
-    }
-  
+  if (sector === "lab" || sector === "realEstate") {
+    const dynamicModule = `
+      <div class="text-gray-700 font-bold flex items-center dynamic-module">
+        <span class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+        <span class="ml-2 text-sm">${modulesData[sector]}</span>
+      </div>
+    `;
+    moduleListContainer.insertAdjacentHTML("afterbegin", dynamicModule);
+  }
 
-    const priceArea = document.getElementById("price-area");
-    if (priceArea) {
-      priceArea.classList.remove("hidden");
-    }
+  const priceArea = document.getElementById("price-area");
+  if (priceArea) {
+    priceArea.classList.remove("hidden");
+  }
 
-    // 📌 Kullanıcı sayısını güncelle
-    const priceUserCountElement = document.getElementById("priceUserCount");
-    if (priceUserCountElement) {
-      priceUserCountElement.value = userCount;
-      calculatePrice(); // 📌 Fiyatı hesapla
-    }
-  } else {
-    alert("Lütfen tüm alanları doldurun!");
+  // 📌 Kullanıcı sayısını güncelle
+  const priceUserCountElement = document.getElementById("priceUserCount");
+  if (priceUserCountElement) {
+    priceUserCountElement.value = userCount;
+    calculatePrice(); // 📌 Fiyatı hesapla
   }
 }
+
 
 // ✅ Fiyatlandırmayı onaylama (teklif gönderme)
 function submitSecondStep() {
@@ -241,5 +269,26 @@ function submitSecondStep() {
 }
 
 
-// Sayfa yüklendiğinde modülleri güncelle
-window.onload = updateModules;
+let scrollPosition = 0;
+
+    function openModal() {
+      // Mevcut kaydırma pozisyonunu al ve sabitle
+      scrollPosition = window.scrollY;
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.classList.add("modal-open");
+
+      // Modal ve arka planı göster
+      document.getElementById("static-modal").classList.remove("hidden");
+      document.getElementById("modalBackdrop").classList.remove("hidden");
+    }
+
+    function closeModal() {
+      // Modal ve arka planı gizle
+      document.getElementById("static-modal").classList.add("hidden");
+      document.getElementById("modalBackdrop").classList.add("hidden");
+
+      // Sayfayı eski pozisyonuna döndür ve kaydırmayı tekrar etkinleştir
+      document.body.classList.remove("modal-open");
+      document.body.style.top = "";
+      window.scrollTo(0, scrollPosition);
+    }
