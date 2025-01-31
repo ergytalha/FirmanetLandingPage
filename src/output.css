@@ -1146,11 +1146,14 @@
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
+  .w-70 {
+    width: calc(var(--spacing) * 70);
+  }
   .w-75 {
     width: calc(var(--spacing) * 75);
   }
-  .w-96 {
-    width: calc(var(--spacing) * 96);
+  .w-80 {
+    width: calc(var(--spacing) * 80);
   }
   .w-auto {
     width: auto;
@@ -3951,6 +3954,14 @@ section {
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
     z-index: 99;
+  }
+  .demand-btn {
+    transform: rotate(270deg);
+    background: linear-gradient(45deg, #e36825, #fa8636);
+    padding: 0.7rem 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
   }
   .mouse-cont {
     display: none;
