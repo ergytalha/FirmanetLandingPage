@@ -124,7 +124,7 @@ section {
 }
 
 .hero-section {
-    padding: 18rem 18rem 13rem 18rem !important;
+   height: 100vh;
 }
 .icon-section {
     margin-top: -28px;
@@ -216,13 +216,6 @@ section {
     background-size: cover;
 }
 
-.welcome-image-group-wrapper {
-    position: absolute;
-    top: 55%;
-    right: 2%;
-    transform: translateY(-50%);
-    width: 46%;
-}
 
 .welcome-image--group-01 {
     position: relative;
@@ -376,10 +369,13 @@ section {
     flex-direction: column;
     padding: 2rem 0;
 }
-
+.module-2-top {
+    position: relative;
+    top: -6rem;
+}
 .module-2-bottom {
     position: relative;
-    top: -7rem;
+    top: 0rem;
 }
 
 .icon-info {
@@ -482,6 +478,30 @@ section {
 }
 
 
+.feature-section {
+    background: linear-gradient(180deg, #7846FF 0%, #70A8FF 100%);
+}
+.features-img-1 {
+    width: 35vw !important;
+}
+.features-img-2 {
+    width: 23vw !important;
+}
+.features-img-3 {
+    width: 23vw !important;
+}
+.arrow-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(113%, -59%);
+}
+.arrow-2 {
+    position: absolute;
+    top: 93px;
+    right: 154px;
+    transform: rotate(185deg);
+}
 @keyframes scroll {
     0% {
         top: 50%;
@@ -550,4 +570,18 @@ section {
 
 .module-head.m-3 {
     padding-top: 2rem;
+}
+
+
+/* responsive  */
+
+
+@media (max-width: 768px) {
+    .module-2-bottom {
+        top: 0rem ; /* Tablet ve masaüstü cihazlar için */
+    }
+    .module-2-top {
+        position: relative;
+        top: -6rem;
+    }
 }
