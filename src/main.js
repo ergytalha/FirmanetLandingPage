@@ -155,8 +155,9 @@ function calculatePrice() {
   const userCountElement = document.getElementById("priceUserCount");
   const totalPriceElement = document.getElementById("totalPrice");
   const discountPriceElement = document.getElementById("discountPrice");
+  const kdvElement = document.querySelector(".kdv-element"); 
 
-  if (!userCountElement || !totalPriceElement || !discountPriceElement) {
+  if (!userCountElement || !totalPriceElement || !discountPriceElement || !kdvElement) {
     console.error("Fiyat hesaplaması için gerekli HTML öğeleri bulunamadı!");
     return;
   }
@@ -166,15 +167,20 @@ function calculatePrice() {
   if (userCount === "50+") {
     totalPriceElement.textContent = "";
     discountPriceElement.textContent = "Lütfen bizimle iletişime geçin.";
+    discountPriceElement.style.fontSize = "2rem"; 
+    kdvElement.style.display = "none"; 
   } else {
     const parsedUserCount = parseInt(userCount) || 0;
     const price = basePrice[parsedUserCount] || 0;
     const discountPrice = discountPriceList[parsedUserCount] || 0;
 
-    totalPriceElement.textContent = `${price.toLocaleString()}TL`;
-    discountPriceElement.textContent = `${discountPrice.toLocaleString()}TL`;
+    totalPriceElement.textContent = `${price.toLocaleString()} TL`;
+    discountPriceElement.textContent = `${discountPrice.toLocaleString()} TL`;
+    discountPriceElement.style.fontSize = ""; 
+    kdvElement.style.display = "block"; 
   }
 }
+
 
 // Validate Form and Scroll to Price Section
 function validateForm() {
