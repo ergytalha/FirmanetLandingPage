@@ -124,11 +124,13 @@ section {
 }
 
 .hero-section {
-   height: 100vh;
+    height: 100vh;
 }
+
 .icon-section {
     margin-top: -28px;
 }
+
 .hero-section::after {
     content: "";
     position: absolute;
@@ -164,8 +166,7 @@ section {
     background-color: var(--white-color);
     border-radius: 16px;
     padding: 0.5rem 1rem;
-    display: flex
-;
+    display: flex;
     align-items: center;
     min-height: 160px;
     justify-content: center;
@@ -283,6 +284,7 @@ section {
     width: 32%;
     z-index: -1;
 }
+
 .module-section {
     background-color: #FFFFFF;
 }
@@ -299,8 +301,7 @@ section {
     text-align: start;
     padding: 8px;
     background-color: #ffffff;
-    border: 0 solid 
-color-mix(in srgb, currentColor 15%, transparent);
+    border: 0 solid color-mix(in srgb, currentColor 15%, transparent);
     border-radius: 0.25rem;
     height: auto;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -331,6 +332,7 @@ color-mix(in srgb, currentColor 15%, transparent);
     color: #6B7280;
     margin-bottom: 1rem;
 }
+
 .platform-box {
     border: 1px solid #cacaca;
     border-radius: 38px;
@@ -342,41 +344,54 @@ color-mix(in srgb, currentColor 15%, transparent);
     left: -51px;
     top: 50%;
     color: transparent;
-    -webkit-text-stroke: 2px rgb(178, 178, 178); /* Siyah dış çizgi */
+    -webkit-text-stroke: 2px rgb(178, 178, 178);
+    /* Siyah dış çizgi */
     font-size: 2.5rem;
 }
+
 .yellows {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .yellows::after {
     content: "";
     display: block;
     width: 120px;
-    height: 20px; /* Çizginin yüksekliği */
+    height: 20px;
+    /* Çizginin yüksekliği */
     background-image: url(../src/img/indir.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 5px; /* h1 ile çizgi arasındaki mesafe */
+    margin-top: 5px;
+    /* h1 ile çizgi arasındaki mesafe */
 }
+
 .module-head {
     color: #4a9ad5;
+}
+#module-list {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .price-content {
     display: flex;
-    background-color: #eef2fb;
+    background: url(https://img.freepik.com/free-vector/digital-grid-technology-background-white-tone_53876-117509.jpg?t=st=1738584231~exp=1738587831~hmac=dbaa5b0…&w=2000);
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-repeat: no-repeat;
     padding: 2rem 0;
+    background-origin: content-box;
 }
+
 .module-2-top {
     position: relative;
     top: -6rem;
 }
+
 .module-2-bottom {
     position: relative;
     top: 0rem;
@@ -394,15 +409,15 @@ color-mix(in srgb, currentColor 15%, transparent);
     width: -webkit-fill-available;
     margin: 7px 0;
 }
+
 .module-icon-head {
     margin-bottom: -25px;
 }
 
 .icon-box-set {
-    display: flex
-    ;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .box-img {
@@ -416,6 +431,7 @@ color-mix(in srgb, currentColor 15%, transparent);
     transition: .1s ease;
     margin-bottom: 1rem;
 }
+
 .icon-box-content {
     margin-bottom: 10px;
 }
@@ -436,12 +452,14 @@ color-mix(in srgb, currentColor 15%, transparent);
     cursor: pointer;
     margin-right: 17px;
 }
+
 .slider-bottom .mouse-cont {
     cursor: pointer;
     float: inherit;
     position: relative;
     top: 50px;
 }
+
 .slider-bottom .oklar {
     position: relative;
     margin-bottom: 6px;
@@ -455,6 +473,7 @@ color-mix(in srgb, currentColor 15%, transparent);
     animation-iteration-count: infinite;
     animation-play-state: running;
 }
+
 .button-scroll {
     position: absolute;
     bottom: 15px;
@@ -470,6 +489,7 @@ color-mix(in srgb, currentColor 15%, transparent);
     margin-left: auto;
     margin-right: auto;
 }
+
 .button-scroll span {
     height: 10px;
     width: 2px;
@@ -485,33 +505,40 @@ color-mix(in srgb, currentColor 15%, transparent);
 .feature-section {
     background: linear-gradient(130deg, #3466aa 0%, #61aadb 100%);
 }
+
 .features-img-1 {
     width: 35vw !important;
 }
+
 .features-img-2 {
     width: 23vw !important;
 }
+
 .features-img-3 {
     width: 23vw !important;
 }
+
 .arrow-1 {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(113%, -59%);
 }
+
 .arrow-2 {
     position: absolute;
     top: 93px;
     right: 154px;
     transform: rotate(185deg);
 }
+
 .hero-icon {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(-86%, -32%);
 }
+
 .hero-icon-2 {
     position: absolute;
     top: 0;
@@ -525,6 +552,7 @@ color-mix(in srgb, currentColor 15%, transparent);
     right: 0;
     transform: translate(0%, 98%);
 }
+
 .hero-content {
     margin-top: -65px;
 }
@@ -604,41 +632,68 @@ color-mix(in srgb, currentColor 15%, transparent);
 .module-content h4 {
     color: #ee762d;
 }
+
 .module-content .icon span {
     font-size: 35px;
 }
+
+.error-text {
+    color: red;
+    font-size: 12px;
+}
+
 /* responsive  */
 
 
 @media (max-width: 768px) {
-    .module-2-bottom {
-        top: 0rem ; /* Tablet ve masaüstü cihazlar için */
+    #mobile-menu {
+        background: white !important;
     }
+
+    #mobile-menu .nav-li {
+        color: #0054a1 !important;
+    }
+
+    .icon-box-content p {
+        font-size: 13px;
+    }
+
+    .module-2-bottom {
+        top: 0rem;
+        /* Tablet ve masaüstü cihazlar için */
+    }
+
     .module-2-top {
         position: relative;
         top: -6rem;
     }
+
     .demand {
         position: fixed;
-        top: 2rem;
+        top: 1.5rem;
         right: 82px;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.5s ease-in-out;
         z-index: 99;
     }
+
     .demand-btn {
         transform: rotate(270deg);
         background: linear-gradient(45deg, #e36825, #fa8636);
-        padding: 0.7rem 1rem;
+        padding: 0.7rem 0.5rem;
         color: white;
         font-weight: bold;
         cursor: pointer;
+        font-size: 12px;
     }
+
     .mouse-cont {
         display: none;
     }
-    .hero-icon, .hero-icon-2 {
+
+    .hero-icon,
+    .hero-icon-2 {
         display: none;
     }
 }

@@ -17,10 +17,11 @@
   </head>
   <body>
     <div class="demand" id="demand">
-      <a class="demand-btn rounded-full" href="#form-section"> Hemen Fiyat Gör</a>
+      <a class="demand-btn rounded-full scrool" href="#form-section"> Hemen
+        Fiyat Gör</a>
     </div>
 
-    <header class="p-5" id="header">
+    <header class="p-2 md:p-5" id="header">
       <nav class="flex  justify-between md:justify-evenly items-center">
         <div>
           <a href="#">
@@ -80,7 +81,7 @@
         <div class="hidden md:block">
           <a
             href="#form-section"
-            class="bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+            class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
             Hemen Fiyat Gör
           </a>
         </div>
@@ -105,7 +106,7 @@
           <li class="nav-li">
             <a
               href="#form-section"
-              class="bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+              class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
               Hemen Fiyat Gör
             </a>
           </li>
@@ -143,7 +144,7 @@
           <div class="hero-btn mt-10 relative">
             <a
               href="#form-area"
-              class="bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+              class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
               Hemen Fiyat Gör
             </a>
             <span class="relative button-icon">
@@ -574,7 +575,8 @@
     <!-- Form Section -->
     <section class="form-section bg-white py-10" id="form-section">
       <div class="container mx-auto px-4" id="form-area">
-        <h2 class="text-3xl font-bold mb-6 text-center text-orange-400">Size
+        <h2
+          class="text-xl md:text-3xl font-bold mb-6 text-center text-orange-400">Size
           ÖZEL fiyatı hemen öğrenin!</h2>
         <div class="flex flex-col md:flex-row gap-20">
 
@@ -590,15 +592,7 @@
                   pattern="[A-Za-zğüşıöçĞÜŞİÖÇ\s]+"
                   title="Lütfen geçerli bir ad soyad giriniz (sadece harf ve boşluk)."
                   class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Firma Adı"
-                  id="company"
-                  name="company"
-                  required
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                <span id="name-error" class="error-text"></span>
               </div>
               <div>
                 <input
@@ -608,18 +602,29 @@
                   placeholder="E-posta Adresi"
                   required
                   class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                <span id="email-error" class="error-text"></span>
               </div>
-              <div>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  placeholder="Telefon"
-                  required
-                  pattern="(\d{10}|\d{3}-\d{3}-\d{4})"
-                  title="Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555)."
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+              <div class="flex flex-col">
+                <label for="phone" class="text-gray-400 text-sm mb-1">Telefon
+                </label>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md p-3 shadow-sm">
+                  <span class="text-gray-600 font-semibold">+90</span>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="___ ___ __ __"
+                    required
+                    pattern="(\d{10}|\d{3}-\d{3}-\d{4})"
+                    maxlength="10"
+                    title="Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555)."
+                    class="ml-2 w-full outline-none bg-transparent placeholder-gray-400 text-gray-900" />
+                </div>
+                <span id="phone-error"
+                  class="error-text text-red-500 text-sm mt-1"></span>
               </div>
+
               <div>
                 <select
                   id="userCount"
@@ -640,6 +645,7 @@
                   <option value="50">50 Kullanıcı</option>
                   <option value="50+">50+ Kullanıcı</option>
                 </select>
+                <span id="userCount-error" class="error-text"></span>
               </div>
               <div>
                 <select
@@ -661,19 +667,24 @@
                   <option value="manufacturing">Diğer İmalat</option>
                   <option value="other-services">Diğer Hizmet</option>
                 </select>
+
               </div>
+              <span id="sector-error" class="error-text"></span>
               <div class="mt-4 flex items-start space-x-2">
                 <input
                   type="checkbox"
                   id="kvkkCheckbox"
+                  required
                   class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                 <label for="kvkkCheckbox" class="text-gray-700 text-sm">
-                  Kişisel Verilerin Korunması Kanunu kapsamında
-                  <a href="#" class="text-blue-600 underline"
-                    id="openModal">Aydınlatma ve Rıza Metni</a>'ni
+                  KVKK kapsamında
+                  <a href="#" class="text-blue-600 underline" id="openModal">Aydınlatma
+                    ve Rıza Metni</a>'ni
                   okudum ve kabul ediyorum.
                 </label>
+                <span id="kvkk-error" class="error-text"></span>
               </div>
+
               <button
                 type="button"
                 class="w-full bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
@@ -691,7 +702,7 @@
         </div>
       </div>
       <div id="price-area" class="hidden">
-        <div class="price-content">
+        <div class="price-content bg-gradient-to-b from-[#3466aa] to-[#61aadb]">
           <div class="container mx-auto py-2 px-4 rounded-lg">
             <div class="text-center py-5">
               <h3 class="text-lg font-semibold mb-2">Kullanıcı Sayısı Seçin</h3>
@@ -711,6 +722,21 @@
                 <option value="50+">50+ Kullanıcı</option>
               </select>
             </div>
+            <div class="text-center py-5">
+              <input
+                type="text"
+                placeholder="Firma Adı"
+                id="company"
+                name="company"
+                required
+                class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="text-center flex justify-center py-5">
+              <textarea id="message" rows="5"
+                class="block border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                placeholder="Mesajınız..."></textarea>
+            </div>
+
             <div class="text-center mt-4">
               <p
                 class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 line-through">
@@ -721,18 +747,19 @@
                 <span id="discountPrice" class="discount-price">₺0,00 TL</span>
               </p>
 
-              <p class="text-sm text-gray-500 kdv-element">+ KDV, Tek Seferlik Lisans
+              <p class="text-sm text-gray-500 kdv-element">+ KDV, Tek Seferlik
+                Lisans
                 Ödemesi</p>
               <button
-                class="mt-4 bg-blue-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-700"
+                class="mt-4 bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
                 onclick="submitSecondStep()">
                 Teklifinizle İlgileniyorum
               </button>
             </div>
             <div class="text-center py-5 mt-10">
               <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-700">
-                Tüm Modüller için Tek Fiyat
+                class="text-3xl sm:text-4xl md:text-5xl font-bold">
+                <span class="text-[#0054A1]">Tüm Modüller için Tek Fiyat</span>
               </h2>
             </div>
           </div>
@@ -742,180 +769,180 @@
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 bg-white p-6 rounded-lg shadow-sm module-list"
             id="module-list">
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Ofis Yönetimi</span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Müşteri İlişkileri Yönetimi (CRM)</span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Satış Yönetimi</span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Yardım Masası</span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Araç Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Malzeme ve Stok Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Tedarik Zinciri Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Malzeme İhtiyaç Yönetimi (MRP) </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Servis Yönetimi</span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Dokümantasyon Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Hukuk Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">İnsan Kaynakları Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Ön Muhasebe Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Finans Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Raporlar ve Dashboard </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Proje Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Üretim Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Ar-ge Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Bakım/Onarım </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Kantar Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Resmi Muhasebe Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Demirbaş Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Bütçe Yönetimi </span>
             </div>
-            <div class="text-gray-700 font-bold flex items-center">
+            <div class="text-[#0054A1] font-bold flex items-center">
               <span
-                class="w-4 h-4 flex items-center justify-center bg-[#8bc34a3d] text-[#8bc34a] rounded-[100%] p-3">✓</span>
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
               <span class="ml-2 text-sm">Bordro Yönetimi </span>
             </div>
           </div>
           <!-- Bilgilendirme Alanları -->
           <div
-            class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-gray-800 px-4">
-            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-gray-900">
-                  Eş Zamanlı Kullanıcı
-                </h4>
-                <p class="text-gray-600 mt-2 text-base">
-                  Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
-                  işlem
-                  yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
-                  kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
-                </p>
-              </div>
+          class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-gray-800 px-4">
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
             </div>
-
-            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-gray-900">Eğitim ve Uyarlama</h4>
-                <p class="text-gray-600 mt-2 text-base">
-                  Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
-                  hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
-                </p>
-              </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">
+                Eş Zamanlı Kullanıcı
+              </h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
+                işlem
+                yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
+                kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
+              </p>
             </div>
-
-            <div class="p-6 bg-white rounded-lg flex items-start gap-4">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full shrink-0">
-                <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-gray-900">
-                  Satış Sonrası Destek
-                </h4>
-                <p class="text-gray-600 mt-2 text-base">
-                  Satın alma sonrası, kurulum, eğitim ve teknik destek
-                  hizmetleriyle
-                  işletmenizin verimli çalışmasını sağlıyoruz.
-                  Karşılaşabileceğiniz
-                  her türlü sorunda yanınızdayız.
-                </p>
-              </div>
+          </div>
+          
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
             </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">Eğitim ve Uyarlama</h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
+                hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
+              </p>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">
+                Satış Sonrası Destek
+              </h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Satın alma sonrası, kurulum, eğitim ve teknik destek
+                hizmetleriyle
+                işletmenizin verimli çalışmasını sağlıyoruz.
+                Karşılaşabileceğiniz
+                her türlü sorunda yanınızdayız.
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </div>

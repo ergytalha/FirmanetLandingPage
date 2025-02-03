@@ -49,10 +49,19 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
 document.getElementById('menu-toggle').addEventListener('click', function () {
   const mobileMenu = document.getElementById('mobile-menu');
   mobileMenu.classList.toggle('hidden');
 });
+
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.add('hidden');
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const icons = document.querySelectorAll(".icon-bg");
@@ -184,33 +193,57 @@ function calculatePrice() {
 
 // Validate Form and Scroll to Price Section
 function validateForm() {
+  let valid = true;
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const userCount = document.getElementById("userCount").value;
   const sector = document.getElementById("sector").value;
+  const kvkkCheckbox = document.getElementById("kvkkCheckbox").checked;
   const demandBtn = document.querySelector(".demand-btn");
+
+  document.getElementById("name-error").textContent = "";
+  document.getElementById("email-error").textContent = "";
+  document.getElementById("phone-error").textContent = "";
+  document.getElementById("userCount-error").textContent = "";
+  document.getElementById("sector-error").textContent = "";
+  document.getElementById("kvkk-error").textContent = "";
 
   const nameRegex = /^[A-Za-zğüşıöçĞÜŞİÖÇ\s]+$/;
   if (!nameRegex.test(name)) {
-    alert("Please enter a valid name (letters and spaces only).");
-    return false;
+    document.getElementById("name-error").textContent = "Lütfen geçerli bir ad soyad giriniz.";
+    valid = false;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return false;
+    document.getElementById("email-error").textContent = "Lütfen geçerli bir e-posta adresi giriniz.";
+    valid = false;
   }
 
   const phoneRegex = /^(\d{10}|\d{3}-\d{3}-\d{4})$/;
   if (!phoneRegex.test(phone)) {
-    alert("Please enter a valid phone number (example: 5555555555 or 555-555-5555).");
-    return false;
+    document.getElementById("phone-error").textContent = "Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555).";
+    valid = false;
   }
 
-  if (userCount === "" || sector === "") {
-    alert("Please select user count and sector.");
+  if (userCount === "") {
+    document.getElementById("userCount-error").textContent = "Lütfen kullanıcı sayısını seçiniz.";
+    valid = false;
+  }
+
+  if (sector === "") {
+    document.getElementById("sector-error").textContent = "Lütfen bir sektör seçiniz.";
+    valid = false;
+  }
+
+  if (!kvkkCheckbox) {
+    document.getElementById("kvkk-error").textContent = "Aydınlatma ve rıza metnini kabul etmelisiniz.";
+    valid = false;
+  }
+
+  if (!valid) {
     return false;
   }
 
@@ -224,6 +257,7 @@ function validateForm() {
 
   return true;
 }
+
 
 // Go to Price Step Function
 function goToPriceStep() {
