@@ -3626,7 +3626,7 @@ section {
 }
 .price-content {
   display: flex;
-  background: url(https://img.freepik.com/free-vector/digital-grid-technology-background-white-tone_53876-117509.jpg?t=st=1738584231~exp=1738587831~hmac=dbaa5b0…&w=2000);
+  background: url(../src/img/bg/15.jpg);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -3881,6 +3881,9 @@ section {
   }
   .hero-icon, .hero-icon-2 {
     display: none;
+  }
+  .welcome-image.welcome-image--group-01 img {
+    width: 65vw;
   }
 }
 @keyframes spin {

@@ -696,4 +696,9 @@ section {
     .hero-icon-2 {
         display: none;
     }
+    .welcome-image.welcome-image--group-01 img {
+        width: 65vw;
+    }
+    
+    
 }

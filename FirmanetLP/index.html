@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Family CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="src/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="src/aos/aos.css" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="demand" id="demand">
+      <a class="demand-btn rounded-full scrool" href="#form-section"> Hemen
+        Fiyat Gör</a>
+    </div>
+
+    <header class="p-2 md:p-5" id="header">
+      <nav class="flex  justify-between md:justify-evenly items-center">
+        <div>
+          <a href="#">
+            <img
+              class="w-40 md:w-60 logo-white"
+              src="src/img/firmanet_logo.svg"
+              alt="Firmanet Logo" />
+            <img
+              class="w-32 md:w-40 logo-black"
+              src="src/img/firmanet_logo.png"
+              alt="Firmanet Logo" />
+          </a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg
+              class="w-6 h-6 mobile-menu-white text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <svg
+              class="w-6 h-6 mobile-menu-dark text-gray-700 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden md:flex gap-6">
+          <li class="nav-li">
+            <a class="scrool" href="#module">Genel Bakış</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#hidden-section">Tüm Modüller</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#feature">Özellikler</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#brand">Referanslar</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#form-section">İletişim</a>
+          </li>
+        </ul>
+        <div class="hidden md:block">
+          <a
+            href="#form-section"
+            class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+            Hemen Fiyat Gör
+          </a>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="bg-blue-500 hidden md:hidden p-5 mt-4">
+        <ul class="flex flex-col gap-4">
+          <li class="nav-li">
+            <a class="scrool" href="#module">Genel Bakış</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#hidden-section">Tüm Modüller</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#feature">Özellikler</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#brand">Referanslar</a>
+          </li>
+          <li class="nav-li">
+            <a class="scrool" href="#form-section">İletişim</a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="#form-section"
+              class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+              Hemen Fiyat Gör
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="hero-section mx-auto container max-w-screen-xl flex flex-col md:flex-row justify-between items-center">
+      <div class="container hero-content text-center md:text-left">
+        <div class="left-hero flex flex-col items-center md:items-start">
+          <h1 class="text-white text-3xl sm:text-5xl font-bold">
+            ERP ve CRM’den FAZLASI<br />
+            TEK PLATFORMDA!
+          </h1>
+          <div class="relative flex flex-col">
+            <span class="hero-icon"><img src="./src/img/slider-arrow.svg"
+                class="w-30" alt></span>
+            <h3
+              class=" text-xl sm:text-4xl text-yellow-400 p-5 pt-5">
+              Verileriniz Sizde Daha Güvenli
+            </h3>
+            <p class="text-xl text-white py-1">
+              Lisans sahibi olun, Kendi sunucunuzda çalıştırın, <br>
+              Web tabanlı kullanın!
+            </p>
+          </div>
+          <div class="btn-area mt-10 relative">
+            <h4 class="text-4xl text-white">Tüm Modüller için</h4>
+            <h5 class="text-6xl text-yellow-400 uppercase font-bold">Tek Fİyat</h5>
+            <span class="hero-icon-2"><img src="./src/img/slider-arrow-2.svg"
+                class="w-30" alt></span>
+          </div>
+
+          <div class="hero-btn mt-10 relative">
+            <a
+              href="#form-area"
+              class="scrool bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+              Hemen Fiyat Gör
+            </a>
+            <span class="relative button-icon">
+              <img src="./src/img/icon/button-icon.svg" class="w-8 h-8" alt>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="right-hero py-3 mt-10 md:mt-0">
+        <div class="welcome-image-group-wrapper">
+          <div class="welcome-image welcome-image--group-01">
+            <img
+              class="w-80 md:w-full lg:w-full xl:w-full"
+              src="./src/img/hero.gif"
+              alt="Hero Image" />
+          </div>
+        </div>
+      </div>
+      <div class="containers mt-10 md:mt-0">
+        <a href="#module">
+          <div class="mouse-cont slider-btn">
+            <div class="oklar">
+              <div class="button-scroll"><span></span></div>
+            </div>
+            <div class="mouse">
+              <div class="icon"><i class="fab fa-chevron-down"></i></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- İcon Section -->
+    <section
+      id="module"
+      class="icon-section">
+      <div class="head-container">
+        <h1 class="text-4xl font-bold text-center">
+          <span style="color: #0054A1"> Tüm Modüller</span> <br> <span
+            style="color: #fec802"> Tek Platformda,</span> <span
+            style="color: #ff8d39;"> Tek Fiyatla!</span>
+        </h1>
+      </div>
+      <div
+        class="container mx-auto max-w-screen-lg pt-10 px-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/1.svg"
+              alt="Müşteri İlişkileri" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Müşteri İlişkileri</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/2.svg" alt="Satış" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Satış</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/3.svg" alt="Projeler" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Projeler</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/4.svg"
+              alt="Zaman Yönetimi" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Zaman Yönetimi</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/5.svg" alt="İhaleler" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">İhaleler</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/6.svg"
+              alt="Yardım Masası" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Yardım Masası</p>
+        </div>
+
+        <!-- Satır 2 -->
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/7.svg" alt="Üretim" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Üretim</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/8.svg" alt="Ar-Ge Lab" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Ar-Ge Lab</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/9.svg"
+              alt="Bakım/Onarım" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Bakım/Onarım</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/10.svg"
+              alt="Kalite Kontrol" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Kalite Kontrol</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/11.svg"
+              alt="Dokümantasyon" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Dokümantasyon</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/12.svg"
+              alt="Teknik Servis" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Teknik Servis</p>
+        </div>
+        <!-- Satır 3 -->
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/13.svg" alt="Finans" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Finans</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/14.svg" alt="Muhasebe" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Muhasebe</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/15.svg" alt="Bütçe" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Bütçe</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/16.svg"
+              alt="Nakit Akışı" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Nakit Akışı</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/17.svg"
+              alt="İnsan Kaynakları" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">İnsan Kaynakları</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/18.svg"
+              alt="Masraflar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Masraflar</p>
+        </div>
+
+        <!-- Satır 4 -->
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/19.svg"
+              alt="Satınalma" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Satınalma</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/20.svg" alt="Envanter" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Envanter</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/21.svg"
+              alt="Malzeme İhtiyaç Planlama" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">MRP</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/22.svg" alt="Kantar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Kantar</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/23.svg" alt="Görevler" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Görevler</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/24.svg"
+              alt="E-Postalar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">E-Postalar</p>
+        </div>
+
+        <!-- Satır 5 -->
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/25.svg"
+              alt="Akredite Laboratuvar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Akredite LAB</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/26.svg"
+              alt="Emlak Yönetimi" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Emlak Yönetimi</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img class="w-12 h-12" src="./src/img/icon/27.svg" alt="Hukuk" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Hukuk</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/28.svg"
+              alt="Filo Yönetimi" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Filo Yönetimi</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/29.svg"
+              alt="Entegrasyonlar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Entegrasyonlar</p>
+        </div>
+
+        <div class="icon-box-content text-center">
+          <div
+            class="box-img bg-white shadow-lg rounded-lg w-20 h-20 flex items-center justify-center mx-auto">
+            <img
+              class="w-12 h-12"
+              src="./src/img/icon/30.svg"
+              alt="Ajandalar" />
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Ajandalar</p>
+        </div>
+      </div>
+
+      <div class="service-content text-center">
+        <div class="mb-10 mt-2">
+          <button
+            onclick="document.getElementById('hidden-section').scrollIntoView({ behavior: 'smooth' });"
+            class="mt-4 bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md">
+            Detaylı İncele
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- İcon Section End -->
+    <!--feature-section  -->
+    <section
+      class="feature-section py-10 bg-gradient-to-b from-[#3466aa] to-[#61aadb]"
+      id="feature">
+      <div class="container mx-auto">
+        <h2 class="text-center text-3xl text-yellow-400 font-bold">Büyüyen KOBİ'ler
+          için <br> dijital dönüşüm hiç bu kadar kolay olmamıştı!</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mx-4 md:mx-10">
+        <div
+          class="col-span-12 md:col-span-5 flex items-center justify-center flex-col">
+          <div class="feature-content-left mt-5 text-center">
+            <img class="w-full max-h-max object-contain mx-auto"
+              src="./src/img/ozellik.gif" alt="Web Tabanlı" />
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-7">
+          <div
+            class="feature-content-right flex flex-col gap-8 md:gap-12 items-center mt-10 md:mt-20">
+            <div
+              class="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center w-full gap-6 md:gap-10">
+              <div class="text-center md:text-left md:w-1/7">
+                <h2 class="text-2xl text-yellow-400">Web Tabanlı</h2>
+                <img src="./src/img/ozellik-arrow.svg"
+                  class="w-30 mx-auto md:mx-0 mt-2" alt />
+              </div>
+              <p class="text-white text-lg text-center md:text-left md:w-2/3">
+                Kendi sunucunuzda çalışan yazılımımızla verilerinizi güvende
+                tutuyoruz ve tüm kodları size ait bir çözüm sunuyoruz.
+                Özelleştirilebilir, yetkilendirilebilir ve geliştirilebilir bir
+                platformla kodlama gerektirmeden form ve
+                alan oluşturabilirsiniz. Ayrıca arama formları, alan isimleri ve
+                görüntüleme seçeneklerini özelleştirme imkânı sağlıyoruz.
+              </p>
+            </div>
+            <div
+              class="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center w-full gap-6 md:gap-10">
+              <div class="text-center md:text-left md:w-1/7">
+                <h2 class="text-2xl text-yellow-400">KURUMSAL HAFIZA</h2>
+                <img src="./src/img/ozellik-arrow.svg"
+                  class="w-30 mx-auto md:mx-0 mt-2" alt />
+              </div>
+              <p class="text-white text-lg text-center md:text-left md:w-2/3">
+                ERP'nin tüm modüllerini sunarak CRM'i ERP ile entegre ettik.
+                Gantt Chart ile proje yönetimini geliştirdik ve görev yönetimi,
+                toplantı, e-posta, yorum ve sohbet gibi özelliklerle ofis içi
+                yazılım ihtiyacını ortadan kaldırdık.
+                Laboratuvar yönetimi ve Ar-Ge desteğiyle sistemi güçlendirdik;
+                dashboardlar ve BI çözümleriyle verilerinizi görselleştirdik.
+              </p>
+            </div>
+            <div
+              class="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center w-full gap-6 md:gap-10">
+              <div class="text-center md:text-left md:w-1/7">
+                <h2 class="text-2xl text-yellow-400">HIZLI UYARLAMA</h2>
+                <img src="./src/img/ozellik-arrow.svg"
+                  class="w-30 mx-auto md:mx-0 mt-2" alt />
+              </div>
+              <p class="text-white text-lg text-center md:text-left md:w-2/3">
+                Kullanıcı dostu ve kolay anlaşılır ekranlar tasarlayarak arayüzü
+                kısa sürede öğrenilebilir hale getirdik. Danışman şirketlere
+                ihtiyaç duymadan kullanılabilecek bir yapı hazırladık. Uzman
+                eğitimcilerden oluşan bir kadro
+                kurarak, öğrenen ve öğreten bir organizasyon oluşturduk. Bu
+                sayede, hızlı ve etkili bir şekilde uyarlama süreçlerini
+                tamamladık.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature-section En -->
+    <!-- Form Section -->
+    <section class="form-section bg-white py-10" id="form-section">
+      <div class="container mx-auto px-4" id="form-area">
+        <h2
+          class="text-xl md:text-3xl font-bold mb-6 text-center text-orange-400">Size
+          ÖZEL fiyatı hemen öğrenin!</h2>
+        <div class="flex flex-col md:flex-row gap-20">
+
+          <div class="w-full md:w-1/2 order-1 md:order-2">
+            <form id="infoForm" class="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Ad Soyad"
+                  id="name"
+                  name="name"
+                  required
+                  pattern="[A-Za-zğüşıöçĞÜŞİÖÇ\s]+"
+                  title="Lütfen geçerli bir ad soyad giriniz (sadece harf ve boşluk)."
+                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                <span id="name-error" class="error-text"></span>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-posta Adresi"
+                  required
+                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                <span id="email-error" class="error-text"></span>
+              </div>
+              <div class="flex flex-col">
+                <label for="phone" class="text-gray-400 text-sm mb-1">Telefon
+                </label>
+                <div
+                  class="flex items-center border border-gray-300 rounded-md p-3 shadow-sm">
+                  <span class="text-gray-600 font-semibold">+90</span>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="___ ___ __ __"
+                    required
+                    pattern="(\d{10}|\d{3}-\d{3}-\d{4})"
+                    maxlength="10"
+                    title="Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555)."
+                    class="ml-2 w-full outline-none bg-transparent placeholder-gray-400 text-gray-900" />
+                </div>
+                <span id="phone-error"
+                  class="error-text text-red-500 text-sm mt-1"></span>
+              </div>
+
+              <div>
+                <select
+                  id="userCount"
+                  name="userCount"
+                  required
+                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <option disabled selected hidden>
+                    Kullanıcı Sayısını Seçiniz
+                  </option>
+                  <option value="10">10 Kullanıcı</option>
+                  <option value="15">15 Kullanıcı</option>
+                  <option value="20">20 Kullanıcı</option>
+                  <option value="25">25 Kullanıcı</option>
+                  <option value="30">30 Kullanıcı</option>
+                  <option value="35">35 Kullanıcı</option>
+                  <option value="40">40 Kullanıcı</option>
+                  <option value="45">45 Kullanıcı</option>
+                  <option value="50">50 Kullanıcı</option>
+                  <option value="50+">50+ Kullanıcı</option>
+                </select>
+                <span id="userCount-error" class="error-text"></span>
+              </div>
+              <div>
+                <select
+                  id="sector"
+                  name="sector"
+                  required
+                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                  <option disabled selected hidden>Sektör Seçiniz</option>
+                  <option value="general">Genel</option>
+                  <option value="defense">Savunma Sanayi</option>
+                  <option value="flour-feed">Un ve Yem Sanayi</option>
+                  <option value="machinery-automation">Makina ve Otomasyon</option>
+                  <option value="automotive">Otomotiv ve Yedek Parça</option>
+                  <option value="exhibition-services">Fuarcılık Hizmetleri</option>
+                  <option value="epc">EPC Hizmetleri</option>
+                  <option value="lab">Akredite Laboratuvar</option>
+                  <option value="realEstate">Gayrimenkul ve Emlak</option>
+                  <option value="wholesaler">Toptancı</option>
+                  <option value="manufacturing">Diğer İmalat</option>
+                  <option value="other-services">Diğer Hizmet</option>
+                </select>
+
+              </div>
+              <span id="sector-error" class="error-text"></span>
+              <div class="mt-4 flex items-start space-x-2">
+                <input
+                  type="checkbox"
+                  id="kvkkCheckbox"
+                  required
+                  class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <label for="kvkkCheckbox" class="text-gray-700 text-sm">
+                  KVKK kapsamında
+                  <a href="#" class="text-blue-600 underline" id="openModal">Aydınlatma
+                    ve Rıza Metni</a>'ni
+                  okudum ve kabul ediyorum.
+                </label>
+                <span id="kvkk-error" class="error-text"></span>
+              </div>
+
+              <button
+                type="button"
+                class="w-full bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
+                onclick="goToPriceStep()">
+                Devam Et ve Fiyatı Gör
+              </button>
+            </form>
+          </div>
+          <div class="w-full md:w-1/2 flex justify-center order-2 md:order-1">
+            <img
+              src="src/img/img-13.png"
+              alt="Bilgi Formu Görseli"
+              class="w-full rounded-md object-contain" />
+          </div>
+        </div>
+      </div>
+      <div id="price-area" class="hidden">
+        <div class="price-content bg-gradient-to-b from-[#3466aa] to-[#61aadb]">
+          <div class="container mx-auto py-2 px-4 rounded-lg">
+            <div class="text-center py-5">
+              <h3 class="text-lg font-semibold mb-2">Kullanıcı Sayısı Seçin</h3>
+              <select
+                id="priceUserCount"
+                class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                onchange="calculatePrice()">
+                <option value="10">10 Kullanıcı</option>
+                <option value="15">15 Kullanıcı</option>
+                <option value="20">20 Kullanıcı</option>
+                <option value="25">25 Kullanıcı</option>
+                <option value="30">30 Kullanıcı</option>
+                <option value="35">35 Kullanıcı</option>
+                <option value="40">40 Kullanıcı</option>
+                <option value="45">45 Kullanıcı</option>
+                <option value="50">50 Kullanıcı</option>
+                <option value="50+">50+ Kullanıcı</option>
+              </select>
+            </div>
+            <div class="text-center py-5">
+              <input
+                type="text"
+                placeholder="Firma Adı"
+                id="company"
+                name="company"
+                required
+                class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="text-center flex justify-center py-5">
+              <textarea id="message" rows="5"
+                class="block border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                placeholder="Mesajınız..."></textarea>
+            </div>
+
+            <div class="text-center mt-4">
+              <p
+                class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 line-through">
+                <span id="totalPrice">300.000,00 <span>TL</span></span>
+              </p>
+              <p
+                class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800">
+                <span id="discountPrice" class="discount-price">₺0,00 TL</span>
+              </p>
+
+              <p class="text-sm text-gray-500 kdv-element">+ KDV, Tek Seferlik
+                Lisans
+                Ödemesi</p>
+              <button
+                class="mt-4 bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
+                onclick="submitSecondStep()">
+                Teklifinizle İlgileniyorum
+              </button>
+            </div>
+            <div class="text-center py-5 mt-10">
+              <h2
+                class="text-3xl sm:text-4xl md:text-5xl font-bold">
+                <span class="text-[#0054A1]">Tüm Modüller için Tek Fiyat</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="module-2-top container mx-auto py-10 px-4 rounded-lg relative">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-8 bg-white p-6 rounded-lg shadow-sm module-list"
+            id="module-list">
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Ofis Yönetimi</span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Müşteri İlişkileri Yönetimi (CRM)</span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Satış Yönetimi</span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Yardım Masası</span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Araç Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Malzeme ve Stok Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Tedarik Zinciri Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Malzeme İhtiyaç Yönetimi (MRP) </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Servis Yönetimi</span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Dokümantasyon Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Hukuk Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">İnsan Kaynakları Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Ön Muhasebe Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Finans Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Raporlar ve Dashboard </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Proje Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Üretim Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Ar-ge Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Bakım/Onarım </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Kantar Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Resmi Muhasebe Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Demirbaş Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Bütçe Yönetimi </span>
+            </div>
+            <div class="text-[#0054A1] font-bold flex items-center">
+              <span
+                class="w-4 h-4 flex items-center justify-center bg-[#fec700] text-[#ffffff] rounded-[100%] p-3">✓</span>
+              <span class="ml-2 text-sm">Bordro Yönetimi </span>
+            </div>
+          </div>
+          <!-- Bilgilendirme Alanları -->
+          <div
+          class="module-2-bottom container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 text-gray-800 px-4">
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">
+                Eş Zamanlı Kullanıcı
+              </h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Eş zamanlı kullanıcı, aynı anda ERP sistemine giriş yaparak
+                işlem
+                yapan kullanıcı sayısını ifade eder ve bu sayı, işletmenizdeki
+                kullanıcıların sisteme giriş yoğunluğuna göre belirlenmelidir.
+              </p>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">Eğitim ve Uyarlama</h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Tüm paketlerde 20 saat eğitim uyarlama hizmeti dahildir. Ek
+                hizmetler, modül ve ihtiyaçlarınıza göre ücretlendirilir.
+              </p>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-white rounded-lg flex items-start gap-4">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-orange-400 rounded-full shrink-0">
+              <img src="./src/img/icon/phone-call.svg" class="w-6 h-6" alt />
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-[#0054A1]">
+                Satış Sonrası Destek
+              </h4>
+              <p class="text-gray-600 mt-2 text-base">
+                Satın alma sonrası, kurulum, eğitim ve teknik destek
+                hizmetleriyle
+                işletmenizin verimli çalışmasını sağlıyoruz.
+                Karşılaşabileceğiniz
+                her türlü sorunda yanınızdayız.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="confirmationMessage"
+        class="hidden container mx-auto flex items-center justify-center p-5 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white rounded-lg shadow-lg mt-6">
+        <div class="flex items-center">
+          <svg
+            class="w-8 h-8 mr-4 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m5-2a9 9 0 11-6 15 9 9 0 016-15z" />
+          </svg>
+          <div>
+            <strong class="block text-2xl font-bold">Talebiniz başarıyla alındı!</strong>
+            <p class="text-sm">
+              Ekibimiz en kısa sürede sizinle iletişime geçecektir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Brand Swiper -->
+    <section
+      class="brand-section bg-gradient-to-b from-[#3466aa] to-[#61aadb] py-10 overflow-hidden"
+      id="brand">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl text-yellow-400 font-bold mb-6">Referanslarımız EN
+          GÜÇLÜ yanımız!</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper mx-auto">
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/1.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/2.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/3.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/5.png"
+                alt="Brand 1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/6.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/7.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/8.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/9.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/11.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/13.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/14.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/15.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/16.png"
+                alt="Brand 1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/10.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/17.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/12.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/18.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/19.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/20.png"
+                alt="Brand 1" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="w-52 mx-auto"
+                src="./src/img/ref/4.png"
+                alt="Brand 1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Brand Swiper End -->
+
+    <!-- Modules Section -->
+    <section id="hidden-section" class="module-section py-10">
+      <div class="container mx-auto">
+        <h1 class="text-4xl text-center font-bold mt-6 text-orange-400">
+          Tüm iş süreçleriniz için <br> ENTEGRE modüller sunuyoruz!
+        </h1>
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">CRM ve Satış</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Müşteri İlişkileri Yönetimi (CRM)</h4>
+              <p class="text-sm text-gray-600">
+                Etkinlikler,Temaslar, Ziyaretler, Teklifler, Satış Tahminleri,
+                Ref. Listeleri ve Anketler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Satış Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Entegre Talepler, Sözleşmeler, Siparişler, Pos Yönetimi ve
+                Prim
+                Hesaplama
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Satış Talep Entegrasyonu</h4>
+              <p class="text-sm text-gray-600">
+                B2B Siparileri ve Web Sitesi Satış Talepleri entegrasyonu
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">İhale Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                İhale Dokümanları, Süreçleri, Katılımcı Firmalar ve Teklifler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Yardım Masası</h4>
+              <p class="text-sm text-gray-600">
+                Müşteri Portalı, Görevler, İş Emirleri, Süreçler, Müşteri
+                Talep
+                ve Şikayetleri
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Firmalar ve Bağlantılar</h4>
+              <p class="text-sm text-gray-600">
+                Firmalar, Kişiler, Cariler, Firma Kara Liste, Anket ve
+                Görüşmeler, Riskler ve Fiyat Listeleri
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Üretim ve Kalite</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Üretim Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Talepler, Sevkiyata Göre Üretim, Planlama, İş Emirleri,
+                Hareketler ve Operasyonlar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Kalite Kontrol</h4>
+              <p class="text-sm text-gray-600">
+                Numune Takip, Analizler, Parametreler, Rapor Düzenleme ve
+                Cihaz
+                Dosya Aktarımı
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Ar-Ge Laboratuvar</h4>
+              <p class="text-sm text-gray-600">
+                Analizler, Ar-Ge Numuneleri, Ar-Ge Projeleri, Ar-Ge
+                Uygulamaları, Malzemeler ve Ürünler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Bakım ve Onarım</h4>
+              <p class="text-sm text-gray-600">
+                Periyotlar, Sözleşmeler, Süreçler, Demirbaş Ajandası, İş
+                Emirleri, Mevcut Arızalar ve Firmalar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Dokümantasyon Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Bilgi Paylaşım Listesi, Dosya Yönetimi ve Dosya Tür Tanımları
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 text-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Denetim Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Denetim Planı, Denetim Sözleşmeleri, Süreçler, Tutanaklar ve
+                Faturalanacak Kalemler
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Muhasebe ve Finans</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Finans Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Nakit Akışı Planlama, Krediler, Teminatlar, Forward Takibi,
+                Finans Hareketleri ve Bankalar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Ön Muhasebe</h4>
+              <p class="text-sm text-gray-600">
+                Banka Entegrasyon, Fatura, İrsaliye, Cari Mutabakat, KDV
+                Listesi, Kur Farkı ve Çek-Senet
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Resmi Muhasebe</h4>
+              <p class="text-sm text-gray-600">
+                Fişler, Bilanço, Defter, Gelir Tablosu, Muavin, Yevmiye
+                Defteri,
+                Hesap Yansıtma ve E-Belgeler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Bütçe Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Bütçe Planlaması, Bütçe Raporu ve Bütçe Rapor Özeti
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Maliyet Muhasebesi</h4>
+              <p class="text-sm text-gray-600">
+                Fire Senaryoları, Dönemler, Mamül Maliyet, Ticari Maliyet ve
+                Maliyet Düzenleme
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Demirbaş Amortisman</h4>
+              <p class="text-sm text-gray-600">
+                Amortisman Bilgileri, Amortisman Listesi ve Faydalı Ömür
+                Listesi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Tedarik Zinciri ve Envanter</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Malzeme ve Hizmetler</h4>
+              <p class="text-sm text-gray-600">
+                Malzeme Listesi, Ürün Ağacı ve Maliyet, Stok Durumu, Fiyat
+                Listeleri ve Rayiç Fiyatlar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Malzeme İhtiyaç Planlaması (MRP)</h4>
+              <p class="text-sm text-gray-600">
+                MRP, İhtiyaç Listesi, Toplu İhtiyaç Listesi ve Günlük Malzeme
+                Tahmini
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Sabit Kıymetler</h4>
+              <p class="text-sm text-gray-600">
+                Demirbaşlar, Taşıtlar, Gayrimenkul ve Tesisler ve Zimmet
+                Yönetimi
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Satın Alma Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Talepler, Teklifler, Teklif Karşılaştırma, Siparişler, Mal
+                Kabul
+                ve İthalatlar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Lojistik ve Depo Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Mal Kabul, Sevk Planlama, Sayım, Seri-Lot, Rezerveler,
+                Konsinyeler, Sarflar ve Dinamik Depo
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Kantar Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Dış Tartım, Sevkiyat, Tartım Penceresi, Tüm Tartımlar, Mal
+                Kabul
+                ve Transferler
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">İnsan Kaynakları (IK)</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">IK Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                İş İlanları, İşe Alma, Org. Şeması, Sağlık Takip, Maaş Ödeme,
+                Ekstra Haklar ve Değerlendirme
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Personel Devam Durumu</h4>
+              <p class="text-sm text-gray-600">
+                Personel Giriş ve Çıkış, PKDS Entegrasyonu ve Personel İzin
+                Takip
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Talepler ve Masraflar</h4>
+              <p class="text-sm text-gray-600">
+                Masraflar, Avans Talep, Mesai Talep, Seyahat Talep ve Satın
+                Alma
+                Talep
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Hizmetler</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Proje Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Projeler, Proje Kar/Zarar, Süreçler, Satın Alma, Ekipmanlar,
+                Talepler, Sunumlar ve Gant Chart
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Ofis Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Çağrılar, Evraklar, Görevler, Toplantılar ve Ziyaretçi Defteri
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Teknik Servis Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Kira Sözleşmeleri, Servis Sözleşmeleri, Saha Servisleri,
+                Teknik
+                Servisleri ve Ürün İadeleri
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Araç Filo Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Araç Talep, Bakım, Sigorta, Muayene, Lastik Takibi, Akaryakıt,
+                Tarihçe ve Trafik Cezaları
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Hukuk</h4>
+              <p class="text-sm text-gray-600">
+                Dava Dosyaları, Gelirler ve Giderler, Görevler ve Hukuksal
+                İşlemler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Lisans ve Eğitim Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Eğitim Etkinlikleri, Eğitim Hakları, Yazılım Servis
+                Sözleşmeleri
+                ve Yazılım Test Yönetimi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Üretkenlik</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Zaman Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Zaman Çizelgeleri, Çizelge Özeti, Çizelge Planlama ve Zaman
+                Planı Projeksiyonu
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Ajandalar</h4>
+              <p class="text-sm text-gray-600">
+                Araç, Ekipman, Personel, Proje, Toplantı Salonu ve Denetim
+                Ajandaları
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Ekstralar</h4>
+              <p class="text-sm text-gray-600">
+                Sohbet (Chat), Alarm, Bildirim, SMS, Dönüşüm, e-posta, Yorum,
+                Raporlar, Yetki ve Onaylar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Araç Filo Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Araç Talep, Bakım, Sigorta, Muayene, Lastik Takibi, Akaryakıt,
+                Tarihçe ve Trafik Cezaları
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Hukuk</h4>
+              <p class="text-sm text-gray-600">
+                Dava Dosyları, Gelirler ve Giderler, Görevler ve Hukuksal
+                İşlemler
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Lisans ve Eğitim Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Eğitim Etkinlikleri, Eğitim Hakları, Yazılım Servis
+                Sözleşmeleri
+                ve Yazılım Test Yönetimi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Akredite Laboratuvar Yönetimi</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Numune ve Analizler</h4>
+              <p class="text-sm text-gray-600">
+                Numune Alma, İmha, Kabul, Kayıt ve Tutanak, Analiz Sayısı,
+                Sonucu, Analizi ve Gönderimi
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Personel ve Cihaz Takibi</h4>
+              <p class="text-sm text-gray-600">
+                Laboratuvar Personelleri, Hammadde Talepleri ve Cihaz Dosya
+                Aktarımı
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Rapor ve e-imza</h4>
+              <p class="text-sm text-gray-600">
+                Numune, Teklif ve Analiz e-imza Süreçleri, Numune Raporu ve
+                Numune Toplu e-posta
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-head m-3">
+          <h3 class="text-2xl font-bold mt-6">Emlak Yönetimi</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Portföy Yönetimi</h4>
+              <p class="text-sm text-gray-600">
+                Emlak Portföyü, Kira Kontrol, Mülk Sahibi, Emsaller ve
+                Komisyonlar
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Emlak Aktiviteleri</h4>
+              <p class="text-sm text-gray-600">
+                Emlak Aktivite, Müşteri-Tedarikçi Görüşmeleri ve Pankart
+                Takibi
+              </p>
+            </div>
+          </div>
+          <div
+            class="module-content flex items-center gap-4 bg-white p-2 rounded-lg">
+            <div class="icon">
+              <span
+                class="w-12 h-12 font-xl flex items-center justify-center  text-[#fec700] rounded-[100%] p-3">✓</span>
+            </div>
+            <div>
+              <h4 class="font-bold mt-2">Talepler ve İlanlar</h4>
+              <p class="text-sm text-gray-600">
+                Emlak Talepler, İlan Listeleri ve Yetki Belgeleri
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modules Section End -->
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-[#3466aa] to-[#61aadb] py-14">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-gray-700 px-4">
+        <div>
+          <img
+            src="./src/img/firmanet_logo.svg"
+            alt="Firmanet Logo"
+            class="w-44 mb-5 mx-auto md:mx-0" />
+        </div>
+        <div class="text-center md:text-left">
+          <p class="text-base leading-relaxed text-white">
+            <strong class="font-extrabold text-white">Güçlü Geçmiş,
+              Yenilikçi Gelecek!</strong> <br> <br>
+            Firmanet Yazılım ve Teknoloji A.Ş., 2020 yılında Solimpeks Grup
+            bünyesinde kurulmuş yenilikçi bir yazılım şirketidir. 2006
+            yılından bu yana ODTÜ Teknokent'te geliştirilen Türkiye'nin ilk
+            web tabanlı yerli yazılımı iWorkBetter'ı 2021 yılında tüm
+            haklarıyla devralarak, köklü bir geçmişi modern teknolojiyle
+            birleştirdik. Bu önemli dönüşümle Firmanet adı altında, yenilikçi
+            çözümler sunarak dijital dönüşümde fark yaratıyoruz.
+          </p>
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="font-extrabold text-lg text-white mb-5">İletişim</h3>
+          <ul class="space-y-4">
+            <!-- Adres İkonu -->
+            <li
+              class="flex items-center gap-3 text-base justify-center md:justify-start text-white">
+              Kızılırmak Mahallesi 1443.Cadde No:9 Ulusoy Plaza Kat:2 Daire:6,
+              06510, Çankaya / Ankara
+            </li>
+
+            <!-- E-posta İkonu -->
+            <li
+              class="flex items-center gap-3 text-base justify-center md:justify-start text-white">
+              info@firmanet.com.tr
+            </li>
+
+            <!-- Telefon İkonu -->
+            <li
+              class="flex items-center gap-3 text-base justify-center md:justify-start text-white">
+              0312 439 3940
+            </li>
+          </ul>
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="font-extrabold text-lg text-white mb-5">Hızlı Menü</h3>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#"
+                class="text-base hover:text-blue-600 transition-colors text-white">Uygulamalar</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base hover:text-blue-600 transition-colors text-white">Özellikler</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base hover:text-blue-600 transition-colors text-white">Referanslar</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-base hover:text-blue-600 transition-colors text-white">İletişim</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <div id="popupModal"
+      class="fixed inset-0 bg-opacity-50  hidden flex items-center justify-center z-50"
+      style="    background-color: #797575ba;">
+      <div class="bg-white w-11/12 max-w-3xl rounded-lg shadow-lg">
+        <div class="flex justify-between items-center border-b px-6 py-4">
+          <h2 class="text-xl font-semibold">Aydınlatma Metni</h2>
+          <button id="closeModal" class="text-gray-600 hover:text-gray-900">
+            ✖️
+          </button>
+        </div>
+        <div class="p-6 max-h-[70vh] overflow-y-auto">
+          <p class="text-gray-700 mb-4">
+            İşbu, “Aydınlatma Metni” (“Veri Sorumlusu”) tarafından 6698 sayılı
+            Kişisel Verilerin Korunması Kanunu “Kanun” uyarınca kullanıcıların
+            kişisel verilerinin işlenmesine ilişkin olarak kullanıcıları
+            aydınlatmak amacıyla yayınlanmaktadır.
+          </p>
+
+          <h3 class="font-semibold text-gray-900">1) Veri Sorumlusunun Kimliği
+            ve İletişim Bilgileri</h3>
+          <p class="text-gray-700 mt-2">
+            Unvan: Firmanet Yazılım Teknoloji A.Ş. <br>
+            Konya Merkez Adresi: Büyükkayacık OSB Mahallesi, 101. Cadde,
+            InnoPark Konya TGB, B Blok, No:4/105, 42160, Selçuklu / KONYA <br>
+            Ankara Ofisi Adresi: Kızılırmak Mahallesi 1443.Cadde No:9 Ulusoy
+            Plaza Kat:2 Daire:6 Çankaya / Ankara <br>
+            Telefon: +90 312 439 39 40 <br>
+            E-Posta: info@iworkbetter.com.tr <br>
+          </p>
+          <p class="text-gray-700 mt-4">
+            <strong>2) Kişisel Verilerin İşlenme Amacı:</strong> Kişisel
+            verileriniz, Veri Sorumlusu veya onun yurt içinde ve/veya yurt
+            dışında mukim iş ortakları, iş ortakları veya adınıza verilen
+            işleyen tüzel kişiler tarafından toplumsal ve kanuni amaçlarla
+            işlenebilecektir.
+          </p>
+
+          <p class="text-gray-700 mt-2">
+            <strong>3) Veri Sorumlusu Tarafından İşlenebilecek Veriler:</strong>
+            Şirket Unvanı, Mersis Numarası, IP Adresleri, Konum Bilgileri,
+            İnternet Sitesi İçerisinde Gezinti Alışkanlıkları, E-Posta
+            Adresleri, Telefon Numaraları, Adresler, Ad, soyad, TC Kimlik
+            Numaraları...
+          </p>
+
+          <p class="text-gray-700 mt-2">
+            <strong>4) Verilerin İşlenme Amaçları:</strong> Yukarıda
+            belirtilen veriler; ürün ve/veya hizmetlerin sunulması, ürünlerin
+            denenmesi, satış öncesi ve sonrası destek hizmetlerinin verilmesi
+            gibi amaçlarla işlenir...
+          </p>
+
+          <p class="text-gray-700 mt-2">
+            <strong>5) Kişisel Verilerin Aktarılabileceği Taraflar:</strong>
+            Kişisel verileriniz yukarıda belirtilen taraflara aktarılabilecek,
+            veri güvenliği önlemleri dahilinde saklanabilecektir...
+          </p>
+        </div>
+        <div class="flex justify-end border-t px-6 py-3">
+          <button id="closeModalFooter"
+            class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none">
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./src/aos/aos.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
