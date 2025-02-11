@@ -203,12 +203,8 @@ function validateForm() {
   const kvkkCheckbox = document.getElementById("kvkkCheckbox").checked;
   const demandBtn = document.querySelector(".demand-btn");
 
-  document.getElementById("name-error").textContent = "";
-  document.getElementById("email-error").textContent = "";
-  document.getElementById("phone-error").textContent = "";
-  document.getElementById("userCount-error").textContent = "";
-  document.getElementById("sector-error").textContent = "";
-  document.getElementById("kvkk-error").textContent = "";
+  // Hata mesajlarını temizle
+  clearErrors();
 
   const nameRegex = /^[A-Za-zğüşıöçĞÜŞİÖÇ\s]+$/;
   if (!nameRegex.test(name)) {
@@ -257,6 +253,37 @@ function validateForm() {
 
   return true;
 }
+
+// Hata mesajlarını temizlemek için olay dinleyicilerinin bağlanması
+function clearErrors() {
+  document.getElementById("name").addEventListener("input", () => {
+    document.getElementById("name-error").textContent = "";
+  });
+
+  document.getElementById("email").addEventListener("input", () => {
+    document.getElementById("email-error").textContent = "";
+  });
+
+  document.getElementById("phone").addEventListener("input", () => {
+    document.getElementById("phone-error").textContent = "";
+  });
+
+  document.getElementById("userCount").addEventListener("change", () => {
+    document.getElementById("userCount-error").textContent = "";
+  });
+
+  document.getElementById("sector").addEventListener("change", () => {
+    document.getElementById("sector-error").textContent = "";
+  });
+
+  document.getElementById("kvkkCheckbox").addEventListener("change", () => {
+    document.getElementById("kvkk-error").textContent = "";
+  });
+}
+
+// Sayfa yüklendiğinde hata temizleme olaylarını bağla
+document.addEventListener("DOMContentLoaded", clearErrors);
+
 
 
 // Go to Price Step Function

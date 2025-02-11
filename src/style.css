@@ -646,6 +646,9 @@ section {
 
 
 @media (max-width: 768px) {
+    .welcome-image.welcome-image--group-01 img {
+        width: 65vw;
+    }
     #mobile-menu {
         background: white !important;
     }
@@ -660,7 +663,6 @@ section {
 
     .module-2-bottom {
         top: 0rem;
-        /* Tablet ve masaüstü cihazlar için */
     }
 
     .module-2-top {
@@ -695,10 +697,5 @@ section {
     .hero-icon,
     .hero-icon-2 {
         display: none;
-    }
-    .welcome-image.welcome-image--group-01 img {
-        width: 65vw;
-    }
-    
-    
+    } 
 }
