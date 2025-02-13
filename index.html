@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" sizes="32x32"
       href="./src/img/favicon-32x32.png">
     <!-- Font Family CSS -->
@@ -618,7 +619,7 @@
                     placeholder="___ ___ __ __"
                     required
                     pattern="(\d{10}|\d{3}-\d{3}-\d{4})"
-                    maxlength="11"
+                    maxlength="10"
                     title="Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555)."
                     class="ml-2 w-full outline-none bg-transparent placeholder-gray-400 text-gray-900" />
                 </div>
@@ -633,9 +634,9 @@
                   required
                   class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                   <option disabled selected hidden>
-                    Kullanıcı Sayısını Seçiniz
+                    Eş Zamanlı Kullanıcı Sayısını Seçiniz
                   </option>
-                  <option value="10">10 Kullanıcı</option>
+                  <option value="10">10 Kullanıcı (en az)</option>
                   <option value="15">15 Kullanıcı</option>
                   <option value="20">20 Kullanıcı</option>
                   <option value="25">25 Kullanıcı</option>
@@ -648,29 +649,12 @@
                 </select>
                 <span id="userCount-error" class="error-text"></span>
               </div>
-              <div>
-                <select
-                  id="sector"
-                  name="sector"
-                  required
-                  class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                  <option disabled selected hidden>Sektör Seçiniz</option>
-                  <option value="general">Genel</option>
-                  <option value="defense">Savunma Sanayi</option>
-                  <option value="flour-feed">Un ve Yem Sanayi</option>
-                  <option value="machinery-automation">Makina ve Otomasyon</option>
-                  <option value="automotive">Otomotiv ve Yedek Parça</option>
-                  <option value="exhibition-services">Fuarcılık Hizmetleri</option>
-                  <option value="epc">EPC Hizmetleri</option>
-                  <option value="lab">Akredite Laboratuvar</option>
-                  <option value="realEstate">Gayrimenkul ve Emlak</option>
-                  <option value="wholesaler">Toptancı</option>
-                  <option value="manufacturing">Diğer İmalat</option>
-                  <option value="other-services">Diğer Hizmet</option>
-                </select>
-
+     
+              <div class="text-center flex justify-center py-5">
+                <textarea id="message" rows="5" cols="50"
+                  class="block border rounded-lg p-3  text-blue-600 border-gray-300 focus:ring-blue-500"
+                  placeholder="Mesajınız..."></textarea>
               </div>
-              <span id="sector-error" class="error-text"></span>
               <div class="mt-4 flex items-start space-x-2">
                 <input
                   type="checkbox"
@@ -685,7 +669,6 @@
                 </label>
                 <span id="kvkk-error" class="error-text"></span>
               </div>
-
               <button
                 type="button"
                 class="w-full bg-gradient-to-b from-[#da5c1f] to-[#ff8d39] hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md"
@@ -731,6 +714,28 @@
                 name="company"
                 required
                 class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="text-center py-5">
+              <select
+                id="sector"
+                name="sector"
+                required
+                class="border rounded-lg p-3 w-full md:w-64 bg-white shadow-sm focus:ring-2 focus:ring-blue-500">
+                <option disabled selected hidden>Sektör Seçiniz</option>
+                <option value="general">Genel</option>
+                <option value="defense">Savunma Sanayi</option>
+                <option value="flour-feed">Un ve Yem Sanayi</option>
+                <option value="machinery-automation">Makina ve Otomasyon</option>
+                <option value="automotive">Otomotiv ve Yedek Parça</option>
+                <option value="exhibition-services">Fuarcılık Hizmetleri</option>
+                <option value="epc">EPC Hizmetleri</option>
+                <option value="lab">Akredite Laboratuvar</option>
+                <option value="realEstate">Gayrimenkul ve Emlak</option>
+                <option value="wholesaler">Toptancı</option>
+                <option value="manufacturing">Diğer İmalat</option>
+                <option value="other-services">Diğer Hizmet</option>
+              </select>
+
             </div>
             <div class="text-center flex justify-center py-5">
               <textarea id="message" rows="5"
@@ -1793,9 +1798,9 @@
             <li
               class="flex items-center gap-3 text-base justify-center md:justify-start text-white">
               <a href="https://maps.app.goo.gl/1ifJUM7vSzsZdxrZA">
-              Kızılırmak Mahallesi 1443.Cadde No:9 Ulusoy Plaza Kat:2 Daire:6,
-              06510, Çankaya / Ankara
-            </a>
+                Kızılırmak Mahallesi 1443.Cadde No:9 Ulusoy Plaza Kat:2 Daire:6,
+                06510, Çankaya / Ankara
+              </a>
             </li>
             <!-- E-posta İkonu -->
             <li

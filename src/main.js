@@ -218,9 +218,10 @@ function validateForm() {
     valid = false;
   }
 
-  const phoneRegex = /^(\d{10}|\d{3}-\d{3}-\d{4})$/;
+  // Telefon numarası doğrulama
+  const phoneRegex = /^5\d{9}$/; // Sadece 10 haneli ve 5 ile başlayan Türk GSM numarası
   if (!phoneRegex.test(phone)) {
-    document.getElementById("phone-error").textContent = "Lütfen geçerli bir telefon numarası giriniz (örnek: 5555555555 veya 555-555-5555).";
+    document.getElementById("phone-error").textContent = "Lütfen geçerli bir Türk GSM numarası giriniz (örnek: 5551234567).";
     valid = false;
   }
 
@@ -265,7 +266,13 @@ function clearErrors() {
   });
 
   document.getElementById("phone").addEventListener("input", () => {
-    document.getElementById("phone-error").textContent = "";
+    const phone = document.getElementById("phone").value.trim();
+    const phoneRegex = /^5\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      document.getElementById("phone-error").textContent = "Lütfen geçerli bir GSM numarası giriniz (örnek: 5551234567).";
+    } else {
+      document.getElementById("phone-error").textContent = "";
+    }
   });
 
   document.getElementById("userCount").addEventListener("change", () => {
@@ -283,7 +290,6 @@ function clearErrors() {
 
 // Sayfa yüklendiğinde hata temizleme olaylarını bağla
 document.addEventListener("DOMContentLoaded", clearErrors);
-
 
 
 // Go to Price Step Function
