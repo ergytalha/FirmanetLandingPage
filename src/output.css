@@ -1098,12 +1098,6 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
-  }
-  .w-25 {
-    width: calc(var(--spacing) * 25);
-  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
@@ -1112,6 +1106,12 @@
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
   }
   .w-30 {
     width: calc(var(--spacing) * 30);
@@ -2855,6 +2855,10 @@
   .transition-normal {
     transition-behavior: normal;
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -3015,6 +3019,13 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .hover\:h-32 {
+    &:hover {
+      @media (hover: hover) {
+        height: calc(var(--spacing) * 32);
+      }
+    }
   }
   .hover\:bg-blue-700 {
     &:hover {
@@ -4210,6 +4221,10 @@ section {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -4227,10 +4242,6 @@ section {
   inherits: false;
 }
 @property --tw-contain-style {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
